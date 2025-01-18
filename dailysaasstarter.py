@@ -1,9 +1,12 @@
 import requests
 import os
 from dotenv import load_dotenv
+import json
+from pathlib import Path
 import yaml
 
 load_dotenv()
+
 
 def search_github_repos(keywords, token=None, secret_key=None):
     """
@@ -49,14 +52,74 @@ def search_github_repos(keywords, token=None, secret_key=None):
 
     return repo_urls
 
+
+def load_existing_data(filepath):
+    """Loads existing data from a JSON file.
+
+    Args:
+        filepath (str): The path to the JSON file.
+
+    Returns:
+        dict: The loaded data, or an empty dictionary if the file doesn't exist
+        or there is a json exception.
+    """
+    try:
+        with open(filepath, "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        print ("Data file not found. Starting with empty results")
+        return {}
+    except json.JSONDecodeError:
+        print("Error decoding JSON file. Starting with empty results")
+        return {}
+
+def save_data(filepath, data):
+    """Saves data to a JSON file.
+
+    Args:
+        filepath (str): The path to the JSON file.
+        data (dict): The data to save.
+    """
+
+    #ensure parent directory exists
+    Path(filepath).parent.mkdir(parents=True, exist_ok=True)
+    with open(filepath, "w") as f:
+        json.dump(data, f, indent=2)
+
+def merge_and_save_results(keywords, token, secret_key, output_filepath):
+    """Searches, loads existing data, merges, and saves new data.
+
+    Args:
+       keywords (list): A list of keywords to search for.
+       token (str, optional): A GitHub personal access token for higher rate limits. Defaults to None.
+       secret_key (str, optional) : An additional secret key to demonstrate yml retrieval, default to None
+       output_filepath (str) : Path to save the results to
+    """
+
+    # 1. search github for keywords
+    new_results = search_github_repos(keywords, token, secret_key)
+    # 2. Load existing data (or initialize an empty dict)
+    existing_data = load_existing_data(output_filepath)
+    # 3.  Merge the data, make them unique
+    merged_data = {}
+    for keyword, new_urls in new_results.items():
+      existing_urls = existing_data.get(keyword,[]) # return empty list for that key if key doesnt exists
+      merged_urls = list(set(existing_urls + new_urls)) # set will ensure uniqueness.
+      merged_data[keyword] = merged_urls
+    #4. save to file
+    save_data(output_filepath, merged_data)
+    print(f"Results saved to: {output_filepath}")
+
+
 if __name__ == "__main__":
-    keywords_to_search = [
-        "machine learning",
-        "data analysis",
-        "web development",
-        "python",
-        "javascript"
-    ]
+    keywords_str = os.getenv("KEYWORDS_ENV")
+    if keywords_str:
+        keywords_to_search = [keyword.strip() for keyword in keywords_str.split(",")]
+    else:
+      keywords_to_search = []
+      print("No Keywords specified. Please specify via KEYWORDS_ENV")
+
+
     github_token = os.getenv("GITHUB_TOKEN")
     secret_yaml_str = os.getenv("SECRET_YAML")
 
@@ -71,17 +134,5 @@ if __name__ == "__main__":
     else:
           secret_key = None  # ensure key is None
 
-
-    results = search_github_repos(keywords_to_search, github_token,secret_key)
-
-    if results:
-         for keyword, urls in results.items():
-            print(f"Repositories for '{keyword}':")
-            if urls:
-                for url in urls:
-                    print(f"  - {url}")
-            else:
-                print(f"  - No repositories found for '{keyword}'.")
-            print("-" * 30)
-    else:
-         print("No results found. Please check the keywords or your connection.")
+    output_file = "results/data.json"
+    merge_and_save_results(keywords_to_search, github_token, secret_key, output_file)

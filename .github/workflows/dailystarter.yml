@@ -31,7 +31,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           KEYWORDS_ENV: ${{ github.event.inputs.keywords }}
         run: |
-          python dailystarter.py
+          python dailysaasstarter.py
 
       - name: Upload search results as artifact
         uses: actions/upload-artifact@v3

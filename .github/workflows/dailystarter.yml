@@ -1,7 +1,7 @@
 name: GitHub Repo Search
 
 on:
-  workflow_dispatch: # allows manual triggers,
+  workflow_dispatch:
 
 jobs:
   run-search:
@@ -24,12 +24,13 @@ jobs:
       - name: Run GitHub repo search script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SECRET_YAML: ${{ secrets.SECRET_YAML }} # Assuming you need a secret, otherwise remove this
+          SECRET_YAML: ${{ secrets.SECRET_YAML }}
+          KEYWORDS_ENV: ${{ secrets.KEYWORDS_ENV }} #  add this
         run: |
           python dailystarter.py
-          
+
       - name: Upload search results as artifact
         uses: actions/upload-artifact@v3
         with:
           name: search-results
-          path: result/data.json
+          path: results/data.json

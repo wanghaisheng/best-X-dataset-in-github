@@ -2,6 +2,11 @@ name: GitHub Repo Search
 
 on:
   workflow_dispatch:
+    inputs:
+      keywords:
+        description: 'Comma-separated keywords to search'
+        required: true
+        default: 'machine learning,data analysis,web development,python,javascript'
 
 jobs:
   run-search:
@@ -24,8 +29,7 @@ jobs:
       - name: Run GitHub repo search script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SECRET_YAML: ${{ secrets.SECRET_YAML }}
-          KEYWORDS_ENV: ${{ secrets.KEYWORDS_ENV }} #  add this
+          KEYWORDS_ENV: ${{ github.event.inputs.keywords }}
         run: |
           python dailystarter.py
 

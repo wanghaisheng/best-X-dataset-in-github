@@ -6,7 +6,7 @@ on:
       keywords:
         description: 'Comma-separated keywords to search'
         required: true
-        default: 'machine learning,data analysis,web development,python,javascript'
+        default: 'saas starter,saas kit,starter kit, saas boilerplate, next.js saas, react.js saas, laravel saas, starter template, b2b saas, saas kit, remix saas, saas framework,saas starter kit, next.js starter kit, react.js starter kit, laravel starter kit, remix starter kit, open source saas, saas starter template, production-ready saas, free open-source saas, node.js starter kit, saas starter framework'
 
 jobs:
   run-search:

@@ -8,14 +8,13 @@ import yaml
 load_dotenv()
 
 
-def search_github_repos(keywords, token=None, secret_key=None):
+def search_github_repos(keywords, token=None):
     """
     Searches GitHub repositories for given keywords.
 
     Args:
         keywords (list): A list of keywords to search for.
         token (str, optional): A GitHub personal access token for higher rate limits. Defaults to None.
-        secret_key (str, optional) : An additional secret key to demonstrate yml retrieval, default to None
 
     Returns:
         dict: A dictionary where keys are keywords and values are lists of repository URLs.
@@ -47,8 +46,6 @@ def search_github_repos(keywords, token=None, secret_key=None):
             print(f"Error searching for '{keyword}': {e}")
             repo_urls[keyword] = [] # ensure there's always an entry even with errors
 
-    if secret_key: # to demonstrate that secret key was provided
-        print (f"secret key provided and printed:{secret_key}")
 
     return repo_urls
 
@@ -86,18 +83,17 @@ def save_data(filepath, data):
     with open(filepath, "w") as f:
         json.dump(data, f, indent=2)
 
-def merge_and_save_results(keywords, token, secret_key, output_filepath):
+def merge_and_save_results(keywords, token, output_filepath):
     """Searches, loads existing data, merges, and saves new data.
 
     Args:
        keywords (list): A list of keywords to search for.
        token (str, optional): A GitHub personal access token for higher rate limits. Defaults to None.
-       secret_key (str, optional) : An additional secret key to demonstrate yml retrieval, default to None
        output_filepath (str) : Path to save the results to
     """
 
     # 1. search github for keywords
-    new_results = search_github_repos(keywords, token, secret_key)
+    new_results = search_github_repos(keywords, token)
     # 2. Load existing data (or initialize an empty dict)
     existing_data = load_existing_data(output_filepath)
     # 3.  Merge the data, make them unique
@@ -121,18 +117,6 @@ if __name__ == "__main__":
 
 
     github_token = os.getenv("GITHUB_TOKEN")
-    secret_yaml_str = os.getenv("SECRET_YAML")
-
-    secret_dict = None
-    if secret_yaml_str:
-          try:
-            secret_dict = yaml.safe_load(secret_yaml_str)
-            secret_key = secret_dict.get("api_key")
-          except yaml.YAMLError as e:
-                print(f"Error parsing SECRET_YAML: {e}")
-                secret_key = None # ensure key is None
-    else:
-          secret_key = None  # ensure key is None
 
     output_file = "results/data.json"
-    merge_and_save_results(keywords_to_search, github_token, secret_key, output_file)
+    merge_and_save_results(keywords_to_search, github_token, output_file)

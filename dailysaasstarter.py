@@ -124,8 +124,8 @@ if __name__ == "__main__":
         print("No Keywords specified. Please specify via KEYWORDS_ENV")
 
     github_token = os.getenv("GITHUB_TOKEN")
-    min_stars_filter = int(os.getenv("MIN_STARS", 20))
-    min_forks_filter = int(os.getenv("MIN_FORKS", 100))
+    min_stars_filter = int(os.getenv("MIN_STARS", 10))
+    min_forks_filter = int(os.getenv("MIN_FORKS", 10))
 
     output_file = "results/data.json"
     merge_and_save_results(

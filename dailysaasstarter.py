@@ -5,7 +5,6 @@ import json
 from pathlib import Path
 import logging
 import time
-import yaml
 import argparse
 from typing import List, Dict, Any
 
@@ -14,27 +13,6 @@ load_dotenv()
 # Constants
 GITHUB_API_BASE_URL = "https://api.github.com/search/repositories"
 GITHUB_API_VERSION = "2022-11-28"
-
-
-def load_config(config_path: str) -> Dict:
-    """Loads configuration from a YAML file.
-
-    Args:
-        config_path (str): The path to the YAML file.
-
-    Returns:
-        dict: The loaded configuration, or an empty dictionary if the file doesn't exist
-        or there is a yaml exception.
-    """
-    try:
-        with open(config_path, "r") as f:
-            return yaml.safe_load(f)
-    except FileNotFoundError:
-        logging.warning("Config file not found, using env variables.")
-        return {}
-    except yaml.YAMLError as e:
-         logging.error(f"Error parsing config file {e}")
-         return {}
 
 
 def search_github_repos(
@@ -180,11 +158,13 @@ def merge_and_save_results(
     save_data(output_filepath, merged_data)
     logging.info(f"Results saved to: {output_filepath}")
 
-def validate_config(config: Dict):
-    if "min_stars" in config and not isinstance(config["min_stars"], int) or config["min_stars"] < 0:
+
+def validate_config(min_stars: int, min_forks: int):
+    if not isinstance(min_stars, int) or min_stars < 0:
         raise ValueError("min_stars must be a non-negative integer")
-    if "min_forks" in config and not isinstance(config["min_forks"], int) or config["min_forks"] < 0:
+    if not isinstance(min_forks , int) or min_forks < 0:
         raise ValueError("min_forks must be a non-negative integer")
+
 
 
 if __name__ == "__main__":
@@ -194,27 +174,28 @@ if __name__ == "__main__":
 
     # Setup argument parser
     parser = argparse.ArgumentParser(description="Search and merge GitHub repository data")
-    parser.add_argument("--config", type=str, help="Path to the YAML config file.")
     args = parser.parse_args()
 
     # Load Configuration
-    config = load_config(args.config) if args.config else {}
-    validate_config(config)
-
-    keywords_str = config.get("keywords", os.getenv("KEYWORDS_ENV"))
+    keywords_str = os.getenv("KEYWORDS_ENV")
     if keywords_str:
         keywords_to_search = [keyword.strip() for keyword in keywords_str.split(",") if keyword.strip()]
     else:
         keywords_to_search = []
-        logging.error("No Keywords specified. Please specify via KEYWORDS_ENV or in the config file.")
+        logging.error("No Keywords specified. Please specify via KEYWORDS_ENV.")
         exit(1)
 
+    github_token = os.getenv("GITHUB_TOKEN")
+    try:
+        min_stars_filter = int(os.getenv("MIN_STARS", 10))
+        min_forks_filter = int(os.getenv("MIN_FORKS", 10))
+    except ValueError as e:
+        logging.error(f"Error parsing MIN_STARS or MIN_FORKS env variables: {e}")
+        exit(1)
 
-    github_token = config.get("github_token", os.getenv("GITHUB_TOKEN"))
-    min_stars_filter = config.get("min_stars", int(os.getenv("MIN_STARS", 10)))
-    min_forks_filter = config.get("min_forks", int(os.getenv("MIN_FORKS", 10)))
+    output_file = Path(os.getenv("OUTPUT_FILE", "results/data.json"))
 
-    output_file = Path(config.get("output_file", "results/data.json"))
+    validate_config(min_stars_filter, min_forks_filter)
 
     merge_and_save_results(
         keywords_to_search,

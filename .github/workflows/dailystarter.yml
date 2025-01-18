@@ -1,0 +1,35 @@
+name: GitHub Repo Search
+
+on:
+  workflow_dispatch: # allows manual triggers,
+
+jobs:
+  run-search:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pyyaml python-dotenv
+
+      - name: Run GitHub repo search script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SECRET_YAML: ${{ secrets.SECRET_YAML }} # Assuming you need a secret, otherwise remove this
+        run: |
+          python dailystarter.py
+          
+      - name: Upload search results as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: search-results
+          path: result/data.json

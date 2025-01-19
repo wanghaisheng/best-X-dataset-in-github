@@ -24,7 +24,8 @@
     <meta name="twitter:title" content="Best SaaS Starter | Find Your Perfect SaaS Foundation">
     <meta name="twitter:description" content="Discover the best SaaS starter kits, boilerplates, and frameworks. Find free open-source and production-ready options to accelerate your SaaS development with Next.js, React.js, Laravel, Remix, and more.">
     <meta name="twitter:image" content="https://bestsaasstarter.org/images/twitter-card.png">
-        <meta name="twitter:image:alt" content="Best SaaS Starter Logo" />
+      <meta name="twitter:image:alt" content="Best SaaS Starter Logo" />
+
 
    <link rel="canonical" href="https://bestsaasstarter.org/">
 
@@ -253,13 +254,13 @@
         }
 
         .paid-starter-card ul {
-             padding: 0;
-            list-style: none;
+            padding: 0;
+             list-style: none;
             overflow-y: auto;
             max-height: 150px;
-           }
+          }
 
-        .paid-starter-card ul li {
+           .paid-starter-card ul li {
                 margin-bottom: 3px;
                  white-space: nowrap;
                   overflow: hidden;
@@ -421,7 +422,7 @@
         <p>© 2024 Best SaaS Starter. All rights reserved.  <a href="/terms">Terms</a> & <a href="/privacy">Privacy</a> </p>
         </div>
     </footer>
-     <script>
+    <script>
          console.log("Best SaaS Starter Landing Page Loaded!");
 
          const filterInput = document.getElementById('filterInput');
@@ -472,7 +473,7 @@
           loadData();
 
 
-      function createCards(container, data) {
+        function createCards(container, data) {
              container.innerHTML = '';
              let keys = Object.keys(data);
              for (const category of keys) {
@@ -484,42 +485,30 @@
                  description.classList.add("description");
                  description.textContent = item.description;
                  card.appendChild(description);
-
                  if (container === freeStartersGrid)
                  {
-                      const ul = document.createElement("ul");
-                        const li = document.createElement("li");
+                     const ul = document.createElement("ul");
+                      const li = document.createElement("li");
                        const a = document.createElement('a');
                       a.href = item.html_url;
                        a.textContent = item.html_url;
                        li.appendChild(a)
                        ul.appendChild(li);
-
                       const starsForks = document.createElement('p');
                         starsForks.classList.add("stars-forks");
                          starsForks.textContent = `Stars: ${item.stars}, Forks: ${item.forks}`;
                          card.appendChild(starsForks);
-                        card.appendChild(ul);
-
-                 } else {
-                   const ul = document.createElement("ul");
-                      const li = document.createElement("li");
-                       const a = document.createElement('a');
-                        a.textContent = category;
-                        li.appendChild(a)
-                       ul.appendChild(li);
-
-
-                       const googleDescription = document.createElement('p');
+                         card.appendChild(ul);
+                  } else {
+                      const googleDescription = document.createElement('p');
                       googleDescription.classList.add("google-description");
                        googleDescription.textContent = item.google_description || '';
                        card.appendChild(googleDescription);
                      const domainDetails = document.createElement('p');
                      domainDetails.classList.add("domain-details");
-                       domainDetails.textContent = `Domain Strength: ${item.domain_strength || 'N/A'}, Clicks: ${item.est_mo_clicks || 'N/A'}`;
+                     domainDetails.textContent = `Domain Strength: ${item.domain_strength || 'N/A'}, Clicks: ${item.est_mo_clicks || 'N/A'}`;
                       card.appendChild(domainDetails);
-                       card.appendChild(ul)
-                  }
+                   }
                  container.appendChild(card);
                 });
               }
@@ -528,92 +517,64 @@
         function filterAndPaginate() {
            const searchTerm = filterInput.value.toLowerCase().trim();
            const selectedTech = techFilter.value;
-           filteredFreeData = {};
-
-           if (searchTerm === '' && selectedTech ===''){
-             filteredFreeData = allFreeData;
+           let filteredItems = allFreeData.all;
+           if (searchTerm !== '') {
+             filteredItems = filteredItems.filter(item =>
+                 item.name.toLowerCase().includes(searchTerm) ||
+                   item.description.toLowerCase().includes(searchTerm) ||
+                 (item.keywords && item.keywords.some(keyword => keyword.includes(searchTerm)))
+               );
            }
-           else{
-               for (const category in allFreeData) {
-                  const filteredItems = allFreeData[category].filter(item =>
-                  (item.name.toLowerCase().includes(searchTerm) || item.description.toLowerCase().includes(searchTerm) || category.toLowerCase().includes(searchTerm))
-                  && (selectedTech === "" || category.toLowerCase().includes(selectedTech))
+
+            if(selectedTech !== ''){
+               filteredItems = filteredItems.filter(item =>
+                 item.category.toLowerCase().includes(selectedTech)
+
               );
+            }
 
-                  if (filteredItems.length > 0) {
-                       filteredFreeData[category] = filteredItems;
-                }
-           }
-        }
-        renderPagination();
-         updateCards();
+           filteredFreeData.all = filteredItems
+           renderPagination();
+           updateCards();
           }
 
            function filterAndPaginatePaid() {
            const searchTerm = paidFilterInput.value.toLowerCase().trim();
               const selectedTech = paidTechFilter.value;
-              filteredPaidData = {};
-            if (searchTerm === '' && selectedTech ==='') {
-              filteredPaidData = allPaidData;
-             }else{
-               for (const category in allPaidData) {
-                const filteredUrls = allPaidData[category].filter(item =>
-                 (item.description && (item.description[0]?.toLowerCase().includes(searchTerm))|| item.google_description?.toLowerCase().includes(searchTerm) || category.toLowerCase().includes(selectedTech))
-                  && (selectedTech === "" || category.toLowerCase().includes(selectedTech))
-              );
-                 if (filteredUrls.length > 0) {
-                   filteredPaidData[category] = filteredUrls;
-                }
-             }
-        }
-         renderPaginationPaid();
-         updateCardsPaid();
+            let filteredItems = allPaidData.all;
 
+              if (searchTerm !== '') {
+                filteredItems = filteredItems.filter(item =>
+                 item.name.toLowerCase().includes(searchTerm) ||
+                   (item.description && item.description.some(desc=> desc.toLowerCase().includes(searchTerm)))||
+                  item.google_description?.toLowerCase().includes(searchTerm) ||
+                   (item.keywords && item.keywords.some(keyword => keyword.includes(searchTerm)))
+                );
+              }
+              if(selectedTech !== ''){
+               filteredItems = filteredItems.filter(item =>
+                 item.category.toLowerCase().includes(selectedTech)
+                );
+           }
+           filteredPaidData.all = filteredItems;
+          renderPaginationPaid();
+          updateCardsPaid();
         }
 
         function updateCards() {
-             const allItems = Object.values(filteredFreeData).flat();
-             const startIndex = (currentPage - 1) * cardsPerPage;
-           const endIndex = startIndex + cardsPerPage;
-           const paginatedItems = allItems.slice(startIndex, endIndex);
-         const paginatedData = {};
-         paginatedItems.forEach(item => {
-           for (const category in allFreeData)
-              {
-                if (allFreeData[category].includes(item))
-                  {
-                    if(!paginatedData[category]){
-                      paginatedData[category] = [];
-                    }
-                    paginatedData[category].push(item)
-                  }
-
-             }
-         });
+            const startIndex = (currentPage - 1) * cardsPerPage;
+            const endIndex = startIndex + cardsPerPage;
+           const paginatedItems = filteredFreeData.all.slice(startIndex, endIndex);
+         const paginatedData = { all : paginatedItems}
             createCards(freeStartersGrid, paginatedData)
         }
 
-
             function updateCardsPaid() {
-              const allItems = Object.values(filteredPaidData).flat();
-             const startIndex = (paidCurrentPage - 1) * cardsPerPage;
+            const startIndex = (paidCurrentPage - 1) * cardsPerPage;
            const endIndex = startIndex + cardsPerPage;
-              const paginatedItems = allItems.slice(startIndex, endIndex);
-             const paginatedData = {};
-                paginatedItems.forEach(item => {
-           for (const category in allPaidData)
-              {
-               if (allPaidData[category].includes(item))
-                  {
-                    if(!paginatedData[category]){
-                      paginatedData[category] = [];
-                    }
-                    paginatedData[category].push(item)
-                  }
-              }
-           });
-              createCards(paidStartersGrid, paginatedData)
-
+                const paginatedItems = filteredPaidData.all.slice(startIndex, endIndex);
+            const paginatedData = { all : paginatedItems}
+            createCards(paidStartersGrid, paginatedData)
         }
 
     function renderPagination() {
@@ -635,7 +596,6 @@
           }
     }
 
-
     function renderPaginationPaid() {
          paidPaginationContainer.innerHTML = '';
          const allItems = Object.values(filteredPaidData).flat();
@@ -652,7 +612,6 @@
              paidPaginationContainer.appendChild(button);
           }
     }
-
 
         filterInput.addEventListener('input', () => {
            currentPage = 1;

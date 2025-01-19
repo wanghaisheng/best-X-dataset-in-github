@@ -16,7 +16,7 @@
     <meta property="og:type" content="website">
      <meta property="og:url" content="https://bestsaasstarter.org/">
     <meta property="og:image" content="https://bestsaasstarter.org/images/og-image.png">
-      <meta property="og:image:alt" content="Best SaaS Starter Logo" />
+       <meta property="og:image:alt" content="Best SaaS Starter Logo" />
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card Meta Tags -->
@@ -206,8 +206,9 @@
            .free-starter-card li a {
                  text-decoration: none;
                  color: #007bff;
+
            }
-             .free-starter-card .stars-forks {
+            .free-starter-card .stars-forks {
             margin-top: auto;
               font-size: 0.7em;
               text-align: right;
@@ -470,10 +471,11 @@
           loadData();
 
 
-      function createCards(container, data) {
+        function createCards(container, data) {
              container.innerHTML = '';
 
               for (const category in data) {
+                 if(data[category] && data[category].length > 0) {
                  const card = document.createElement('div');
                  card.classList.add(container === freeStartersGrid ? 'free-starter-card' : 'paid-starter-card');
                  card.innerHTML = `<h3>${category}</h3>`;
@@ -488,8 +490,8 @@
                     });
                  const description = document.createElement('p');
                  description.classList.add("description");
-                 description.textContent = data[category][0].description;
-                 card.appendChild(description);
+                description.textContent = data[category][0].description;
+                  card.appendChild(description);
                 if (container === freeStartersGrid)
                 {
                      const starsForks = document.createElement('p');
@@ -503,11 +505,12 @@
                   card.appendChild(googleDescription);
                    const domainDetails = document.createElement('p');
                   domainDetails.classList.add("domain-details");
-                   domainDetails.textContent = `Domain Strength: ${data[category][0].domain_strength || 'N/A'}, Clicks: ${data[category][0].est_mo_clicks || 'N/A'}`;
+                    domainDetails.textContent = `Domain Strength: ${data[category][0].domain_strength || 'N/A'}, Clicks: ${data[category][0].est_mo_clicks || 'N/A'}`;
                    card.appendChild(domainDetails);
                 }
-                 card.appendChild(ul);
-                   container.appendChild(card);
+                  card.appendChild(ul);
+                  container.appendChild(card);
+             }
            }
         }
 
@@ -543,7 +546,7 @@
              }else{
                  for (const category in allPaidData) {
                    const filteredUrls = allPaidData[category].filter(item =>
-                       (item.name.toLowerCase().includes(searchTerm) || item.description.toLowerCase().includes(searchTerm) || item.google_description?.toLowerCase().includes(searchTerm) || category.toLowerCase().includes(selectedTech))
+                       (item.description && (item.description[0]?.toLowerCase().includes(searchTerm))|| item.google_description?.toLowerCase().includes(searchTerm) || category.toLowerCase().includes(selectedTech))
                         && (selectedTech === "" || category.toLowerCase().includes(selectedTech))
                   );
                 if (filteredUrls.length > 0) {

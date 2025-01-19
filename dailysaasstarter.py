@@ -141,11 +141,43 @@ def extract_keywords(description: str) -> List[str]:
       """Extract keywords from description string."""
       if not description:
          return []
-
       return description.lower().replace(/[,.]/g, '').split(/\s+/).filter(Boolean)
 
+def assign_category(keywords: List[str])-> str:
+     """Categorizes item based on extracted keywords."""
+     if not keywords:
+       return "general"
+     if any(tech in keywords for tech in ["ecommerce", "commerce", "shopify", "vendure", "storefront"]):
+          return "ecommerce"
+     if any(tech in keywords for tech in ["game", "gaming", "unity", "unreal"]):
+          return "game"
+     if any(tech in keywords for tech in ["ai", "machinelearning", "artificialintelligence", "gpt", "chat"]):
+        return "ai"
+     if any(tech in keywords for tech in ["saas", "boilerplate", "starter"]):
+          return "saas"
+     return "general"
+
+def extract_techstack(keywords: List[str], all_keywords: List[str]) -> List[str]:
+    """Extracts techstack from the keywords, using all available keywords."""
+    tech_stack = []
+    if any(tech in keywords for tech in ["nextjs", "next.js", "next"]):
+            tech_stack.append("nextjs")
+    if any(tech in keywords for tech in ["react", "reactjs", "react.js"]):
+          tech_stack.append("react")
+    if any(tech in keywords for tech in ["python", "django", "flask"]):
+        tech_stack.append("python")
+    if any(tech in keywords for tech in ["remix"]):
+         tech_stack.append("remix")
+    if any(tech in keywords for tech in ["node", "nodejs", "node.js"]):
+         tech_stack.append("node")
+    if any(tech in keywords for tech in ["laravel", "php"]):
+        tech_stack.append("laravel")
+    return tech_stack
+
+
+
 def merge_and_save_results(
-    keywords: List[str],
+    keywords_to_search: List[str],
     token: str,
     output_filepath: Path,
     min_stars: int = 0,
@@ -161,7 +193,7 @@ def merge_and_save_results(
        min_forks (int, optional): Minimum number of forks a repo should have. Defaults to 0.
     """
     # 1. search github for keywords, with filter criteria
-    new_results = search_github_repos(keywords, token, min_stars, min_forks)
+    new_results = search_github_repos(keywords_to_search, token, min_stars, min_forks)
 
     # 2. Load existing data (or initialize an empty dict)
     existing_data = load_existing_data(output_filepath)
@@ -173,9 +205,10 @@ def merge_and_save_results(
             logging.warning(f"No results for {keyword}. skipping...")
             continue  # Skip if there are no results
          for repo in new_repos:
-               repo["keywords"] = extract_keywords(repo["description"]);
-               repo["category"] = keyword;
-               merged_data["all"].append(repo)
+              repo["keywords"] = extract_keywords(repo["description"]);
+              repo["category"] = assign_category(repo["keywords"]);
+              repo["techstack"] = extract_techstack(repo["keywords"], keywords_to_search);
+              merged_data["all"].append(repo)
 
     for domain, existing_info in existing_data.items():
          if domain not in merged_data:
@@ -187,7 +220,8 @@ def merge_and_save_results(
                         "name": domain,
                     "description" : item,
                        "keywords": keywords,
-                      "category": domain,
+                       "category": assign_category(keywords),
+                        "techstack": extract_techstack(keywords, keywords_to_search),
                          "domain_strength": existing_info.get("domain_strength"),
                           "est_mo_clicks": existing_info.get("est_mo_clicks",0),
                          "google_description":  existing_info.get("google_description")

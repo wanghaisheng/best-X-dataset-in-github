@@ -52,13 +52,20 @@
     <h2 style="padding: 15px">Free SaaS Starters</h2>
    <div style="padding: 15px">
         <input type="text" id="filterInput" placeholder="Filter Starters..." />
-       <select id="techFilter" style="margin-left: 10px">
-           <option value="">All</option>
+        <select id="techFilter" style="margin-left: 10px">
+           <option value="">All Tech</option>
            <option value="nextjs">Next.js</option>
              <option value="remix">Remix</option>
             <option value="reactjs">React.js</option>
            <option value="laravel">Laravel</option>
       </select>
+        <select id="categoryFilter" style="margin-left: 10px">
+            <option value="">All Categories</option>
+            <option value="saas">SaaS</option>
+            <option value="starter kit">Starter Kit</option>
+             <option value="boilerplate">Boilerplate</option>
+              <option value="template">Template</option>
+        </select>
     </div>
     <div id="free-starters-grid">
     </div>
@@ -68,12 +75,19 @@
    <div style="padding: 15px">
       <input type="text" id="paidFilterInput" placeholder="Filter Starters..." />
        <select id="paidTechFilter" style="margin-left: 10px">
-            <option value="">All</option>
-            <option value="nextjs">Next.js</option>
+            <option value="">All Tech</option>
+             <option value="nextjs">Next.js</option>
             <option value="remix">Remix</option>
            <option value="reactjs">React.js</option>
-            <option value="laravel">Laravel</option>
+             <option value="laravel">Laravel</option>
         </select>
+          <select id="paidCategoryFilter" style="margin-left: 10px">
+             <option value="">All Categories</option>
+             <option value="saas">SaaS</option>
+             <option value="starter kit">Starter Kit</option>
+            <option value="boilerplate">Boilerplate</option>
+            <option value="template">Template</option>
+          </select>
     </div>
     <div id="paid-starters-grid">
     </div>

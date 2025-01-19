@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="header">
+    <div class="header">
         <h1>Best SaaS Starter</h1>
         <p>Your curated list of the top SaaS starter kits, boilerplates and frameworks.</p>
     </div>
     <div style="padding: 15px; text-align:center">
         <h2>Find Your Perfect SaaS Starter</h2>
-       <p style="max-width: 800px; margin: auto">Launching a successful SaaS application starts with the right foundation. We've compiled a list of the best starter kits and boilerplates to accelerate your development. Browse through the list to find the ideal solution for your project needs.</p>
+        <p style="max-width: 800px; margin: auto">Launching a successful SaaS application starts with the right foundation. We've compiled a list of the best starter kits and boilerplates to accelerate your development. Browse through the list to find the ideal solution for your project needs.</p>
     </div>
 
     <div class="featured-section">
@@ -50,52 +50,59 @@
     </div>
 
     <h2 style="padding: 15px">Free SaaS Starters</h2>
-   <div style="padding: 15px">
-        <input type="text" id="filterInput" placeholder="Filter Starters..." />
-        <select id="techFilter" style="margin-left: 10px">
-           <option value="">All Tech</option>
-           <option value="nextjs">Next.js</option>
-             <option value="remix">Remix</option>
+    <div style="padding: 15px; display: flex; flex-wrap: wrap; align-items: center;">
+        <input type="text" id="filterInput" placeholder="Filter Starters..." style="margin-right: 10px; margin-bottom: 5px;" />
+        <select id="techFilter" style="margin-right: 10px; margin-bottom: 5px;">
+            <option value="">All Tech</option>
+            <option value="nextjs">Next.js</option>
+            <option value="remix">Remix</option>
             <option value="reactjs">React.js</option>
-           <option value="laravel">Laravel</option>
-      </select>
-        <select id="categoryFilter" style="margin-left: 10px">
+            <option value="laravel">Laravel</option>
+        </select>
+        <select id="categoryFilter" style="margin-bottom: 5px;">
             <option value="">All Categories</option>
             <option value="saas">SaaS</option>
             <option value="starter kit">Starter Kit</option>
-             <option value="boilerplate">Boilerplate</option>
-              <option value="template">Template</option>
+            <option value="boilerplate">Boilerplate</option>
+            <option value="template">Template</option>
         </select>
     </div>
     <div id="free-starters-grid">
+        <!-- Cards will be loaded here -->
     </div>
-       <div id="pagination-container" style="padding: 15px"></div>
+    <div id="pagination-container" style="padding: 15px; text-align: center;">
+        <!-- Pagination buttons here -->
+    </div>
 
-  <h2 style="padding: 15px">Paid SaaS Starters</h2>
-   <div style="padding: 15px">
-      <input type="text" id="paidFilterInput" placeholder="Filter Starters..." />
-       <select id="paidTechFilter" style="margin-left: 10px">
+    <h2 style="padding: 15px">Paid SaaS Starters</h2>
+      <div style="padding: 15px; display: flex; flex-wrap: wrap; align-items: center;">
+        <input type="text" id="paidFilterInput" placeholder="Filter Starters..." style="margin-right: 10px; margin-bottom: 5px;" />
+        <select id="paidTechFilter" style="margin-right: 10px; margin-bottom: 5px;">
             <option value="">All Tech</option>
-             <option value="nextjs">Next.js</option>
+            <option value="nextjs">Next.js</option>
             <option value="remix">Remix</option>
-           <option value="reactjs">React.js</option>
-             <option value="laravel">Laravel</option>
+            <option value="reactjs">React.js</option>
+            <option value="laravel">Laravel</option>
         </select>
-          <select id="paidCategoryFilter" style="margin-left: 10px">
-             <option value="">All Categories</option>
-             <option value="saas">SaaS</option>
-             <option value="starter kit">Starter Kit</option>
+        <select id="paidCategoryFilter" style="margin-bottom: 5px;">
+            <option value="">All Categories</option>
+            <option value="saas">SaaS</option>
+            <option value="starter kit">Starter Kit</option>
             <option value="boilerplate">Boilerplate</option>
             <option value="template">Template</option>
-          </select>
+        </select>
     </div>
     <div id="paid-starters-grid">
+        <!-- Cards will be loaded here -->
     </div>
-    <div id="paid-pagination-container" style="padding: 15px"></div>
+      <div id="paid-pagination-container" style="padding: 15px; text-align: center;">
+        <!-- Pagination buttons here -->
+    </div>
     <div style="padding: 15px; text-align: center">
-       <button>Explore All Starters</button>
+        <button>Explore All Starters</button>
         <p>© 2024 Best SaaS Starter. All rights reserved. <a href="#">Terms</a> & <a href="#">Privacy</a></p>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

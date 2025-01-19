@@ -24,7 +24,8 @@
     <meta name="twitter:title" content="Best SaaS Starter | Find Your Perfect SaaS Foundation">
     <meta name="twitter:description" content="Discover the best SaaS starter kits, boilerplates, and frameworks. Find free open-source and production-ready options to accelerate your SaaS development with Next.js, React.js, Laravel, Remix, and more.">
     <meta name="twitter:image" content="https://bestsaasstarter.org/images/twitter-card.png">
-     <meta name="twitter:image:alt" content="Best SaaS Starter Logo" />
+        <meta name="twitter:image:alt" content="Best SaaS Starter Logo" />
+
 
    <link rel="canonical" href="https://bestsaasstarter.org/">
 
@@ -236,6 +237,7 @@
          .paid-starter-card:hover {
             transform: translateY(-3px);
         }
+
 
         .paid-starter-card h3 {
             font-size: 1.1rem;
@@ -471,11 +473,11 @@
           loadData();
 
 
-        function createCards(container, data) {
+      function createCards(container, data) {
              container.innerHTML = '';
 
               for (const category in data) {
-                 if(data[category] && data[category].length > 0) {
+                if(data[category] && data[category].length > 0) {
                  const card = document.createElement('div');
                  card.classList.add(container === freeStartersGrid ? 'free-starter-card' : 'paid-starter-card');
                  card.innerHTML = `<h3>${category}</h3>`;
@@ -513,6 +515,7 @@
              }
            }
         }
+
 
         function filterAndPaginate() {
            const searchTerm = filterInput.value.toLowerCase().trim();

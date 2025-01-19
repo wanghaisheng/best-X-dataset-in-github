@@ -1,427 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO Meta Tags -->
-    <title>Best SaaS Starter | Find Your Perfect SaaS Foundation</title>
-    <meta name="description" content="Discover the best SaaS starter kits, boilerplates, and frameworks. Find free open-source and production-ready options to accelerate your SaaS development with Next.js, React.js, Laravel, Remix, and more.">
-    <meta name="keywords" content="SaaS starter kit, SaaS boilerplate, open source SaaS, free SaaS starter, Next.js SaaS, React.js SaaS, Laravel SaaS, Remix SaaS, Node.js SaaS, production-ready SaaS, SaaS framework, SaaS template">
-     <meta name="robots" content="index, follow">
-    <meta name="author" content="Best SaaS Starter">
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Best SaaS Starter | Find Your Perfect SaaS Foundation">
-    <meta property="og:description" content="Discover the best SaaS starter kits, boilerplates, and frameworks. Find free open-source and production-ready options to accelerate your SaaS development with Next.js, React.js, Laravel, Remix, and more.">
-    <meta property="og:type" content="website">
-     <meta property="og:url" content="https://bestsaasstarter.org/">
-    <meta property="og:image" content="https://bestsaasstarter.org/images/og-image.png">
-       <meta property="og:image:alt" content="Best SaaS Starter Logo" />
-    <meta property="og:locale" content="en_US">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Best SaaS Starter | Find Your Perfect SaaS Foundation">
-    <meta name="twitter:description" content="Discover the best SaaS starter kits, boilerplates, and frameworks. Find free open-source and production-ready options to accelerate your SaaS development with Next.js, React.js, Laravel, Remix, and more.">
-    <meta name="twitter:image" content="https://bestsaasstarter.org/images/twitter-card.png">
-      <meta name="twitter:image:alt" content="Best SaaS Starter Logo" />
-
-
-   <link rel="canonical" href="https://bestsaasstarter.org/">
-
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-   <script src="script.js" defer></script>
-    <style>
-       /* CSS Styling (Embedded) */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #343a40;
-            line-height: 1.6;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            background-color: #007bff;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-         header h1{
-            font-size: 2.5em;
-        }
-        header p {
-            font-size: 1.1em
-        }
-        h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-          h3 {
-            font-size: 1.3em;
-            margin-bottom: 10px;
-        }
-           p{
-            margin-bottom: 15px;
-        }
-          .section-title{
-            text-align: center;
-            font-size: 2em;
-            padding: 20px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best SaaS Starter</title>
+ <style>
+        #free-starters-grid, #paid-starters-grid {
+               display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 20px;
+                margin-bottom: 20px;
+               padding: 10px
          }
-          .starter-list{
-            margin-top: 30px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        .starter-item {
-            border: 1px solid #dee2e6;
-            padding: 20px;
-            margin: 20px;
-            width: calc(33.33% - 40px);
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-        }
-
-
-         .starter-item h3{
-           margin-bottom: 10px;
-             font-size: 1.2em;
-           margin-bottom: 10px;
-        }
-        .starter-item p{
-             margin-bottom: 10px;
-        }
-
-         .starter-item ul{
-              padding-left: 20px;
-        }
-          .starter-item ul li{
-             margin-bottom: 5px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #28a745;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: #218838;
-        }
-        .browse-button{
-            text-align: center;
-            margin-top: 20px;
-        }
-        .filter-container{
-           margin: 20px 0;
-        display: flex;
-        justify-content: space-between;
-         align-items: center;
-       }
-             #filterInput{
-                 padding: 10px;
-                 border: 1px solid #ddd;
-                 border-radius: 5px;
-                }
-          #paidFilterInput{
-                 padding: 10px;
-                 border: 1px solid #ddd;
-                 border-radius: 5px;
-                }
-         #techFilter {
-           padding: 10px;
-           border: 1px solid #ddd;
-             border-radius: 5px;
-           margin-left: 10px;
-         }
-          #paidTechFilter {
-           padding: 10px;
-           border: 1px solid #ddd;
-             border-radius: 5px;
-           margin-left: 10px;
-         }
-
-
-     /* Styling for Free Starters Section */
-        .free-starters-grid {
-             margin-top: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 18px;
-        }
-
-         .free-starter-card {
-             border: 1px solid #dee2e6;
-             padding: 15px;
-             background-color: white;
-             border-radius: 8px;
-              box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-             display: flex;
-             flex-direction: column;
-            transition: transform 0.2s ease;
-             align-items: start;
-         }
-
-         .free-starter-card:hover {
-            transform: translateY(-3px);
-         }
-
-        .free-starter-card h3 {
-             font-size: 1.1rem;
-             margin-bottom: 8px;
-             text-align: left;
-            }
-         .free-starter-card .description{
-           font-size: 0.8em;
-           white-space: nowrap;
-           overflow: hidden;
-           text-overflow: ellipsis;
-           margin-bottom: 8px;
-        }
-           .free-starter-card ul{
-              padding-left: 0;
-             list-style: none;
-             overflow-y: auto;
-             max-height: 150px;
-        }
-        .free-starter-card li {
-             margin-bottom: 3px;
-             white-space: nowrap;
-             overflow: hidden;
-             text-overflow: ellipsis;
-          }
-          .free-starter-card li a {
-              text-decoration: none;
-               color: #007bff;
-            }
-            .free-starter-card .stars-forks {
-            margin-top: auto;
-              font-size: 0.7em;
-              text-align: right;
-              color:#6c757d
-             }
-             /* Styling for Paid Starters Section */
-         .paid-starters-grid {
-            margin-top: 20px;
-           display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-           gap: 18px;
-         }
-
-         .paid-starter-card {
-             border: 1px solid #ddd;
-             padding: 15px;
-             background-color: white;
-             border-radius: 8px;
-              box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-             display: flex;
-             flex-direction: column;
-            transition: transform 0.2s ease;
-             align-items: start;
-         }
-
-         .paid-starter-card:hover {
-            transform: translateY(-3px);
-        }
-
-        .paid-starter-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-             text-align: left;
-        }
-
-         .paid-starter-card .description{
-           font-size: 0.8em;
-           white-space: nowrap;
-           overflow: hidden;
-           text-overflow: ellipsis;
-           margin-bottom: 8px;
-        }
-
-        .paid-starter-card ul {
-            padding: 0;
-             list-style: none;
-            overflow-y: auto;
-            max-height: 150px;
-          }
-
-           .paid-starter-card ul li {
-                margin-bottom: 3px;
-                 white-space: nowrap;
-                  overflow: hidden;
-                  text-overflow: ellipsis;
-             }
-           .paid-starter-card ul li a {
-                 text-decoration: none;
-                 color: #007bff;
-           }
-
-       .paid-starter-card .google-description{
-            font-size: 0.7em;
-             margin-bottom: 8px;
-           white-space: nowrap;
-           overflow: hidden;
-           text-overflow: ellipsis;
-         }
-        .paid-starter-card .domain-details {
-            margin-top: auto;
-             font-size: 0.7em;
-            text-align: right;
-            color:#6c757d
-            }
-
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding: 20px;
-            font-size: 0.9em;
-            background-color: #e9ecef;
-        }
-
-        .pagination {
-             display: flex;
-            justify-content: center;
-            margin-top: 20px;
-
-        }
-           .pagination button {
-               padding: 8px 12px;
-               margin: 0 3px;
+        .free-starter-card, .paid-starter-card {
                 border: 1px solid #ddd;
-                 border-radius: 3px;
+                padding: 15px;
+              border-radius: 8px;
                 background-color: white;
-                cursor: pointer;
-                 transition: background-color 0.3s ease;
-           }
-        .pagination button:hover,
-          .pagination button:disabled {
-              background-color: #f0f0f0;
-         }
+                height: auto;
+            }
+        .free-starter-card h3, .paid-starter-card h3 {
+           margin-bottom: 10px;
+           overflow: hidden;
+             text-overflow: ellipsis;
+            white-space: nowrap;
+          }
 
-        .pagination button:disabled {
-          cursor: default;
-         }
+        .description, .google-description {
+             overflow: hidden;
+           text-overflow: ellipsis;
+             display: -webkit-box;
+              -webkit-line-clamp: 3;
+             -webkit-box-orient: vertical;
+              margin-bottom: 10px;
+
+       }
+       .stars-forks {
+         margin-bottom: 10px;
+       }
+        .free-starter-card ul li a {
+           overflow: hidden;
+          text-overflow: ellipsis;
+            white-space: nowrap;
+           display: block
+          }
     </style>
 </head>
 <body>
+     <div style="background-color: #2862ff; padding: 30px; text-align: center; color:white">
+        <h1>Best SaaS Starter</h1>
+        <p>Your curated list of the top SaaS starter kits, boilerplates and frameworks.</p>
+     </div>
+    <div style="padding: 15px; text-align:center">
+        <h2>Find Your Perfect SaaS Starter</h2>
+        <p style="max-width: 800px; margin: auto">Launching a successful SaaS application starts with the right foundation. We've compiled a list of the best starter kits and boilerplates to accelerate your development. Browse through the list to find the ideal solution for your project needs.</p>
+     </div>
 
-    <header>
-        <div class="container">
-             <h1>Best SaaS Starter</h1>
-            <p>Your curated list of the top SaaS starter kits, boilerplates and frameworks.</p>
-        </div>
-    </header>
-
-    <div class="container">
-         <h2 class="section-title">Find Your Perfect SaaS Starter</h2>
-
-        <p>
-            Launching a successful SaaS application starts with the right foundation. We've compiled a list of the best starter kits and boilerplates to accelerate your development. Browse through the list to find the ideal solution for your project needs.
-        </p>
-
-        <h2 class="section-title">Featured SaaS Starter Kits</h2>
-    <div class="starter-list">
-      <div class="starter-item">
+    <div style="display:flex; flex-wrap: wrap; gap: 15px; padding: 15px">
+        <div style="padding:15px;  border: 1px solid #ddd; border-radius: 8px; background-color:white; flex: 1;">
           <h3>Next.js SaaS Starter Kit</h3>
-          <p>A powerful starter for building modern SaaS apps with Next.js and React.</p>
-          <ul>
-            <li> Framework: Next.js </li>
-            <li> Type: Starter Kit</li>
-             <li> Features: Authentication, User Management, Database setup.</li>
-         </ul>
-          <a href="https://example.com/nextjs-starter" class="cta-button">View Details</a>
+            <p>A powerful starter for building modern SaaS apps with Next.js and React.</p>
+              <ul>
+                <li>Framework: Next.js</li>
+                <li>Type: Starter Kit</li>
+               <li>Features: Authentication, User Management, Database setup</li>
+              </ul>
+               <button style="background-color: green; color:white; padding: 5px; border-radius: 5px">View Details</button>
+       </div>
+         <div style="padding:15px; border: 1px solid #ddd; border-radius: 8px; background-color:white; flex: 1;">
+          <h3>Laravel SaaS Boilerplate</h3>
+             <p>A comprehensive boilerplate for SaaS apps using Laravel PHP framework.</p>
+            <ul>
+               <li>Framework: Laravel</li>
+               <li>Type: Boilerplate</li>
+               <li>Features: Subscription management, User roles, Teams</li>
+             </ul>
+             <button style="background-color: green; color:white; padding: 5px; border-radius: 5px">View Details</button>
       </div>
-         <div class="starter-item">
-             <h3> Laravel SaaS Boilerplate</h3>
-             <p> A comprehensive boilerplate for SaaS apps using Laravel PHP framework.</p>
-                <ul>
-                    <li> Framework: Laravel</li>
-                     <li>Type: Boilerplate</li>
-                     <li>Features: Subscription management, User roles, Teams.</li>
-                </ul>
-             <a href="https://example.com/laravel-boilerplate" class="cta-button">View Details</a>
-        </div>
-
-         <div class="starter-item">
-            <h3>React.js SaaS Template</h3>
-           <p> A robust template for building SaaS solutions with React.js. </p>
-             <ul>
-                 <li>Framework: React.js</li>
-                  <li>Type: Template</li>
-                 <li>Features: UI components, authentication setup, payment integration.</li>
-           </ul>
-             <a href="https://example.com/react-template" class="cta-button">View Details</a>
+        <div style="padding:15px; border: 1px solid #ddd; border-radius: 8px; background-color:white; flex: 1;">
+           <h3>React.js SaaS Template</h3>
+             <p>A robust template for building scalable SaaS solutions with React.js.</p>
+              <ul>
+                  <li>Framework: React.js</li>
+                 <li>Type: Template</li>
+                  <li>Features: UI components, authentication setup, payment integration.</li>
+               </ul>
+              <button style="background-color: green; color:white; padding: 5px; border-radius: 5px">View Details</button>
         </div>
     </div>
 
-        <h2 class="section-title">Free SaaS Starters</h2>
-        <p> Explore these free, open-source SaaS starter kits and boilerplates.</p>
-            <div class="filter-container">
-               <input type="text" id="filterInput" placeholder="Filter Starters..." >
-                <select id="techFilter">
-                  <option value="">All</option>
-                  <option value="remix">Remix</option>
-                  <option value="react">React</option>
-                    <option value="next">Next</option>
-                    <option value="laravel">Laravel</option>
-                    <option value="python">Python</option>
-                    <option value="node">Node</option>
-                </select>
-             </div>
-         <div class="free-starters-grid" id="free-starters-grid">
-            <!-- Free starters will be dynamically added here -->
-          </div>
-          <div class="pagination" id="pagination-container">
-            <!-- Pagination buttons will be added here dynamically -->
-          </div>
-
-        <h2 class="section-title">Paid SaaS Starters</h2>
-         <p> Explore these curated SaaS starter kits and boilerplates.</p>
-         <div class="filter-container">
-           <input type="text" id="paidFilterInput" placeholder="Filter Starters..." >
-               <select id="paidTechFilter">
-                   <option value="">All</option>
-                   <option value="remix">Remix</option>
-                  <option value="react">React</option>
-                    <option value="next">Next</option>
-                    <option value="laravel">Laravel</option>
-                    <option value="python">Python</option>
-                    <option value="node">Node</option>
-              </select>
-         </div>
-         <div class="paid-starters-grid" id="paid-starters-grid">
-           <!-- Paid starters will be dynamically added here -->
-         </div>
-         <div class="pagination" id="paid-pagination-container">
-          <!-- Pagination buttons will be added here dynamically -->
-         </div>
-
-
-      <div class="browse-button">
-         <a href="/starters" class="cta-button">Explore All Starters</a>
-      </div>
+  <h2 style="padding: 15px">Free SaaS Starters</h2>
+   <div style="padding: 15px">
+        <input type="text" id="filterInput" placeholder="Filter Starters..." />
+       <select id="techFilter" style="margin-left: 10px">
+             <option value="">All</option>
+            <option value="nextjs">Next.js</option>
+            <option value="remix">Remix</option>
+            <option value="reactjs">React.js</option>
+             <option value="laravel">Laravel</option>
+        </select>
     </div>
+    <div id="free-starters-grid">
+     </div>
+       <div id="pagination-container" style="padding: 15px"></div>
 
-    <footer>
-        <div class="container">
-        <p>© 2024 Best SaaS Starter. All rights reserved.  <a href="/terms">Terms</a> & <a href="/privacy">Privacy</a> </p>
-        </div>
-    </footer>
-     <script src="script.js" defer></script>
+    <h2 style="padding: 15px">Paid SaaS Starters</h2>
+       <div style="padding: 15px">
+        <input type="text" id="paidFilterInput" placeholder="Filter Starters..." />
+        <select id="paidTechFilter" style="margin-left: 10px">
+              <option value="">All</option>
+            <option value="nextjs">Next.js</option>
+            <option value="remix">Remix</option>
+             <option value="reactjs">React.js</option>
+             <option value="laravel">Laravel</option>
+         </select>
+    </div>
+     <div id="paid-starters-grid">
+      </div>
+       <div id="paid-pagination-container" style="padding: 15px"></div>
+  <div style="padding: 15px; text-align: center">
+     <button style="background-color: green; color: white; padding: 10px; border-radius: 5px">Explore All Starters</button>
+      <p>© 2024 Best SaaS Starter. All rights reserved. <a href="#">Terms</a> & <a href="#">Privacy</a></p>
+   </div>
+    <script>
+        console.log("Best SaaS Starter Landing Page Loaded!");
+
+        const filterInput = document.getElementById('filterInput');
+        const freeStartersGrid = document.getElementById('free-starters-grid');
+        const paidStartersGrid = document.getElementById('paid-starters-grid');
+        const paginationContainer = document.getElementById('pagination-container');
+        const paidPaginationContainer = document.getElementById('paid-pagination-container');
+        const cardsPerPage = 12;
+        let currentPage = 1;
+        let paidCurrentPage = 1;
+        let allFreeData = {};
+        let allPaidData = {};
+        let filteredFreeData = { all : [] };
+        let filteredPaidData = { all : [] };
+        const techFilter = document.getElementById('techFilter');
+        const paidFilterInput = document.getElementById('paidFilterInput');
+        const paidTechFilter = document.getElementById('paidTechFilter');
+
+
+        async function loadData() {
+            try{
+                console.log("Starting to load data...");
+                const [freeResponse, paidResponse] = await Promise.all([
+                    fetch('data/free-starters.json'),
+                    fetch('data/paid-starters.json')
+            ]);
+
+               if (!freeResponse.ok) {
+                   console.error(`Free Starters HTTP error! status: ${freeResponse.status}, URL: ${freeResponse.url}`);
+                  throw new Error(`HTTP error! status: ${freeResponse.status}  Free Starters Failed `);
+               }
+
+               if (!paidResponse.ok) {
+                   console.error(`Paid Starters HTTP error! status: ${paidResponse.status}, URL: ${paidResponse.url}`);
+                  throw new Error(`HTTP error! status: ${paidResponse.status} Paid Starters Failed`);
+               }
+
+
+                console.log("Data fetched successfully, processing...");
+                const freeData = await freeResponse.json();
+                allFreeData.all = Object.values(freeData).flat(); //combine all the properties from the object into a single array.
+
+               allPaidData = await paidResponse.json();
+                console.log("All Free Data:", allFreeData);
+               console.log("All Paid Data:", allPaidData);
+               filteredFreeData.all = allFreeData.all;
+               filteredPaidData.all = allPaidData.all;
+
+                filterAndPaginate();
+               filterAndPaginatePaid();
+
+           }catch(error){
+                console.error('Failed to load data:', error);
+               freeStartersGrid.innerHTML = '<p> Failed to Load data, Please try again later. </p>'
+               paidStartersGrid.innerHTML = '<p> Failed to Load data, Please try again later. </p>'
+
+           }
+        }
+        loadData();
+
+        function createCards(container, data, cardClassName) {
+             console.log(`Creating cards for container: ${container.id}, data:`, data, `class: ${cardClassName}`);
+            container.innerHTML = '';
+             const allItems = data.all || [];
+             allItems.forEach(item => {
+                const card = document.createElement('div');
+                card.classList.add(cardClassName);
+                card.innerHTML = `<h3>${item.name}</h3>`;
+                const description = document.createElement('p');
+                description.classList.add("description");
+               description.textContent = item.description;
+                card.appendChild(description);
+               if (container === freeStartersGrid)
+               {
+                   const ul = document.createElement("ul");
+                    const li = document.createElement("li");
+                    const a = document.createElement('a');
+                     a.href = item.html_url;
+                     a.textContent = item.html_url;
+                     li.appendChild(a)
+                      ul.appendChild(li);
+                    const starsForks = document.createElement('p');
+                    starsForks.classList.add("stars-forks");
+                     starsForks.textContent = `Stars: ${item.stars}, Forks: ${item.forks}`;
+                     card.appendChild(starsForks);
+                   card.appendChild(ul);
+
+                } else {
+                     const googleDescription = document.createElement('p');
+                   googleDescription.classList.add("google-description");
+                    googleDescription.textContent = item.google_description || '';
+                    card.appendChild(googleDescription);
+                    const domainDetails = document.createElement('p');
+                    domainDetails.classList.add("domain-details");
+                    domainDetails.textContent = `Domain Strength: ${item.domain_strength || 'N/A'}, Clicks: ${item.est_mo_clicks || 'N/A'}`;
+                   card.appendChild(domainDetails);
+                }
+               container.appendChild(card);
+             });
+        }
+
+        function filterAndPaginate() {
+             console.log("Starting filterAndPaginate");
+            const searchTerm = filterInput.value.toLowerCase().trim();
+           const selectedTech = techFilter.value;
+            let filteredItems = filteredFreeData.all;
+            console.log("Initial filtered items:", filteredItems);
+           if (searchTerm !== '') {
+                 filteredItems = filteredItems.filter(item =>
+                    item.name.toLowerCase().includes(searchTerm) ||
+                    item.description.toLowerCase().includes(searchTerm) ||
+                     (Array.isArray(item.keywords) && item.keywords.some(keyword => new RegExp(searchTerm).test(keyword)))
+                );
+                 console.log("Filtered after search:", filteredItems);
+            }
+
+           if(selectedTech !== ''){
+               filteredItems = filteredItems.filter(item =>
+                    item.category.toLowerCase().includes(selectedTech) || (item.techstack && item.techstack.includes(selectedTech))
+               );
+                 console.log("Filtered after tech:", filteredItems);
+           }
+            filteredFreeData.all = filteredItems
+            updateCards();
+           renderPagination();
+             console.log("Finished filterAndPaginate, filteredFreeData:", filteredFreeData);
+        }
+
+      function filterAndPaginatePaid() {
+             console.log("Starting filterAndPaginatePaid");
+            const searchTerm = paidFilterInput.value.toLowerCase().trim();
+           const selectedTech = paidTechFilter.value;
+           let filteredItems = filteredPaidData.all;
+
+             console.log("Initial filtered paid items:", filteredItems);
+            if (searchTerm !== '') {
+              filteredItems = filteredItems.filter(item =>
+                 item.name.toLowerCase().includes(searchTerm) ||
+                   (typeof item.description === 'string' && item.description.toLowerCase().includes(searchTerm)) ||
+                  (Array.isArray(item.description) && item.description.some(desc => desc.toLowerCase().includes(searchTerm))) ||
+                   item.google_description?.toLowerCase().includes(searchTerm) ||
+                   (Array.isArray(item.keywords) && item.keywords.some(keyword => new RegExp(searchTerm).test(keyword)))
+                );
+              console.log("Filtered paid after search:", filteredItems);
+           }
+           if(selectedTech !== ''){
+              filteredItems = filteredItems.filter(item =>
+                   item.category.toLowerCase().includes(selectedTech) || (item.techstack && item.techstack.includes(selectedTech))
+                );
+             console.log("Filtered paid after tech:", filteredItems);
+           }
+          filteredPaidData.all = filteredItems;
+            updateCardsPaid();
+           renderPaginationPaid();
+             console.log("Finished filterAndPaginatePaid, filteredPaidData:", filteredPaidData);
+        }
+
+        function updateCards() {
+           console.log("Starting updateCards, current page:", currentPage);
+           const startIndex = (currentPage - 1) * cardsPerPage;
+           const endIndex = startIndex + cardsPerPage;
+            const paginatedItems = filteredFreeData.all.slice(startIndex, endIndex);
+            const paginatedData = { all : paginatedItems}
+           createCards(freeStartersGrid, paginatedData, 'free-starter-card')
+             console.log("Finished updateCards, paginated data:", paginatedData);
+        }
+
+        function updateCardsPaid() {
+             console.log("Starting updateCardsPaid, current page:", paidCurrentPage);
+            const startIndex = (paidCurrentPage - 1) * cardsPerPage;
+            const endIndex = startIndex + cardsPerPage;
+           const paginatedItems = filteredPaidData.all.slice(startIndex, endIndex);
+             const paginatedData = { all : paginatedItems}
+             createCards(paidStartersGrid, paginatedData, 'paid-starter-card')
+           console.log("Finished updateCardsPaid, paginated data:", paginatedData);
+        }
+
+       function renderPagination() {
+          console.log("Starting renderPagination, current page:", currentPage);
+            paginationContainer.innerHTML = '';
+             const allItems = Object.values(filteredFreeData).flat();
+
+            const totalPages = Math.ceil(allItems.length / cardsPerPage);
+             console.log("totalPages:", totalPages)
+          for (let i = 1; i <= totalPages; i++) {
+                const button = document.createElement('button');
+                button.textContent = i;
+                 button.disabled = i === currentPage;
+               button.addEventListener('click', () => {
+                    currentPage = i;
+                    updateCards()
+                  renderPagination();
+                });
+                paginationContainer.appendChild(button);
+          }
+          console.log("Finished renderPagination");
+      }
+
+        function renderPaginationPaid() {
+          console.log("Starting renderPaginationPaid, current page:", paidCurrentPage);
+           paidPaginationContainer.innerHTML = '';
+            const allItems = Object.values(filteredPaidData).flat();
+           const totalPages = Math.ceil(allItems.length / cardsPerPage);
+             console.log("totalPages paid:", totalPages)
+           for (let i = 1; i <= totalPages; i++) {
+               const button = document.createElement('button');
+               button.textContent = i;
+                button.disabled = i === paidCurrentPage;
+              button.addEventListener('click', () => {
+                 paidCurrentPage = i;
+                   updateCardsPaid()
+                   renderPaginationPaid();
+               });
+               paidPaginationContainer.appendChild(button);
+          }
+           console.log("Finished renderPaginationPaid");
+       }
+
+        filterInput.addEventListener('input', () => {
+           console.log("Filter Input changed for free starters.");
+          currentPage = 1;
+            filterAndPaginate()
+       });
+
+      techFilter.addEventListener('change', () => {
+          console.log("Tech Filter changed for free starters.");
+           currentPage = 1;
+            filterAndPaginate();
+       })
+
+        paidFilterInput.addEventListener('input', () => {
+           console.log("Filter Input changed for paid starters.");
+           paidCurrentPage =1;
+          filterAndPaginatePaid();
+       });
+
+        paidTechFilter.addEventListener('change', () => {
+           console.log("Tech Filter changed for paid starters.");
+            paidCurrentPage = 1;
+           filterAndPaginatePaid();
+        })
+   </script>
 </body>
 </html>

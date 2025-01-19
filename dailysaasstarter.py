@@ -6,7 +6,7 @@ from pathlib import Path
 import logging
 import time
 import argparse
-from typing import List, Dict, Any
+from typing import List, Dict, Any, TypedDict
 
 load_dotenv()
 
@@ -15,9 +15,19 @@ GITHUB_API_BASE_URL = "https://api.github.com/search/repositories"
 GITHUB_API_VERSION = "2022-11-28"
 
 
+class RepoData(TypedDict):
+    """Define the structure of a single repository's data"""
+
+    name: str
+    description: str
+    html_url: str
+    stars: int
+    forks: int
+
+
 def search_github_repos(
     keywords: List[str], token: str = None, min_stars: int = 0, min_forks: int = 0
-) -> Dict[str, List[str]]:
+) -> Dict[str, List[RepoData]]:
     """
     Searches GitHub repositories for given keywords, filtering by stars and forks.
 
@@ -28,8 +38,8 @@ def search_github_repos(
         min_forks (int, optional): Minimum number of forks a repo should have. Defaults to 0.
 
     Returns:
-        dict: A dictionary where keys are keywords and values are lists of repository URLs.
-             Returns empty dict if there are no results for a keyword.
+        dict: A dictionary where keys are keywords and values are lists of RepoData objects.
+            Returns empty dict if there are no results for a keyword.
 
     Raises:
         requests.exceptions.RequestException: If there's an error during the API request.
@@ -41,11 +51,11 @@ def search_github_repos(
     if token:
         headers["Authorization"] = f"Bearer {token}"
 
-    repo_urls = {}
+    repo_data = {}
     for keyword in keywords:
         params = {"q": keyword}
         try:
-            all_repo_urls_for_keyword = []
+            all_repo_data_for_keyword = []
             next_page_url = GITHUB_API_BASE_URL
             while next_page_url:
                 logging.info(f"Searching for '{keyword}' at '{next_page_url}'")
@@ -56,14 +66,22 @@ def search_github_repos(
 
                 data = response.json()
                 logging.debug(f"API response data: {data}")
-                repo_urls_for_keyword = []
+                repo_data_for_keyword = []
                 for item in data.get("items", []):
                     if (
                         item["stargazers_count"] >= min_stars
                         and item["forks_count"] >= min_forks
                     ):
-                        repo_urls_for_keyword.append(item["html_url"])
-                all_repo_urls_for_keyword.extend(repo_urls_for_keyword)
+                        repo_data_for_keyword.append(
+                            RepoData(
+                                name=item["name"],
+                                description=item["description"],
+                                html_url=item["html_url"],
+                                stars=item["stargazers_count"],
+                                forks=item["forks_count"],
+                            )
+                        )
+                all_repo_data_for_keyword.extend(repo_data_for_keyword)
                 # Handle Pagination
                 if "Link" in response.headers:
                     link_header = response.headers["Link"]
@@ -76,18 +94,18 @@ def search_github_repos(
                 else:
                     next_page_url = None
 
-            repo_urls[keyword] = all_repo_urls_for_keyword
+            repo_data[keyword] = all_repo_data_for_keyword
         except requests.exceptions.RequestException as e:
             logging.error(f"Error searching for '{keyword}': {e}")
-            repo_urls[keyword] = []  # ensure there's always an entry even with errors
+            repo_data[keyword] = []  # ensure there's always an entry even with errors
             time.sleep(
                 60
             )  # In case of rate limit or other error, wait a minute before trying again
 
-    return repo_urls
+    return repo_data
 
 
-def load_existing_data(filepath: Path) -> Dict[str, List[str]]:
+def load_existing_data(filepath: Path) -> Dict[str, List[RepoData]]:
     """Loads existing data from a JSON file or returns an empty dict if the file does not exist.
 
     Args:
@@ -108,7 +126,7 @@ def load_existing_data(filepath: Path) -> Dict[str, List[str]]:
         return {}
 
 
-def save_data(filepath: Path, data: Dict[str, List[str]]) -> None:
+def save_data(filepath: Path, data: Dict[str, List[RepoData]]) -> None:
     """Saves data to a JSON file.
 
     Args:
@@ -118,7 +136,7 @@ def save_data(filepath: Path, data: Dict[str, List[str]]) -> None:
     # ensure parent directory exists
     filepath.parent.mkdir(parents=True, exist_ok=True)
     with open(filepath, "w") as f:
-        json.dump(data, f, indent=2)
+        json.dump(data, f, indent=2, default=lambda o: o.__dict__)
 
 
 def merge_and_save_results(
@@ -144,15 +162,16 @@ def merge_and_save_results(
     existing_data = load_existing_data(output_filepath)
     # 3.  Merge the data, make them unique
     merged_data = {}
-    for keyword, new_urls in new_results.items():
-        if not new_urls:
+    for keyword, new_repos in new_results.items():
+        if not new_repos:
             logging.warning(f"No results for {keyword}. skipping...")
-            continue #Skip if there are no results
-        existing_urls = existing_data.get(
+            continue  # Skip if there are no results
+        existing_repos = existing_data.get(
             keyword, []
         )  # return empty list for that key if key doesnt exists
-        merged_urls = list(set(existing_urls + new_urls))  # set will ensure uniqueness.
-        merged_data[keyword] = merged_urls
+        # Merge lists, convert to set to remove duplicates based on `html_url`
+        merged_repos = list({repo['html_url']: repo for repo in existing_repos + new_repos}.values())
+        merged_data[keyword] = merged_repos
 
     # 4. save to file
     save_data(output_filepath, merged_data)
@@ -162,9 +181,8 @@ def merge_and_save_results(
 def validate_config(min_stars: int, min_forks: int):
     if not isinstance(min_stars, int) or min_stars < 0:
         raise ValueError("min_stars must be a non-negative integer")
-    if not isinstance(min_forks , int) or min_forks < 0:
+    if not isinstance(min_forks, int) or min_forks < 0:
         raise ValueError("min_forks must be a non-negative integer")
-
 
 
 if __name__ == "__main__":
@@ -179,7 +197,9 @@ if __name__ == "__main__":
     # Load Configuration
     keywords_str = os.getenv("KEYWORDS_ENV")
     if keywords_str:
-        keywords_to_search = [keyword.strip() for keyword in keywords_str.split(",") if keyword.strip()]
+        keywords_to_search = [
+            keyword.strip() for keyword in keywords_str.split(",") if keyword.strip()
+        ]
     else:
         keywords_to_search = []
         logging.error("No Keywords specified. Please specify via KEYWORDS_ENV.")

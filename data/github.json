@@ -1,1 +1,272 @@
 
+{
+  "remix saas": [
+    {
+      "name": "remix-saas",
+      "description": "A Lightweight, Production-Ready Remix Stack for your next SaaS application.",
+      "html_url": "https://github.com/dev-xo/remix-saas",
+      "stars": 1344,
+      "forks": 104
+    },
+    {
+      "name": "remix-boilerplate",
+      "description": "SaaSKits is a SaaS boilerplate built with Remix, Stripe, Prisma and Resend to help you bootstrap your SaaS idea quickly.",
+      "html_url": "https://github.com/saas-kits/remix-boilerplate",
+      "stars": 192,
+      "forks": 17
+    },
+    {
+      "name": "remix-saas-kit",
+      "description": "Remix SaaS kit - Free sample of SaasRock v0.0.1 - The SaaS Building Framework",
+      "html_url": "https://github.com/AlexandroMtzG/remix-saas-kit",
+      "stars": 38,
+      "forks": 14
+    },
+    {
+      "name": "saasstellar",
+      "description": "Multi theme landing page for your SaaS website",
+      "html_url": "https://github.com/stormynight9/saasstellar",
+      "stars": 90,
+      "forks": 12
+    },
+    {
+      "name": "remix-blocks",
+      "description": "Ready-to-use Remix + Tailwind CSS routes and components.",
+      "html_url": "https://github.com/AlexandroMtzG/remix-blocks",
+      "stars": 182,
+      "forks": 18
+    }
+  ],
+  "remix starter kit": [
+    {
+      "name": "storefront-remix-starter",
+      "description": "A storefront starter kit for Vendure built with Remix",
+      "html_url": "https://github.com/vendure-ecommerce/storefront-remix-starter",
+      "stars": 201,
+      "forks": 117
+    },
+    {
+      "name": "remix-starter-kit",
+      "description": "Remix with brilliant bells and useful whistles",
+      "html_url": "https://github.com/one-aalam/remix-starter-kit",
+      "stars": 238,
+      "forks": 26
+    },
+    {
+      "name": "remix-knowledge-base",
+      "description": "Knowledge Base starter kit with WYSIWYG, Markdown, GPT, and Multi-language support. Built with Remix, Tailwind CSS and Prisma.",
+      "html_url": "https://github.com/AlexandroMtzG/remix-knowledge-base",
+      "stars": 81,
+      "forks": 16
+    }
+  ],
+  "production-ready saas": [
+    {
+      "name": "remix-saas",
+      "description": "A Lightweight, Production-Ready Remix Stack for your next SaaS application.",
+      "html_url": "https://github.com/dev-xo/remix-saas",
+      "stars": 1344,
+      "forks": 104
+    },
+    {
+      "name": "build-a-saas-app-with-flask",
+      "description": "Learn how to build a production ready web app with Flask and Docker.",
+      "html_url": "https://github.com/nickjj/build-a-saas-app-with-flask",
+      "stars": 968,
+      "forks": 187
+    },
+    {
+      "name": "odoo-saas-kubernetes",
+      "description": "Production Ready Odoo SaaS based on Kubernetes",
+      "html_url": "https://github.com/herawais/odoo-saas-kubernetes",
+      "stars": 31,
+      "forks": 17
+    },
+    {
+      "name": "nuxtgain",
+      "description": "Nuxt3 + Supabase; Production ready SaaS boilerplate",
+      "html_url": "https://github.com/CyberCowboy404/nuxtgain",
+      "stars": 66,
+      "forks": 10
+    },
+    {
+      "name": "awesome-opensource-boilerplates",
+      "description": "A curated list of production-ready and free SaaS boilerplates and starter templates. Build your next software-as-a-service project with battle-tested open source foundations.",
+      "html_url": "https://github.com/EinGuterWaran/awesome-opensource-boilerplates",
+      "stars": 1245,
+      "forks": 66
+    },
+    {
+      "name": "convex-saas",
+      "description": "A production-ready Convex Stack for your next SaaS application with Convex Auth, Stripe, TanStack, Resend, Tailwindcss, and shadcn.",
+      "html_url": "https://github.com/get-convex/convex-saas",
+      "stars": 94,
+      "forks": 12
+    }
+  ],
+  "free open-source saas": [
+    {
+      "name": "open-source-saas-boilerpate",
+      "description": "Free SaaS boilerplate (Python/PostgreSQL/ReactJS/Webpack)",
+      "html_url": "https://github.com/saasforge/open-source-saas-boilerpate",
+      "stars": 825,
+      "forks": 121
+    },
+    {
+      "name": "open-saas",
+      "description": "A free, open-source SaaS app starter for React & Node.js with superpowers. Full-featured. Community-driven.",
+      "html_url": "https://github.com/wasp-lang/open-saas",
+      "stars": 9058,
+      "forks": 879
+    },
+    {
+      "name": "open-react-template",
+      "description": "A free React / Next.js landing page template designed to showcase open source projects, SaaS products, online services, and more. Made by",
+      "html_url": "https://github.com/cruip/open-react-template",
+      "stars": 4094,
+      "forks": 1855
+    },
+    {
+      "name": "cascade",
+      "description": "Best open-source SaaS boilerplate. Free, powerful & extendable.",
+      "html_url": "https://github.com/d-ivashchuk/cascade",
+      "stars": 600,
+      "forks": 55
+    },
+    {
+      "name": "saas-boilerplate",
+      "description": "SaaS Boilerplate - Open Source and free SaaS stack that lets you build SaaS products faster in React, Django and AWS. Focus on essential business logic instead of coding repeatable features!",
+      "html_url": "https://github.com/apptension/saas-boilerplate",
+      "stars": 2364,
+      "forks": 298
+    },
+    {
+      "name": "awesome-open-source-supporters",
+      "description": "\u2b50\ufe0f A curated list of companies that offer their services for free to Open Source projects",
+      "html_url": "https://github.com/zachflower/awesome-open-source-supporters",
+      "stars": 631,
+      "forks": 73
+    },
+    {
+      "name": "i-librarian-free",
+      "description": "I, Librarian - open-source version of  a PDF managing SaaS.",
+      "html_url": "https://github.com/mkucej/i-librarian-free",
+      "stars": 267,
+      "forks": 30
+    },
+    {
+      "name": "awesome-open-source-systems",
+      "description": ":sunglasses: A curated list of awesome Free Open Source Softwares(FOSS).",
+      "html_url": "https://github.com/ishanvyas22/awesome-open-source-systems",
+      "stars": 392,
+      "forks": 52
+    },
+    {
+      "name": "play-bootstrap",
+      "description": "Free HTML Template for - Startup, SaaS, Business, App, and Software Website & Landing Page. Play is 100% Free and Open-source template project that initiated by UIdeck Team.",
+      "html_url": "https://github.com/uideck/play-bootstrap",
+      "stars": 550,
+      "forks": 139
+    },
+    {
+      "name": "astro-theme-stone",
+      "description": "Stone is a free and open-source Astro theme specially designed for Business, Marketing, SaaS and Startup websites.",
+      "html_url": "https://github.com/m6v3l9/astro-theme-stone",
+      "stars": 177,
+      "forks": 98
+    },
+    {
+      "name": "awesome-foss-alternatives",
+      "description": "Awesome Free / Open Source Alternatives (to common SaaS products) for Business Use",
+      "html_url": "https://github.com/sfermigier/awesome-foss-alternatives",
+      "stars": 274,
+      "forks": 19
+    },
+    {
+      "name": "forward-domain",
+      "description": "Forward Domains, completely free and open source.",
+      "html_url": "https://github.com/willnode/forward-domain",
+      "stars": 192,
+      "forks": 24
+    },
+    {
+      "name": "awesome-opensource-boilerplates",
+      "description": "A curated list of production-ready and free SaaS boilerplates and starter templates. Build your next software-as-a-service project with battle-tested open source foundations.",
+      "html_url": "https://github.com/EinGuterWaran/awesome-opensource-boilerplates",
+      "stars": 1245,
+      "forks": 66
+    },
+    {
+      "name": "play-tailwind",
+      "description": "Play is free and open source Tailwind CSS template for - Startup, SaaS, Apps, Business and More. It comes with a high-quality design and all essential components & pages you need to launch a complete website.",
+      "html_url": "https://github.com/TailGrids/play-tailwind",
+      "stars": 952,
+      "forks": 216
+    },
+    {
+      "name": "Saas-landing-page",
+      "description": "Responsive start up website. Open source. Free to use and contribute",
+      "html_url": "https://github.com/mirislomovmirjalol/Saas-landing-page",
+      "stars": 42,
+      "forks": 10
+    },
+    {
+      "name": "astrobrew",
+      "description": "Astrobrew is a free and open-source elegant landing page for Micro SaaS products built with Astro & Skeleton CSS",
+      "html_url": "https://github.com/LaB-CH3/astrobrew",
+      "stars": 31,
+      "forks": 14
+    },
+    {
+      "name": "play-astro",
+      "description": "Play Astro is a free, open-source template perfect for startups, SaaS, apps, and businesses. With its high-end design, functional blog and essential components, it's your one-stop solution for launching a complete Astro website.",
+      "html_url": "https://github.com/TailGrids/play-astro",
+      "stars": 142,
+      "forks": 35
+    },
+    {
+      "name": "my_rime",
+      "description": "Free and Open Source online Chinese IME powered by RIME. \u81ea\u7531\u5f00\u6e90\u5728\u7ebf\u4e2d\u6587\u8f93\u5165\u6cd5 \u62fc\u97f3 \u53cc\u62fc \u7ca4\u8bed \u6ce8\u97f3 \u4e94\u7b14 \u4ed3\u9889 \u901f\u6210",
+      "html_url": "https://github.com/LibreService/my_rime",
+      "stars": 333,
+      "forks": 34
+    },
+    {
+      "name": "startup-template",
+      "description": "Free HTML Template for - Startup, SaaS, Business, App, and Software Website & Landing Page. Play is 100% Free and Open-source template project that initiated by UIdeck Team.",
+      "html_url": "https://github.com/devhau/startup-template",
+      "stars": 28,
+      "forks": 11
+    },
+    {
+      "name": "OpenMersyCore",
+      "description": "# Open Medical Record System Core (Open Mersy Core) is a Open Source Project used as practise for my course sgermosen.com/courses, Mercy is a Solution to make easy the live of doctors implementing an online solution to have the information of their patients any time. Mersy on the basic, open, and free version, have the abbility of have a registry of the appointments, bills, and visits of the patients.  Mersy is a Saas, than implement multi tenant with a lot of features and practice than every developer need to know.",
+      "html_url": "https://github.com/sgermosen/OpenMersyCore",
+      "stars": 39,
+      "forks": 20
+    },
+    {
+      "name": "bizbook-client",
+      "description": "The repository of bizbook client project",
+      "html_url": "https://github.com/foyzulkarim/bizbook-client",
+      "stars": 31,
+      "forks": 18
+    }
+  ],
+  "saas starter framework": [
+    {
+      "name": "Ignite",
+      "description": "A comprehensive Flask boilerplate to build SaaS applications that includes Stripe billing, emails, login, and OAuth. ",
+      "html_url": "https://github.com/Sumukh/Ignite",
+      "stars": 199,
+      "forks": 53
+    },
+    {
+      "name": "saasapp",
+      "description": "SaasApp is a starter kit for creating a multi-tenant software as a service (SAAS) application with ASP.Net, JQuery and MySQL using shared database architecture. It uses Twitter's bootstrap framework for layout.",
+      "html_url": "https://github.com/yatendra/saasapp",
+      "stars": 16,
+      "forks": 10
+    }
+  ]
+}

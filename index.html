@@ -26,7 +26,6 @@
     <meta name="twitter:image" content="https://bestsaasstarter.org/images/twitter-card.png">
         <meta name="twitter:image:alt" content="Best SaaS Starter Logo" />
 
-
    <link rel="canonical" href="https://bestsaasstarter.org/">
 
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
@@ -174,6 +173,7 @@
              display: flex;
              flex-direction: column;
             transition: transform 0.2s ease;
+             align-items: start;
          }
 
          .free-starter-card:hover {
@@ -183,7 +183,7 @@
         .free-starter-card h3 {
              font-size: 1.1rem;
              margin-bottom: 8px;
-              text-align: center;
+             text-align: left;
             }
          .free-starter-card .description{
            font-size: 0.8em;
@@ -193,22 +193,21 @@
            margin-bottom: 8px;
         }
            .free-starter-card ul{
-           padding: 0;
+              padding-left: 0;
              list-style: none;
              overflow-y: auto;
              max-height: 150px;
         }
         .free-starter-card li {
              margin-bottom: 3px;
-              white-space: nowrap;
-                overflow: hidden;
-               text-overflow: ellipsis;
+             white-space: nowrap;
+             overflow: hidden;
+             text-overflow: ellipsis;
           }
-           .free-starter-card li a {
-                 text-decoration: none;
-                 color: #007bff;
-
-           }
+          .free-starter-card li a {
+              text-decoration: none;
+               color: #007bff;
+            }
             .free-starter-card .stars-forks {
             margin-top: auto;
               font-size: 0.7em;
@@ -232,17 +231,17 @@
              display: flex;
              flex-direction: column;
             transition: transform 0.2s ease;
+             align-items: start;
          }
 
          .paid-starter-card:hover {
             transform: translateY(-3px);
         }
 
-
         .paid-starter-card h3 {
             font-size: 1.1rem;
             margin-bottom: 8px;
-             text-align: center;
+             text-align: left;
         }
 
          .paid-starter-card .description{
@@ -254,13 +253,13 @@
         }
 
         .paid-starter-card ul {
-            padding: 0;
-             list-style: none;
-           overflow-y: auto;
-           max-height: 150px;
-          }
+             padding: 0;
+            list-style: none;
+            overflow-y: auto;
+            max-height: 150px;
+           }
 
-           .paid-starter-card ul li {
+        .paid-starter-card ul li {
                 margin-bottom: 3px;
                  white-space: nowrap;
                   overflow: hidden;
@@ -475,84 +474,94 @@
 
       function createCards(container, data) {
              container.innerHTML = '';
-
-              for (const category in data) {
-                if(data[category] && data[category].length > 0) {
-                 const card = document.createElement('div');
-                 card.classList.add(container === freeStartersGrid ? 'free-starter-card' : 'paid-starter-card');
-                 card.innerHTML = `<h3>${category}</h3>`;
-                 const ul = document.createElement("ul");
-                   data[category].forEach(item => {
-                      const li = document.createElement("li");
-                       const a = document.createElement('a');
-                       a.href = item.html_url;
-                        a.textContent = item.name;
-                        li.appendChild(a);
-                      ul.appendChild(li);
-                    });
+             let keys = Object.keys(data);
+             for (const category of keys) {
+               data[category].forEach(item => {
+                   const card = document.createElement('div');
+                     card.classList.add(container === freeStartersGrid ? 'free-starter-card' : 'paid-starter-card');
+                 card.innerHTML = `<h3>${item.name}</h3>`;
                  const description = document.createElement('p');
                  description.classList.add("description");
-                description.textContent = data[category][0].description;
-                  card.appendChild(description);
-                if (container === freeStartersGrid)
-                {
-                     const starsForks = document.createElement('p');
-                        starsForks.classList.add("stars-forks");
-                        starsForks.textContent = `Stars: ${data[category][0].stars}, Forks: ${data[category][0].forks}`;
-                        card.appendChild(starsForks)
-                } else {
-                  const googleDescription = document.createElement('p');
-                  googleDescription.classList.add("google-description");
-                 googleDescription.textContent = data[category][0].google_description || '';
-                  card.appendChild(googleDescription);
-                   const domainDetails = document.createElement('p');
-                  domainDetails.classList.add("domain-details");
-                    domainDetails.textContent = `Domain Strength: ${data[category][0].domain_strength || 'N/A'}, Clicks: ${data[category][0].est_mo_clicks || 'N/A'}`;
-                   card.appendChild(domainDetails);
-                }
-                  card.appendChild(ul);
-                  container.appendChild(card);
-             }
-           }
-        }
+                 description.textContent = item.description;
+                 card.appendChild(description);
 
+                 if (container === freeStartersGrid)
+                 {
+                      const ul = document.createElement("ul");
+                        const li = document.createElement("li");
+                       const a = document.createElement('a');
+                      a.href = item.html_url;
+                       a.textContent = item.html_url;
+                       li.appendChild(a)
+                       ul.appendChild(li);
+
+                      const starsForks = document.createElement('p');
+                        starsForks.classList.add("stars-forks");
+                         starsForks.textContent = `Stars: ${item.stars}, Forks: ${item.forks}`;
+                         card.appendChild(starsForks);
+                        card.appendChild(ul);
+
+                 } else {
+                   const ul = document.createElement("ul");
+                      const li = document.createElement("li");
+                       const a = document.createElement('a');
+                        a.textContent = category;
+                        li.appendChild(a)
+                       ul.appendChild(li);
+
+
+                       const googleDescription = document.createElement('p');
+                      googleDescription.classList.add("google-description");
+                       googleDescription.textContent = item.google_description || '';
+                       card.appendChild(googleDescription);
+                     const domainDetails = document.createElement('p');
+                     domainDetails.classList.add("domain-details");
+                       domainDetails.textContent = `Domain Strength: ${item.domain_strength || 'N/A'}, Clicks: ${item.est_mo_clicks || 'N/A'}`;
+                      card.appendChild(domainDetails);
+                       card.appendChild(ul)
+                  }
+                 container.appendChild(card);
+                });
+              }
+        }
 
         function filterAndPaginate() {
            const searchTerm = filterInput.value.toLowerCase().trim();
            const selectedTech = techFilter.value;
            filteredFreeData = {};
+
            if (searchTerm === '' && selectedTech ===''){
              filteredFreeData = allFreeData;
            }
            else{
                for (const category in allFreeData) {
-                const filteredUrls = allFreeData[category].filter(item =>
-                 (item.name.toLowerCase().includes(searchTerm) || item.description.toLowerCase().includes(searchTerm) || category.toLowerCase().includes(searchTerm))
-                 && (selectedTech === "" || category.toLowerCase().includes(selectedTech))
+                  const filteredItems = allFreeData[category].filter(item =>
+                  (item.name.toLowerCase().includes(searchTerm) || item.description.toLowerCase().includes(searchTerm) || category.toLowerCase().includes(searchTerm))
+                  && (selectedTech === "" || category.toLowerCase().includes(selectedTech))
               );
-                 if (filteredUrls.length > 0) {
-                   filteredFreeData[category] = filteredUrls;
-                }
-            }
-        }
 
-           renderPagination();
-            updateCards();
+                  if (filteredItems.length > 0) {
+                       filteredFreeData[category] = filteredItems;
+                }
+           }
+        }
+        renderPagination();
+         updateCards();
           }
 
            function filterAndPaginatePaid() {
            const searchTerm = paidFilterInput.value.toLowerCase().trim();
               const selectedTech = paidTechFilter.value;
               filteredPaidData = {};
-             if (searchTerm === '' && selectedTech ==='') {
+            if (searchTerm === '' && selectedTech ==='') {
               filteredPaidData = allPaidData;
              }else{
-                 for (const category in allPaidData) {
-                   const filteredUrls = allPaidData[category].filter(item =>
-                       (item.description && (item.description[0]?.toLowerCase().includes(searchTerm))|| item.google_description?.toLowerCase().includes(searchTerm) || category.toLowerCase().includes(selectedTech))
-                        && (selectedTech === "" || category.toLowerCase().includes(selectedTech))
-                  );
-                if (filteredUrls.length > 0) {
+               for (const category in allPaidData) {
+                const filteredUrls = allPaidData[category].filter(item =>
+                 (item.description && (item.description[0]?.toLowerCase().includes(searchTerm))|| item.google_description?.toLowerCase().includes(searchTerm) || category.toLowerCase().includes(selectedTech))
+                  && (selectedTech === "" || category.toLowerCase().includes(selectedTech))
+              );
+                 if (filteredUrls.length > 0) {
                    filteredPaidData[category] = filteredUrls;
                 }
              }
@@ -563,36 +572,55 @@
         }
 
         function updateCards() {
-            const startIndex = (currentPage - 1) * cardsPerPage;
+             const allItems = Object.values(filteredFreeData).flat();
+             const startIndex = (currentPage - 1) * cardsPerPage;
            const endIndex = startIndex + cardsPerPage;
-             let paginatedData = {}
-             let dataKeys = Object.keys(filteredFreeData)
-              dataKeys = dataKeys.slice(startIndex,endIndex);
-            for (const dataKey of dataKeys){
-              paginatedData[dataKey] = filteredFreeData[dataKey]
-            }
-             createCards(freeStartersGrid, paginatedData)
+           const paginatedItems = allItems.slice(startIndex, endIndex);
+         const paginatedData = {};
+         paginatedItems.forEach(item => {
+           for (const category in allFreeData)
+              {
+                if (allFreeData[category].includes(item))
+                  {
+                    if(!paginatedData[category]){
+                      paginatedData[category] = [];
+                    }
+                    paginatedData[category].push(item)
+                  }
 
+             }
+         });
+            createCards(freeStartersGrid, paginatedData)
         }
 
+
             function updateCardsPaid() {
-            const startIndex = (paidCurrentPage - 1) * cardsPerPage;
+              const allItems = Object.values(filteredPaidData).flat();
+             const startIndex = (paidCurrentPage - 1) * cardsPerPage;
            const endIndex = startIndex + cardsPerPage;
-             let paginatedData = {}
-             let dataKeys = Object.keys(filteredPaidData)
-              dataKeys = dataKeys.slice(startIndex,endIndex);
-            for (const dataKey of dataKeys){
-              paginatedData[dataKey] = filteredPaidData[dataKey]
-            }
-             createCards(paidStartersGrid, paginatedData)
+              const paginatedItems = allItems.slice(startIndex, endIndex);
+             const paginatedData = {};
+                paginatedItems.forEach(item => {
+           for (const category in allPaidData)
+              {
+               if (allPaidData[category].includes(item))
+                  {
+                    if(!paginatedData[category]){
+                      paginatedData[category] = [];
+                    }
+                    paginatedData[category].push(item)
+                  }
+              }
+           });
+              createCards(paidStartersGrid, paginatedData)
 
         }
 
     function renderPagination() {
         paginationContainer.innerHTML = '';
-         let dataKeys = Object.keys(filteredFreeData)
+        const allItems = Object.values(filteredFreeData).flat();
 
-         const totalPages = Math.ceil(dataKeys.length / cardsPerPage);
+         const totalPages = Math.ceil(allItems.length / cardsPerPage);
 
           for (let i = 1; i <= totalPages; i++) {
             const button = document.createElement('button');
@@ -607,12 +635,11 @@
           }
     }
 
+
     function renderPaginationPaid() {
          paidPaginationContainer.innerHTML = '';
-         let dataKeys = Object.keys(filteredPaidData)
-
-         const totalPages = Math.ceil(dataKeys.length / cardsPerPage);
-
+         const allItems = Object.values(filteredPaidData).flat();
+         const totalPages = Math.ceil(allItems.length / cardsPerPage);
           for (let i = 1; i <= totalPages; i++) {
             const button = document.createElement('button');
             button.textContent = i;
@@ -625,6 +652,7 @@
              paidPaginationContainer.appendChild(button);
           }
     }
+
 
         filterInput.addEventListener('input', () => {
            currentPage = 1;

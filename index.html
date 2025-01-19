@@ -1,127 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Best SaaS Starter</title>
- <style>
-        #free-starters-grid, #paid-starters-grid {
-               display: grid;
-              grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-                gap: 20px;
-                margin-bottom: 20px;
-               padding: 10px
-         }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best SaaS Starter</title>
+    <style>
+        body {
+            font-family: sans-serif;
+           margin: 0;
+        }
+       #free-starters-grid, #paid-starters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+           gap: 20px;
+           margin-bottom: 20px;
+            padding: 10px
+        }
         .free-starter-card, .paid-starter-card {
-                border: 1px solid #ddd;
-                padding: 15px;
-              border-radius: 8px;
-                background-color: white;
-                height: auto;
-            }
+              border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+             background-color: white;
+             height: auto;
+         }
         .free-starter-card h3, .paid-starter-card h3 {
-           margin-bottom: 10px;
+            margin-bottom: 10px;
            overflow: hidden;
-             text-overflow: ellipsis;
-            white-space: nowrap;
-          }
-
-        .description, .google-description {
-             overflow: hidden;
-           text-overflow: ellipsis;
+            text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+         .description, .google-description {
+            overflow: hidden;
+            text-overflow: ellipsis;
              display: -webkit-box;
-              -webkit-line-clamp: 3;
+            -webkit-line-clamp: 3;
              -webkit-box-orient: vertical;
-              margin-bottom: 10px;
+            margin-bottom: 10px;
 
-       }
-       .stars-forks {
-         margin-bottom: 10px;
+        }
+        .stars-forks {
+           margin-bottom: 10px;
        }
         .free-starter-card ul li a {
-           overflow: hidden;
-          text-overflow: ellipsis;
-            white-space: nowrap;
-           display: block
-          }
-    </style>
+             overflow: hidden;
+            text-overflow: ellipsis;
+             white-space: nowrap;
+            display: block;
+             color: #2862ff;
+        }
+       .free-starter-card ul li a::after {
+          content: " ➔";
+           display: inline;
+         margin-left: 5px;
+         }
+      .featured-section {
+        display:flex;
+        flex-wrap: wrap;
+        gap: 15px;
+       padding: 15px
+     }
+      .featured-card {
+            padding:15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color:white;
+             flex: 1;
+      }
+      .header {
+        background-color: #2862ff;
+           padding: 30px;
+           text-align: center;
+            color: white;
+      }
+    button {
+      background-color: green;
+      color: white;
+      padding: 5px 10px;
+       border: none;
+     border-radius: 5px;
+       cursor: pointer;
+       transition: background-color 0.3s ease;
+    }
+     button:hover {
+      background-color: #1f8c1f
+      }
+  </style>
 </head>
 <body>
-     <div style="background-color: #2862ff; padding: 30px; text-align: center; color:white">
+<div class="header">
         <h1>Best SaaS Starter</h1>
         <p>Your curated list of the top SaaS starter kits, boilerplates and frameworks.</p>
-     </div>
+    </div>
     <div style="padding: 15px; text-align:center">
         <h2>Find Your Perfect SaaS Starter</h2>
-        <p style="max-width: 800px; margin: auto">Launching a successful SaaS application starts with the right foundation. We've compiled a list of the best starter kits and boilerplates to accelerate your development. Browse through the list to find the ideal solution for your project needs.</p>
-     </div>
+       <p style="max-width: 800px; margin: auto">Launching a successful SaaS application starts with the right foundation. We've compiled a list of the best starter kits and boilerplates to accelerate your development. Browse through the list to find the ideal solution for your project needs.</p>
+    </div>
 
-    <div style="display:flex; flex-wrap: wrap; gap: 15px; padding: 15px">
-        <div style="padding:15px;  border: 1px solid #ddd; border-radius: 8px; background-color:white; flex: 1;">
-          <h3>Next.js SaaS Starter Kit</h3>
-            <p>A powerful starter for building modern SaaS apps with Next.js and React.</p>
-              <ul>
-                <li>Framework: Next.js</li>
+    <div class="featured-section">
+       <div class="featured-card">
+             <h3>Next.js SaaS Starter Kit</h3>
+             <p>A powerful starter for building modern SaaS apps with Next.js and React.</p>
+           <ul>
+                 <li>Framework: Next.js</li>
                 <li>Type: Starter Kit</li>
-               <li>Features: Authentication, User Management, Database setup</li>
+                <li>Features: Authentication, User Management, Database setup</li>
               </ul>
-               <button style="background-color: green; color:white; padding: 5px; border-radius: 5px">View Details</button>
-       </div>
-         <div style="padding:15px; border: 1px solid #ddd; border-radius: 8px; background-color:white; flex: 1;">
-          <h3>Laravel SaaS Boilerplate</h3>
-             <p>A comprehensive boilerplate for SaaS apps using Laravel PHP framework.</p>
+               <button>View Details</button>
+        </div>
+         <div class="featured-card">
+              <h3>Laravel SaaS Boilerplate</h3>
+              <p>A comprehensive boilerplate for SaaS apps using Laravel PHP framework.</p>
             <ul>
-               <li>Framework: Laravel</li>
-               <li>Type: Boilerplate</li>
-               <li>Features: Subscription management, User roles, Teams</li>
+                  <li>Framework: Laravel</li>
+                   <li>Type: Boilerplate</li>
+                   <li>Features: Subscription management, User roles, Teams</li>
              </ul>
-             <button style="background-color: green; color:white; padding: 5px; border-radius: 5px">View Details</button>
-      </div>
-        <div style="padding:15px; border: 1px solid #ddd; border-radius: 8px; background-color:white; flex: 1;">
-           <h3>React.js SaaS Template</h3>
+            <button>View Details</button>
+        </div>
+       <div class="featured-card">
+          <h3>React.js SaaS Template</h3>
              <p>A robust template for building scalable SaaS solutions with React.js.</p>
               <ul>
-                  <li>Framework: React.js</li>
-                 <li>Type: Template</li>
-                  <li>Features: UI components, authentication setup, payment integration.</li>
-               </ul>
-              <button style="background-color: green; color:white; padding: 5px; border-radius: 5px">View Details</button>
+                    <li>Framework: React.js</li>
+                   <li>Type: Template</li>
+                   <li>Features: UI components, authentication setup, payment integration.</li>
+                </ul>
+             <button>View Details</button>
         </div>
     </div>
 
-  <h2 style="padding: 15px">Free SaaS Starters</h2>
+    <h2 style="padding: 15px">Free SaaS Starters</h2>
    <div style="padding: 15px">
         <input type="text" id="filterInput" placeholder="Filter Starters..." />
        <select id="techFilter" style="margin-left: 10px">
-             <option value="">All</option>
-            <option value="nextjs">Next.js</option>
-            <option value="remix">Remix</option>
+           <option value="">All</option>
+           <option value="nextjs">Next.js</option>
+             <option value="remix">Remix</option>
             <option value="reactjs">React.js</option>
-             <option value="laravel">Laravel</option>
-        </select>
+           <option value="laravel">Laravel</option>
+      </select>
     </div>
     <div id="free-starters-grid">
-     </div>
+    </div>
        <div id="pagination-container" style="padding: 15px"></div>
 
-    <h2 style="padding: 15px">Paid SaaS Starters</h2>
-       <div style="padding: 15px">
-        <input type="text" id="paidFilterInput" placeholder="Filter Starters..." />
-        <select id="paidTechFilter" style="margin-left: 10px">
-              <option value="">All</option>
+  <h2 style="padding: 15px">Paid SaaS Starters</h2>
+   <div style="padding: 15px">
+      <input type="text" id="paidFilterInput" placeholder="Filter Starters..." />
+       <select id="paidTechFilter" style="margin-left: 10px">
+            <option value="">All</option>
             <option value="nextjs">Next.js</option>
             <option value="remix">Remix</option>
-             <option value="reactjs">React.js</option>
-             <option value="laravel">Laravel</option>
-         </select>
+           <option value="reactjs">React.js</option>
+            <option value="laravel">Laravel</option>
+        </select>
     </div>
-     <div id="paid-starters-grid">
-      </div>
-       <div id="paid-pagination-container" style="padding: 15px"></div>
-  <div style="padding: 15px; text-align: center">
-     <button style="background-color: green; color: white; padding: 10px; border-radius: 5px">Explore All Starters</button>
-      <p>© 2024 Best SaaS Starter. All rights reserved. <a href="#">Terms</a> & <a href="#">Privacy</a></p>
-   </div>
+    <div id="paid-starters-grid">
+    </div>
+    <div id="paid-pagination-container" style="padding: 15px"></div>
+    <div style="padding: 15px; text-align: center">
+       <button>Explore All Starters</button>
+        <p>© 2024 Best SaaS Starter. All rights reserved. <a href="#">Terms</a> & <a href="#">Privacy</a></p>
+    </div>
     <script>
         console.log("Best SaaS Starter Landing Page Loaded!");
 
@@ -129,54 +169,54 @@
         const freeStartersGrid = document.getElementById('free-starters-grid');
         const paidStartersGrid = document.getElementById('paid-starters-grid');
         const paginationContainer = document.getElementById('pagination-container');
-        const paidPaginationContainer = document.getElementById('paid-pagination-container');
+       const paidPaginationContainer = document.getElementById('paid-pagination-container');
         const cardsPerPage = 12;
         let currentPage = 1;
-        let paidCurrentPage = 1;
+       let paidCurrentPage = 1;
         let allFreeData = {};
         let allPaidData = {};
         let filteredFreeData = { all : [] };
         let filteredPaidData = { all : [] };
         const techFilter = document.getElementById('techFilter');
         const paidFilterInput = document.getElementById('paidFilterInput');
-        const paidTechFilter = document.getElementById('paidTechFilter');
+       const paidTechFilter = document.getElementById('paidTechFilter');
 
 
         async function loadData() {
             try{
-                console.log("Starting to load data...");
+               console.log("Starting to load data...");
                 const [freeResponse, paidResponse] = await Promise.all([
-                    fetch('data/free-starters.json'),
-                    fetch('data/paid-starters.json')
-            ]);
+                     fetch('data/free-starters.json'),
+                     fetch('data/paid-starters.json')
+                ]);
 
                if (!freeResponse.ok) {
-                   console.error(`Free Starters HTTP error! status: ${freeResponse.status}, URL: ${freeResponse.url}`);
-                  throw new Error(`HTTP error! status: ${freeResponse.status}  Free Starters Failed `);
+                  console.error(`Free Starters HTTP error! status: ${freeResponse.status}, URL: ${freeResponse.url}`);
+                   throw new Error(`HTTP error! status: ${freeResponse.status}  Free Starters Failed `);
                }
 
                if (!paidResponse.ok) {
-                   console.error(`Paid Starters HTTP error! status: ${paidResponse.status}, URL: ${paidResponse.url}`);
+                  console.error(`Paid Starters HTTP error! status: ${paidResponse.status}, URL: ${paidResponse.url}`);
                   throw new Error(`HTTP error! status: ${paidResponse.status} Paid Starters Failed`);
-               }
+                }
 
 
                 console.log("Data fetched successfully, processing...");
-                const freeData = await freeResponse.json();
+               const freeData = await freeResponse.json();
                 allFreeData.all = Object.values(freeData).flat(); //combine all the properties from the object into a single array.
 
-               allPaidData = await paidResponse.json();
+                allPaidData = await paidResponse.json();
                 console.log("All Free Data:", allFreeData);
-               console.log("All Paid Data:", allPaidData);
+                 console.log("All Paid Data:", allPaidData);
                filteredFreeData.all = allFreeData.all;
-               filteredPaidData.all = allPaidData.all;
+              filteredPaidData.all = allPaidData.all;
 
-                filterAndPaginate();
-               filterAndPaginatePaid();
+               filterAndPaginate();
+                filterAndPaginatePaid();
 
-           }catch(error){
+            }catch(error){
                 console.error('Failed to load data:', error);
-               freeStartersGrid.innerHTML = '<p> Failed to Load data, Please try again later. </p>'
+                freeStartersGrid.innerHTML = '<p> Failed to Load data, Please try again later. </p>'
                paidStartersGrid.innerHTML = '<p> Failed to Load data, Please try again later. </p>'
 
            }
@@ -184,186 +224,186 @@
         loadData();
 
         function createCards(container, data, cardClassName) {
-             console.log(`Creating cards for container: ${container.id}, data:`, data, `class: ${cardClassName}`);
-            container.innerHTML = '';
-             const allItems = data.all || [];
-             allItems.forEach(item => {
-                const card = document.createElement('div');
-                card.classList.add(cardClassName);
-                card.innerHTML = `<h3>${item.name}</h3>`;
-                const description = document.createElement('p');
-                description.classList.add("description");
-               description.textContent = item.description;
+           console.log(`Creating cards for container: ${container.id}, data:`, data, `class: ${cardClassName}`);
+             container.innerHTML = '';
+            const allItems = data.all || [];
+            allItems.forEach(item => {
+               const card = document.createElement('div');
+                 card.classList.add(cardClassName);
+               card.innerHTML = `<h3>${item.name}</h3>`;
+                 const description = document.createElement('p');
+               description.classList.add("description");
+                 description.textContent = item.description;
                 card.appendChild(description);
-               if (container === freeStartersGrid)
-               {
+                if (container === freeStartersGrid)
+                {
                    const ul = document.createElement("ul");
                     const li = document.createElement("li");
-                    const a = document.createElement('a');
-                     a.href = item.html_url;
-                     a.textContent = item.html_url;
-                     li.appendChild(a)
-                      ul.appendChild(li);
-                    const starsForks = document.createElement('p');
-                    starsForks.classList.add("stars-forks");
-                     starsForks.textContent = `Stars: ${item.stars}, Forks: ${item.forks}`;
-                     card.appendChild(starsForks);
-                   card.appendChild(ul);
+                   const a = document.createElement('a');
+                    a.href = item.html_url;
+                    a.textContent = item.html_url;
+                    li.appendChild(a)
+                    ul.appendChild(li);
+                   const starsForks = document.createElement('p');
+                      starsForks.classList.add("stars-forks");
+                       starsForks.textContent = `Stars: ${item.stars}, Forks: ${item.forks}`;
+                      card.appendChild(starsForks);
+                     card.appendChild(ul);
 
-                } else {
-                     const googleDescription = document.createElement('p');
-                   googleDescription.classList.add("google-description");
-                    googleDescription.textContent = item.google_description || '';
+               } else {
+                    const googleDescription = document.createElement('p');
+                    googleDescription.classList.add("google-description");
+                   googleDescription.textContent = item.google_description || '';
                     card.appendChild(googleDescription);
-                    const domainDetails = document.createElement('p');
-                    domainDetails.classList.add("domain-details");
-                    domainDetails.textContent = `Domain Strength: ${item.domain_strength || 'N/A'}, Clicks: ${item.est_mo_clicks || 'N/A'}`;
-                   card.appendChild(domainDetails);
-                }
-               container.appendChild(card);
+                   const domainDetails = document.createElement('p');
+                   domainDetails.classList.add("domain-details");
+                     domainDetails.textContent = `Domain Strength: ${item.domain_strength || 'N/A'}, Clicks: ${item.est_mo_clicks || 'N/A'}`;
+                  card.appendChild(domainDetails);
+               }
+                container.appendChild(card);
              });
         }
 
         function filterAndPaginate() {
-             console.log("Starting filterAndPaginate");
-            const searchTerm = filterInput.value.toLowerCase().trim();
+            console.log("Starting filterAndPaginate");
+             const searchTerm = filterInput.value.toLowerCase().trim();
            const selectedTech = techFilter.value;
             let filteredItems = filteredFreeData.all;
-            console.log("Initial filtered items:", filteredItems);
-           if (searchTerm !== '') {
-                 filteredItems = filteredItems.filter(item =>
-                    item.name.toLowerCase().includes(searchTerm) ||
-                    item.description.toLowerCase().includes(searchTerm) ||
-                     (Array.isArray(item.keywords) && item.keywords.some(keyword => new RegExp(searchTerm).test(keyword)))
+           console.log("Initial filtered items:", filteredItems);
+            if (searchTerm !== '') {
+               filteredItems = filteredItems.filter(item =>
+                   item.name.toLowerCase().includes(searchTerm) ||
+                     item.description.toLowerCase().includes(searchTerm) ||
+                    (Array.isArray(item.keywords) && item.keywords.some(keyword => new RegExp(searchTerm).test(keyword)))
                 );
-                 console.log("Filtered after search:", filteredItems);
+              console.log("Filtered after search:", filteredItems);
             }
 
            if(selectedTech !== ''){
-               filteredItems = filteredItems.filter(item =>
-                    item.category.toLowerCase().includes(selectedTech) || (item.techstack && item.techstack.includes(selectedTech))
-               );
-                 console.log("Filtered after tech:", filteredItems);
+                filteredItems = filteredItems.filter(item =>
+                     item.category.toLowerCase().includes(selectedTech) || (item.techstack && item.techstack.includes(selectedTech))
+                );
+               console.log("Filtered after tech:", filteredItems);
            }
             filteredFreeData.all = filteredItems
-            updateCards();
+             updateCards();
            renderPagination();
-             console.log("Finished filterAndPaginate, filteredFreeData:", filteredFreeData);
+            console.log("Finished filterAndPaginate, filteredFreeData:", filteredFreeData);
         }
 
-      function filterAndPaginatePaid() {
-             console.log("Starting filterAndPaginatePaid");
-            const searchTerm = paidFilterInput.value.toLowerCase().trim();
-           const selectedTech = paidTechFilter.value;
-           let filteredItems = filteredPaidData.all;
+        function filterAndPaginatePaid() {
+            console.log("Starting filterAndPaginatePaid");
+           const searchTerm = paidFilterInput.value.toLowerCase().trim();
+            const selectedTech = paidTechFilter.value;
+          let filteredItems = filteredPaidData.all;
 
              console.log("Initial filtered paid items:", filteredItems);
-            if (searchTerm !== '') {
-              filteredItems = filteredItems.filter(item =>
-                 item.name.toLowerCase().includes(searchTerm) ||
+           if (searchTerm !== '') {
+               filteredItems = filteredItems.filter(item =>
+                    item.name.toLowerCase().includes(searchTerm) ||
                    (typeof item.description === 'string' && item.description.toLowerCase().includes(searchTerm)) ||
-                  (Array.isArray(item.description) && item.description.some(desc => desc.toLowerCase().includes(searchTerm))) ||
-                   item.google_description?.toLowerCase().includes(searchTerm) ||
-                   (Array.isArray(item.keywords) && item.keywords.some(keyword => new RegExp(searchTerm).test(keyword)))
-                );
-              console.log("Filtered paid after search:", filteredItems);
-           }
-           if(selectedTech !== ''){
-              filteredItems = filteredItems.filter(item =>
+                    (Array.isArray(item.description) && item.description.some(desc => desc.toLowerCase().includes(searchTerm))) ||
+                    item.google_description?.toLowerCase().includes(searchTerm) ||
+                     (Array.isArray(item.keywords) && item.keywords.some(keyword => new RegExp(searchTerm).test(keyword)))
+               );
+               console.log("Filtered paid after search:", filteredItems);
+          }
+            if(selectedTech !== ''){
+               filteredItems = filteredItems.filter(item =>
                    item.category.toLowerCase().includes(selectedTech) || (item.techstack && item.techstack.includes(selectedTech))
                 );
-             console.log("Filtered paid after tech:", filteredItems);
+              console.log("Filtered paid after tech:", filteredItems);
            }
           filteredPaidData.all = filteredItems;
-            updateCardsPaid();
-           renderPaginationPaid();
-             console.log("Finished filterAndPaginatePaid, filteredPaidData:", filteredPaidData);
-        }
+             updateCardsPaid();
+            renderPaginationPaid();
+            console.log("Finished filterAndPaginatePaid, filteredPaidData:", filteredPaidData);
+       }
 
-        function updateCards() {
-           console.log("Starting updateCards, current page:", currentPage);
+      function updateCards() {
+          console.log("Starting updateCards, current page:", currentPage);
            const startIndex = (currentPage - 1) * cardsPerPage;
-           const endIndex = startIndex + cardsPerPage;
+            const endIndex = startIndex + cardsPerPage;
             const paginatedItems = filteredFreeData.all.slice(startIndex, endIndex);
             const paginatedData = { all : paginatedItems}
            createCards(freeStartersGrid, paginatedData, 'free-starter-card')
-             console.log("Finished updateCards, paginated data:", paginatedData);
+           console.log("Finished updateCards, paginated data:", paginatedData);
         }
 
-        function updateCardsPaid() {
+       function updateCardsPaid() {
              console.log("Starting updateCardsPaid, current page:", paidCurrentPage);
             const startIndex = (paidCurrentPage - 1) * cardsPerPage;
-            const endIndex = startIndex + cardsPerPage;
-           const paginatedItems = filteredPaidData.all.slice(startIndex, endIndex);
-             const paginatedData = { all : paginatedItems}
-             createCards(paidStartersGrid, paginatedData, 'paid-starter-card')
-           console.log("Finished updateCardsPaid, paginated data:", paginatedData);
-        }
+           const endIndex = startIndex + cardsPerPage;
+            const paginatedItems = filteredPaidData.all.slice(startIndex, endIndex);
+            const paginatedData = { all : paginatedItems}
+           createCards(paidStartersGrid, paginatedData, 'paid-starter-card')
+            console.log("Finished updateCardsPaid, paginated data:", paginatedData);
+       }
 
-       function renderPagination() {
+        function renderPagination() {
           console.log("Starting renderPagination, current page:", currentPage);
-            paginationContainer.innerHTML = '';
-             const allItems = Object.values(filteredFreeData).flat();
+             paginationContainer.innerHTML = '';
+           const allItems = Object.values(filteredFreeData).flat();
 
             const totalPages = Math.ceil(allItems.length / cardsPerPage);
-             console.log("totalPages:", totalPages)
-          for (let i = 1; i <= totalPages; i++) {
+           console.log("totalPages:", totalPages)
+           for (let i = 1; i <= totalPages; i++) {
                 const button = document.createElement('button');
-                button.textContent = i;
-                 button.disabled = i === currentPage;
-               button.addEventListener('click', () => {
-                    currentPage = i;
+               button.textContent = i;
+                button.disabled = i === currentPage;
+                button.addEventListener('click', () => {
+                     currentPage = i;
                     updateCards()
                   renderPagination();
                 });
-                paginationContainer.appendChild(button);
-          }
-          console.log("Finished renderPagination");
-      }
+             paginationContainer.appendChild(button);
+           }
+           console.log("Finished renderPagination");
+       }
 
-        function renderPaginationPaid() {
+       function renderPaginationPaid() {
           console.log("Starting renderPaginationPaid, current page:", paidCurrentPage);
            paidPaginationContainer.innerHTML = '';
             const allItems = Object.values(filteredPaidData).flat();
            const totalPages = Math.ceil(allItems.length / cardsPerPage);
-             console.log("totalPages paid:", totalPages)
-           for (let i = 1; i <= totalPages; i++) {
-               const button = document.createElement('button');
-               button.textContent = i;
-                button.disabled = i === paidCurrentPage;
+           console.log("totalPages paid:", totalPages)
+          for (let i = 1; i <= totalPages; i++) {
+                const button = document.createElement('button');
+              button.textContent = i;
+               button.disabled = i === paidCurrentPage;
               button.addEventListener('click', () => {
                  paidCurrentPage = i;
                    updateCardsPaid()
                    renderPaginationPaid();
                });
-               paidPaginationContainer.appendChild(button);
+                paidPaginationContainer.appendChild(button);
           }
            console.log("Finished renderPaginationPaid");
-       }
+        }
 
         filterInput.addEventListener('input', () => {
            console.log("Filter Input changed for free starters.");
-          currentPage = 1;
+           currentPage = 1;
             filterAndPaginate()
        });
 
       techFilter.addEventListener('change', () => {
-          console.log("Tech Filter changed for free starters.");
-           currentPage = 1;
-            filterAndPaginate();
-       })
+           console.log("Tech Filter changed for free starters.");
+            currentPage = 1;
+           filterAndPaginate();
+        })
 
-        paidFilterInput.addEventListener('input', () => {
-           console.log("Filter Input changed for paid starters.");
+      paidFilterInput.addEventListener('input', () => {
+          console.log("Filter Input changed for paid starters.");
            paidCurrentPage =1;
-          filterAndPaginatePaid();
-       });
+           filterAndPaginatePaid();
+        });
 
         paidTechFilter.addEventListener('change', () => {
            console.log("Tech Filter changed for paid starters.");
-            paidCurrentPage = 1;
-           filterAndPaginatePaid();
+           paidCurrentPage = 1;
+          filterAndPaginatePaid();
         })
-   </script>
+    </script>
 </body>
 </html>

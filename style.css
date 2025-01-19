@@ -3,13 +3,13 @@
         font-family: sans-serif;
         margin: 0;
         color: #333;
-        background-color: #fff; /* Light background */
+        background-color: #fff;
     }
     .header {
-      background-color: #ffffff; /* White header background */
+        background-color: #ffffff;
         padding: 30px;
         text-align: center;
-        color: #3498db; /* Blue text for header */
+        color: #3498db;
     }
     #free-starters-grid,
     #paid-starters-grid {
@@ -19,10 +19,10 @@
         margin-bottom: 20px;
         padding: 10px;
     }
-    .free-starter-card,
+  .free-starter-card,
     .paid-starter-card {
-      background-color: #343a40; /* Dark card background */
-        color: white; /* White text */
+      background-color: #343a40;
+        color: white;
         padding: 15px;
       border-radius: 8px;
         height: auto;
@@ -43,40 +43,41 @@
        -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
        margin-bottom: 10px;
-    color: #ddd;
+       color: #ddd;
     }
     .stars-forks {
         margin-bottom: 10px;
        color: #ddd;
    }
    .free-starter-card ul li a {
-        overflow: hidden;
+      overflow: hidden;
       text-overflow: ellipsis;
         white-space: nowrap;
         display: block;
-       color: #3498db; /* Blue link color */
+       color: #3498db;
    }
-   .free-starter-card ul li a::after {
+    .free-starter-card ul li a::after {
         content: " ➔";
         display: inline;
         margin-left: 5px;
         color: #3498db;
     }
-    .featured-section {
+   .featured-section {
       display:flex;
         flex-wrap: wrap;
       gap: 15px;
     padding: 15px
   }
-  .featured-card {
+ .featured-card {
       padding:15px;
-           background-color: #f8f9fa;
+          background-color: #f8f9fa;
       border: 1px solid #ddd;
       border-radius: 8px;
           flex: 1;
           box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      }
-      button {
+    }
+
+    button {
           background-color: #28a745;
           color: white;
         padding: 8px 16px;
@@ -85,32 +86,52 @@
          cursor: pointer;
           transition: background-color 0.3s ease;
       }
+
     button:hover {
-          background-color: #218838;
-      }
+        background-color: #218838;
+    }
     input[type="text"], select {
         padding: 8px;
         border: 1px solid #ddd;
         border-radius: 4px;
         margin-right: 5px;
-        font-size: 1rem
+      font-size: 1rem;
+        background-color: #fff;  /* Add white background to inputs and selects */
+          color: #333;
+    }
+    /* Style for filter containers to align elements */
+    #filter-container,
+    #paid-filter-container {
+       display: flex;
+       align-items: center;
+        padding: 15px;
+        flex-wrap:wrap;
+       justify-content: start; /* Align items at the start */
     }
 
-   #pagination-container button, #paid-pagination-container button {
+      #filter-container input,
+     #filter-container select,
+      #paid-filter-container input,
+      #paid-filter-container select {
+       margin-right: 10px; /* Add some spacing */
+        margin-bottom: 5px;
+    }
+     #pagination-container button, #paid-pagination-container button {
         background-color: #6c757d;
         color: white;
         padding: 5px 10px;
         border: none;
         border-radius: 5px;
-       cursor: pointer;
-         transition: background-color 0.3s ease;
-      margin: 5px
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+          margin: 5px
     }
-    #pagination-container button:hover, #paid-pagination-container button:hover {
-        background-color: #5a6268;
-    }
-    #pagination-container button:disabled, #paid-pagination-container button:disabled {
+     #pagination-container button:hover, #paid-pagination-container button:hover {
+          background-color: #5a6268;
+      }
+   #pagination-container button:disabled, #paid-pagination-container button:disabled {
         background-color: #ccc;
-       cursor: default
+    cursor: default
     }
+
 </style>

@@ -62,26 +62,27 @@
                  {
                     const ul = document.createElement("ul");
                     const li = document.createElement("li");
-                     const a = document.createElement('a');
-                    a.href = item.html_url;
-                     a.textContent = item.html_url;
-                    li.appendChild(a)
-                    ul.appendChild(li);
+                       const a = document.createElement('a');
+                      a.href = item.html_url;
+                       a.textContent = item.html_url;
+                       li.appendChild(a)
+                       ul.appendChild(li);
                       const starsForks = document.createElement('p');
-                      starsForks.classList.add("stars-forks");
-                      starsForks.textContent = `Stars: ${item.stars}, Forks: ${item.forks}`;
-                      card.appendChild(starsForks);
-                     card.appendChild(ul);
+                        starsForks.classList.add("stars-forks");
+                         starsForks.textContent = `Stars: ${item.stars}, Forks: ${item.forks}`;
+                         card.appendChild(starsForks);
+                       card.appendChild(ul);
+
                 } else {
-                    const googleDescription = document.createElement('p');
-                    googleDescription.classList.add("google-description");
-                      googleDescription.textContent = item.google_description || '';
-                      card.appendChild(googleDescription);
-                    const domainDetails = document.createElement('p');
-                      domainDetails.classList.add("domain-details");
-                   domainDetails.textContent = `Domain Strength: ${item.domain_strength || 'N/A'}, Clicks: ${item.est_mo_clicks || 'N/A'}`;
-                     card.appendChild(domainDetails);
-                }
+                      const googleDescription = document.createElement('p');
+                      googleDescription.classList.add("google-description");
+                       googleDescription.textContent = item.google_description || '';
+                       card.appendChild(googleDescription);
+                     const domainDetails = document.createElement('p');
+                     domainDetails.classList.add("domain-details");
+                     domainDetails.textContent = `Domain Strength: ${item.domain_strength || 'N/A'}, Clicks: ${item.est_mo_clicks || 'N/A'}`;
+                      card.appendChild(domainDetails);
+                 }
                  container.appendChild(card);
               });
         }
@@ -94,25 +95,25 @@
              filteredItems = filteredItems.filter(item =>
                  item.name.toLowerCase().includes(searchTerm) ||
                    item.description.toLowerCase().includes(searchTerm) ||
-                 (item.keywords && item.keywords.some(keyword => keyword.includes(searchTerm)))
+                 (item.keywords && item.keywords.some(keyword => new RegExp(searchTerm).test(keyword)))
                );
            }
 
-            if(selectedTech !== ''){
+           if(selectedTech !== ''){
                filteredItems = filteredItems.filter(item =>
                  item.category.toLowerCase().includes(selectedTech) || (item.techstack && item.techstack.includes(selectedTech))
               );
-            }
+           }
 
            filteredFreeData.all = filteredItems
            renderPagination();
-            updateCards();
-        }
+           updateCards();
+          }
 
 
-       function filterAndPaginatePaid() {
+           function filterAndPaginatePaid() {
            const searchTerm = paidFilterInput.value.toLowerCase().trim();
-            const selectedTech = paidTechFilter.value;
+              const selectedTech = paidTechFilter.value;
             let filteredItems = allPaidData.all;
 
               if (searchTerm !== '') {
@@ -120,38 +121,38 @@
                  item.name.toLowerCase().includes(searchTerm) ||
                    (item.description && item.description.some(desc=> desc.toLowerCase().includes(searchTerm)))||
                   item.google_description?.toLowerCase().includes(searchTerm) ||
-                   (item.keywords && item.keywords.some(keyword => keyword.includes(searchTerm)))
+                   (item.keywords && item.keywords.some(keyword => new RegExp(searchTerm).test(keyword)))
                 );
-             }
+              }
               if(selectedTech !== ''){
                filteredItems = filteredItems.filter(item =>
                  item.category.toLowerCase().includes(selectedTech) || (item.techstack && item.techstack.includes(selectedTech))
                 );
            }
-            filteredPaidData.all = filteredItems;
+           filteredPaidData.all = filteredItems;
           renderPaginationPaid();
-           updateCardsPaid();
+          updateCardsPaid();
         }
 
         function updateCards() {
             const startIndex = (currentPage - 1) * cardsPerPage;
            const endIndex = startIndex + cardsPerPage;
            const paginatedItems = filteredFreeData.all.slice(startIndex, endIndex);
-            const paginatedData = { all : paginatedItems}
-             createCards(freeStartersGrid, paginatedData)
+         const paginatedData = { all : paginatedItems}
+            createCards(freeStartersGrid, paginatedData)
         }
 
-         function updateCardsPaid() {
+            function updateCardsPaid() {
             const startIndex = (paidCurrentPage - 1) * cardsPerPage;
            const endIndex = startIndex + cardsPerPage;
                 const paginatedItems = filteredPaidData.all.slice(startIndex, endIndex);
-                const paginatedData = { all : paginatedItems}
-                createCards(paidStartersGrid, paginatedData)
+            const paginatedData = { all : paginatedItems}
+            createCards(paidStartersGrid, paginatedData)
         }
 
     function renderPagination() {
         paginationContainer.innerHTML = '';
-        const allItems = Object.values(filteredFreeData).flat();
+         const allItems = Object.values(filteredFreeData).flat();
 
          const totalPages = Math.ceil(allItems.length / cardsPerPage);
 
@@ -171,7 +172,7 @@
     function renderPaginationPaid() {
          paidPaginationContainer.innerHTML = '';
          const allItems = Object.values(filteredPaidData).flat();
-        const totalPages = Math.ceil(allItems.length / cardsPerPage);
+         const totalPages = Math.ceil(allItems.length / cardsPerPage);
           for (let i = 1; i <= totalPages; i++) {
             const button = document.createElement('button');
             button.textContent = i;

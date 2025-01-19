@@ -5,13 +5,13 @@
         color: #333;
         background-color: #fff; /* Light background */
     }
-  .header {
-      background-color: #3498db; /* Header background */
-      padding: 30px;
-      text-align: center;
-      color: white;
-  }
-  #free-starters-grid,
+    .header {
+      background-color: #ffffff; /* White header background */
+        padding: 30px;
+        text-align: center;
+        color: #3498db; /* Blue text for header */
+    }
+    #free-starters-grid,
     #paid-starters-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -19,7 +19,7 @@
         margin-bottom: 20px;
         padding: 10px;
     }
-  .free-starter-card,
+    .free-starter-card,
     .paid-starter-card {
       background-color: #343a40; /* Dark card background */
         color: white; /* White text */
@@ -45,74 +45,72 @@
        margin-bottom: 10px;
     color: #ddd;
     }
- .stars-forks {
+    .stars-forks {
         margin-bottom: 10px;
        color: #ddd;
    }
-    .free-starter-card ul li a {
+   .free-starter-card ul li a {
         overflow: hidden;
       text-overflow: ellipsis;
         white-space: nowrap;
         display: block;
        color: #3498db; /* Blue link color */
    }
-    .free-starter-card ul li a::after {
-       content: " ➔";
+   .free-starter-card ul li a::after {
+        content: " ➔";
         display: inline;
         margin-left: 5px;
-         color: #3498db;
+        color: #3498db;
     }
-
     .featured-section {
       display:flex;
         flex-wrap: wrap;
       gap: 15px;
     padding: 15px
   }
-    .featured-card {
-          padding:15px;
+  .featured-card {
+      padding:15px;
            background-color: #f8f9fa;
-          border: 1px solid #ddd;
-          border-radius: 8px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
           flex: 1;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       }
-       button {
+      button {
           background-color: #28a745;
           color: white;
-          padding: 8px 16px;
+        padding: 8px 16px;
            border: none;
           border-radius: 5px;
          cursor: pointer;
           transition: background-color 0.3s ease;
       }
-       button:hover {
-           background-color: #218838;
-       }
-   input[type="text"], select {
+    button:hover {
+          background-color: #218838;
+      }
+    input[type="text"], select {
         padding: 8px;
         border: 1px solid #ddd;
         border-radius: 4px;
         margin-right: 5px;
         font-size: 1rem
-     }
+    }
 
-  #pagination-container button, #paid-pagination-container button {
-    background-color: #6c757d;
-      color: white;
-      padding: 5px 10px;
-    border: none;
-     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-     margin: 5px
-  }
-   #pagination-container button:hover, #paid-pagination-container button:hover {
+   #pagination-container button, #paid-pagination-container button {
+        background-color: #6c757d;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+       cursor: pointer;
+         transition: background-color 0.3s ease;
+      margin: 5px
+    }
+    #pagination-container button:hover, #paid-pagination-container button:hover {
         background-color: #5a6268;
     }
-  #pagination-container button:disabled, #paid-pagination-container button:disabled {
+    #pagination-container button:disabled, #paid-pagination-container button:disabled {
         background-color: #ccc;
-   cursor: default
+       cursor: default
     }
-
 </style>

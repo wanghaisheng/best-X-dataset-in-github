@@ -16,7 +16,7 @@
     <meta property="og:type" content="website">
      <meta property="og:url" content="https://bestsaasstarter.org/">
     <meta property="og:image" content="https://bestsaasstarter.org/images/og-image.png">
-     <meta property="og:image:alt" content="Best SaaS Starter Logo" />
+       <meta property="og:image:alt" content="Best SaaS Starter Logo" />
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card Meta Tags -->
@@ -24,8 +24,7 @@
     <meta name="twitter:title" content="Best SaaS Starter | Find Your Perfect SaaS Foundation">
     <meta name="twitter:description" content="Discover the best SaaS starter kits, boilerplates, and frameworks. Find free open-source and production-ready options to accelerate your SaaS development with Next.js, React.js, Laravel, Remix, and more.">
     <meta name="twitter:image" content="https://bestsaasstarter.org/images/twitter-card.png">
-    <meta name="twitter:image:alt" content="Best SaaS Starter Logo" />
-
+       <meta name="twitter:image:alt" content="Best SaaS Starter Logo" />
 
    <link rel="canonical" href="https://bestsaasstarter.org/">
 
@@ -225,6 +224,14 @@
              text-align: center;
         }
 
+         .paid-starter-card .description{
+           font-size: 0.9em;
+           white-space: nowrap;
+           overflow: hidden;
+           text-overflow: ellipsis;
+           margin-bottom: 10px;
+        }
+
         .paid-starter-card ul {
             padding: 0;
              list-style: none;
@@ -242,6 +249,20 @@
                  text-decoration: none;
                  color: #007bff;
            }
+
+       .paid-starter-card .google-description{
+            font-size: 0.8em;
+             margin-bottom: 10px;
+           white-space: nowrap;
+           overflow: hidden;
+           text-overflow: ellipsis;
+         }
+        .paid-starter-card .domain-details {
+            margin-top: auto;
+             font-size: 0.8em;
+            text-align: right;
+             color:#6c757d
+            }
 
         footer {
             text-align: center;
@@ -405,7 +426,7 @@
         <p>© 2024 Best SaaS Starter. All rights reserved.  <a href="/terms">Terms</a> & <a href="/privacy">Privacy</a> </p>
         </div>
     </footer>
-    <script>
+     <script>
          console.log("Best SaaS Starter Landing Page Loaded!");
 
          const filterInput = document.getElementById('filterInput');
@@ -426,8 +447,8 @@
           async function loadData() {
           try{
                 const [freeResponse, paidResponse] = await Promise.all([
-                fetch('free-starters.json'),
-                fetch('paid-starters.json')
+                fetch('data/github.json'),
+                fetch('data/google.json')
              ]);
 
                 if (!freeResponse.ok) {
@@ -454,7 +475,7 @@
           loadData();
 
 
-        function createCards(container, data) {
+     function createCards(container, data) {
              container.innerHTML = '';
 
               for (const category in data) {
@@ -462,31 +483,38 @@
                  card.classList.add(container === freeStartersGrid ? 'free-starter-card' : 'paid-starter-card');
                  card.innerHTML = `<h3>${category}</h3>`;
                  const ul = document.createElement("ul");
-                 data[category].forEach(item => {
-                   const li = document.createElement("li");
-                    const a = document.createElement('a');
-                    a.href = item.html_url;
-                     a.textContent = item.name;
-                     li.appendChild(a);
-                     ul.appendChild(li);
-                     });
-                const description = document.createElement('p');
+                   data[category].forEach(item => {
+                      const li = document.createElement("li");
+                       const a = document.createElement('a');
+                       a.href = item.html_url;
+                        a.textContent = item.name;
+                        li.appendChild(a);
+                      ul.appendChild(li);
+                    });
+                 const description = document.createElement('p');
                  description.classList.add("description");
-                description.textContent = data[category][0].description;
-                card.appendChild(description);
-               if (container === freeStartersGrid)
-                   {
-                        const starsForks = document.createElement('p');
-                           starsForks.classList.add("stars-forks");
-                           starsForks.textContent = `Stars: ${data[category][0].stars}, Forks: ${data[category][0].forks}`;
-                           card.appendChild(starsForks)
-                   }
-                 card.appendChild(ul)
-                container.appendChild(card);
+                 description.textContent = data[category][0].description;
+                 card.appendChild(description);
+                if (container === freeStartersGrid)
+                {
+                     const starsForks = document.createElement('p');
+                        starsForks.classList.add("stars-forks");
+                        starsForks.textContent = `Stars: ${data[category][0].stars}, Forks: ${data[category][0].forks}`;
+                        card.appendChild(starsForks)
+                } else {
+                  const googleDescription = document.createElement('p');
+                  googleDescription.classList.add("google-description");
+                 googleDescription.textContent = data[category][0].google_description || '';
+                  card.appendChild(googleDescription);
+                   const domainDetails = document.createElement('p');
+                  domainDetails.classList.add("domain-details");
+                   domainDetails.textContent = `Domain Strength: ${data[category][0].domain_strength || 'N/A'}, Clicks: ${data[category][0].est_mo_clicks || 'N/A'}`;
+                   card.appendChild(domainDetails);
+                }
+                 card.appendChild(ul);
+                   container.appendChild(card);
            }
         }
-
-
 
         function filterAndPaginate() {
            const searchTerm = filterInput.value.toLowerCase().trim();
@@ -516,12 +544,12 @@
               filteredPaidData = allPaidData;
              }else{
                  for (const category in allPaidData) {
-                const filteredUrls = allPaidData[category].filter(item =>
-                   item.name.toLowerCase().includes(searchTerm) || item.description.toLowerCase().includes(searchTerm) || category.toLowerCase().includes(searchTerm)
-              );
-                if (filteredUrls.length > 0) {
-                   filteredPaidData[category] = filteredUrls;
-                }
+                    const filteredUrls = allPaidData[category].filter(item =>
+                       item.name.toLowerCase().includes(searchTerm) || item.description.toLowerCase().includes(searchTerm) || item.google_description?.toLowerCase().includes(searchTerm) || category.toLowerCase().includes(searchTerm)
+                  );
+                    if (filteredUrls.length > 0) {
+                      filteredPaidData[category] = filteredUrls;
+                    }
              }
         }
          renderPaginationPaid();

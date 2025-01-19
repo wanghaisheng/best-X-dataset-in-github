@@ -1,1 +1,244 @@
 
+{
+    "github.com": {
+        "description": [
+            "smirnov-am/awesome-saas-boilerplates",
+             "apptension/saas-boilerplate"
+            ]
+        },
+    "boilerplatelist.com": {
+        "description": [
+             "SaaS Boilerplates Discover over 130+ SaaS Boilerplates",
+              "Top 41 Next.js SaaS Boilerplates 2024 😍"
+            ]
+     },
+    "apptension.com": {
+        "description": "SaaS Boilerplate by Apptension"
+    },
+   "sitepoint.com": {
+        "description": "SaaS Boilerplates: What They Are, And 10 of the Best"
+   },
+   "saaspegasus.com": {
+        "description": [
+            "SaaS Boilerplates and Starter Kits",
+            "SaaS Pegasus | The Python / Django SaaS Boilerplate"
+          ]
+    },
+    "saasboilerplates.com": {
+        "description": [
+            "SaaS Boilerplates - Find SaaS Starter Kits and Boilerplates",
+            "SaaS Starter Kit"
+             ]
+    },
+    "saasstarters.com": {
+        "description": [
+           "SaaS Starters: A vetted list of SaaS Boilerplates",
+           "A vetted list of SaaS Boilerplates - SaaS Starters"
+             ]
+      },
+    "buildkits.dev": {
+       "description": [
+            "Buildkits: SaaS Boilerplates, starter kits, and design systems",
+             "SaaS Boilerplates, starter kits, and design systems - Buildkits"
+        ]
+    },
+     "usegravity.app": {
+        "description" : [
+              "Node.js SaaS Boilerplate with React.js | Gravity",
+            "SaaS Boilerplates and Starter Kits Buyers Guide"
+         ]
+      },
+    "browsee.io": {
+        "description": [
+          "10 Open Source SaaS Boilerplates for your next side project",
+           "Open-source Javascript Saas Boilerplates"
+          ]
+     },
+    "highsignal.io":{
+        "description": [
+            "The best SaaS boilerplates for founders",
+             "$100k from building a SaaS boilerplate for Django"
+            ]
+    },
+   "medium.com": {
+        "description": [
+           "You don't need to pay for SaaS boilerplates — Open SaaS",
+            "Comparing SaaS Boilerplates for Your Next AI Project | by Eli"
+
+            ]
+    },
+   "getscrapbook.com":{
+      "description": [
+            "Best SaaS Boilerplates and Starter Kits",
+            "Best Python SaaS Boilerplates and Starter Kits"
+           ]
+   },
+    "launchnow.pro": {
+        "description": "SaaS Boilerplates and Starter Kits: Features, Names & Prices"
+    },
+   "saasbold.com":{
+       "description": "SaaSBold"
+    },
+    "tenten.co":{
+     "description": "Top 20 Next.js SaaS Boilerplates 2024"
+    },
+    "volca.io": {
+        "description": [
+          "SaaS Boilerplate and Starter Kit with Node.js and React",
+          "Python (Django) SaaS Boilerplate and Starter Kits"
+          ]
+    },
+     "slashdot.org": {
+       "description":[
+            "Top SaaS Boilerplates in 2024",
+            "Top SaaS Boilerplates for TypeScript in 2024"
+        ]
+    },
+      "starterindex.com": {
+        "description": [
+            "30 SaaS Boilerplates and Starter Kits",
+            "SaaS Boilerplates and Starter Kits"
+             ]
+        },
+    "uneed.best":{
+         "description": [
+             "Best Saas Boilerplates Review | Uneed",
+              "A launch platform for your products | Uneed"
+             ]
+     },
+    "shipsaas.com":{
+         "description": [
+            "Ship SaaS: Next.js SaaS boilerplate",
+            "Boilerplates"
+             ]
+    },
+   "tenancyforlaravel.com":{
+        "description": "Multi-tenant SaaS boilerplate"
+   },
+    "boilerplatesearch.com": {
+         "description": [
+             "What is the best SaaS Boilerplates? (2024)",
+              "Most Recommended SaaS Boilerplate for a Starter Kit? (2024)"
+             ]
+     },
+  "fuzen.io":{
+       "description": "SaaS Boilerplate Templates"
+     },
+   "sourceforge.net":{
+        "description": [
+          "saas-boilerplate",
+           "SaaS Boilerplate"
+           ]
+   },
+    "softwaregrowth.io":{
+         "description": "The best code boilerplates for SaaS - Software Growth"
+    },
+     "findmicrosaasideas.com": {
+          "description": "SaaS Boilerplates Collection | Made for Solopreneurs"
+    },
+   "devaradise.com": {
+         "description": "7 Best SaaS Boilerplates 2024 (Reviewed)"
+     },
+    "boilerplatehub.com":{
+          "description": "BoilerplateHub: Best SaaS Boilerplates, Templates & Starter Kits"
+      },
+      "stackademic.com":{
+        "description" : [
+            "What are SaaS Boilerplates and How Can They Help ...",
+            "RockStack: Full-stack boilerplate for Remix, Next, and Svelte"
+            ]
+       },
+    "tailkits.com":{
+      "description": "Wave - SAAS Boilerplate"
+     },
+    "nextlessjs.com":{
+        "description": "Nextless.js: Next JS SaaS Boilerplate & Serverless React ..."
+     },
+    "startupsandcode.com":{
+       "description":"Boilerplates for SaaS. Don't create your own, tweak the others"
+     },
+    "nextjstemplates.com": {
+        "description": [
+            "Solid - Next.js SaaS Boilerplate and Starter Kit",
+             "Base - Next.js SaaS Boilerplate Template"
+             ]
+       },
+     "getboilerplates.com":{
+       "description": "Best Next.js SaaS Boilerplates and Starter Kits"
+    },
+   "thesaasfactory.dev": {
+        "description" : [
+           "SaaS Boilerplates",
+           "SaaS Boilerplates - SaaS Project - The SaaS Factory"
+          ]
+    },
+    "tonysm.com":{
+      "description": "On SaaS Boilerplates - Tony Messias"
+    },
+  "geniepy.com": {
+        "description": "8 Game-Changing Python SaaS Boilerplates to Skyrocket ..."
+    },
+    "stackonfire.com":{
+       "description":"Cascade - free open-source SaaS boilerplate"
+     },
+  "flatlogic.com":{
+       "description" : "Top SaaS App Boilerplates"
+     },
+    "aspnano.com":{
+         "description":"ASP.NET Core API Boilerplate|Multi-Tenant SaaS Architecture"
+     },
+    "indiehackers.com":{
+          "description" : [
+              "Which SaaS Boilerplates have you used to launch your website",
+               "Just launched SaaS Boilerplates, a platform for boilerplates and starter kits"
+              ]
+       },
+      "uideck.com":{
+          "description" : "21+ Best Next.js SaaS Boilerplates for 2024"
+        },
+      "divjoy.com": {
+         "description" : "React and Formspree SaaS Boilerplate and Starter Kit"
+     },
+  "nextjet.dev": {
+         "description" : "5 Best SaaS Boilerplates 2024 Used By Successful Developers"
+      },
+    "djangoproject.com":{
+       "description": "Django SaaS boilerplate - Show & Tell"
+     },
+     "getapp.za.com":{
+       "description" : "SaaS Boilerplate Reviews, Prices & Ratings"
+      },
+  "marblism.com":{
+       "description": "The Ultimate Guide to Choosing the Best SaaS Starter Kit"
+      },
+  "creativedesignsguru.com": {
+      "description": "Best SaaS Boilerplates and Starter Kits for 2024"
+     },
+    "jakeprins.com":{
+        "description" : "7 Boilerplates for a Head Start When Building a SaaS App"
+    },
+   "scalingdevtools.com":{
+      "description" : "Bootstrapping a SaaS boilerplate to $25k MRR with Kyle ..."
+    },
+   "tomaslau.com":{
+         "description" : "SaaS Boilerplates: Launch Your Software Business in a ..."
+    },
+  "ordinarycoders.com":{
+        "description" : "3 Best SaaS Boilerplates Built With JS"
+   },
+      "bubble.io":{
+        "description" : [
+           "Nocode SaaS Boilerplate Template",
+           "Bubble: The full-stack no-code app builder"
+         ]
+        },
+    "www.highsignal.io":{
+         "description":"$100k from building a SaaS boilerplate for Django"
+      },
+  "www.uneed.best": {
+    "description" : "A launch platform for your products | Uneed"
+   },
+   "gadget.dev": {
+         "description" : "Gadget | Faster full-stack app development"
+    }
+}

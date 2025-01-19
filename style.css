@@ -1,0 +1,103 @@
+<style>
+  body {
+   font-family: sans-serif;
+    margin: 0;
+   color: #333333;
+  }
+  #free-starters-grid, #paid-starters-grid {
+        display: grid;
+       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+       gap: 20px;
+       margin-bottom: 20px;
+       padding: 10px
+   }
+  .free-starter-card, .paid-starter-card {
+         border: 1px solid #ddd;
+         padding: 15px;
+        border-radius: 8px;
+          background-color: #FFFFFF;
+          height: auto;
+   }
+ .free-starter-card h3, .paid-starter-card h3 {
+      margin-bottom: 10px;
+      overflow: hidden;
+       text-overflow: ellipsis;
+     white-space: nowrap;
+   }
+    .description, .google-description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+       display: -webkit-box;
+       -webkit-line-clamp: 3;
+       -webkit-box-orient: vertical;
+        margin-bottom: 10px;
+
+    }
+  .stars-forks {
+       margin-bottom: 10px;
+  }
+  .free-starter-card ul li a {
+        overflow: hidden;
+       text-overflow: ellipsis;
+         white-space: nowrap;
+        display: block;
+         color: #2862ff;
+  }
+ .free-starter-card ul li a::after {
+    content: " ➔";
+      display: inline;
+    margin-left: 5px;
+  }
+ .featured-section {
+    display:flex;
+       flex-wrap: wrap;
+     gap: 15px;
+   padding: 15px
+  }
+ .featured-card {
+        padding:15px;
+         border: 1px solid #ddd;
+        border-radius: 8px;
+       background-color:#FFFFFF;
+          flex: 1;
+    }
+    .header {
+        background-color: #2862ff;
+         padding: 30px;
+         text-align: center;
+         color: white;
+    }
+   button {
+      background-color: #1F8C1F;
+     color: white;
+      padding: 8px 16px;
+    border: none;
+      border-radius: 5px;
+    cursor: pointer;
+      transition: background-color 0.3s ease;
+   }
+   button:hover {
+      background-color: #2862ff;
+    }
+    input[type="text"], select {
+        padding: 8px;
+       border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-right: 5px;
+        font-size: 1rem
+     }
+  #pagination-container button, #paid-pagination-container button {
+        background-color: #1F8C1F;
+        color: white;
+        padding: 5px 10px;
+          border: none;
+       border-radius: 5px;
+       cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 5px
+       }
+  #pagination-container button:disabled, #paid-pagination-container button:disabled {
+    background-color: #ccc;
+   cursor: default
+    }
+</style>

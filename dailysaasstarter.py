@@ -14,7 +14,6 @@ load_dotenv()
 GITHUB_API_BASE_URL = "https://api.github.com/search/repositories"
 GITHUB_API_VERSION = "2022-11-28"
 
-
 class RepoData(TypedDict):
     """Define the structure of a single repository's data"""
 
@@ -105,7 +104,7 @@ def search_github_repos(
     return repo_data
 
 
-def load_existing_data(filepath: Path) -> Dict[str, List[RepoData]]:
+def load_existing_data(filepath: Path) -> Dict[str, Any]:
     """Loads existing data from a JSON file or returns an empty dict if the file does not exist.
 
     Args:
@@ -126,7 +125,7 @@ def load_existing_data(filepath: Path) -> Dict[str, List[RepoData]]:
         return {}
 
 
-def save_data(filepath: Path, data: Dict[str, List[RepoData]]) -> None:
+def save_data(filepath: Path, data: Dict[str, Any]) -> None:
     """Saves data to a JSON file.
 
     Args:
@@ -138,6 +137,12 @@ def save_data(filepath: Path, data: Dict[str, List[RepoData]]) -> None:
     with open(filepath, "w") as f:
         json.dump(data, f, indent=2, default=lambda o: o.__dict__)
 
+def extract_keywords(description: str) -> List[str]:
+      """Extract keywords from description string."""
+      if not description:
+         return []
+
+      return description.lower().replace(/[,.]/g, '').split(/\s+/).filter(Boolean)
 
 def merge_and_save_results(
     keywords: List[str],
@@ -160,19 +165,33 @@ def merge_and_save_results(
 
     # 2. Load existing data (or initialize an empty dict)
     existing_data = load_existing_data(output_filepath)
-    # 3.  Merge the data, make them unique
-    merged_data = {}
+
+    # 3.  Merge the data, make them unique and add keywords as properties
+    merged_data = {"all":[]}
     for keyword, new_repos in new_results.items():
-        if not new_repos:
+         if not new_repos:
             logging.warning(f"No results for {keyword}. skipping...")
             continue  # Skip if there are no results
-        existing_repos = existing_data.get(
-            keyword, []
-        )  # return empty list for that key if key doesnt exists
-        # Merge lists, convert to set to remove duplicates based on `html_url`
-        merged_repos = list({repo['html_url']: repo for repo in existing_repos + new_repos}.values())
-        merged_data[keyword] = merged_repos
+         for repo in new_repos:
+               repo["keywords"] = extract_keywords(repo["description"]);
+               repo["category"] = keyword;
+               merged_data["all"].append(repo)
 
+    for domain, existing_info in existing_data.items():
+         if domain not in merged_data:
+             merged_data[domain] = []
+         if isinstance(existing_info,dict):
+             for item in existing_info.get("description", []):
+               keywords = extract_keywords(item);
+                merged_data["all"].append({
+                        "name": domain,
+                    "description" : item,
+                       "keywords": keywords,
+                      "category": domain,
+                         "domain_strength": existing_info.get("domain_strength"),
+                          "est_mo_clicks": existing_info.get("est_mo_clicks",0),
+                         "google_description":  existing_info.get("google_description")
+                    });
     # 4. save to file
     save_data(output_filepath, merged_data)
     logging.info(f"Results saved to: {output_filepath}")
@@ -181,7 +200,7 @@ def merge_and_save_results(
 def validate_config(min_stars: int, min_forks: int):
     if not isinstance(min_stars, int) or min_stars < 0:
         raise ValueError("min_stars must be a non-negative integer")
-    if not isinstance(min_forks, int) or min_forks < 0:
+    if not isinstance(min_forks , int) or min_forks < 0:
         raise ValueError("min_forks must be a non-negative integer")
 
 

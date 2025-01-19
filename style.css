@@ -6,10 +6,10 @@
     background-color: #212121;
   }
   .header {
-      background-color: #2862ff;
-      padding: 30px;
-      text-align: center;
-      color: white;
+    background-color: #303030; /* Dark header background */
+    padding: 30px;
+    text-align: center;
+    color: #ffffff; /* White text for header */
   }
   #free-starters-grid, #paid-starters-grid {
     display: grid;
@@ -70,10 +70,10 @@
     border: 1px solid #424242;
     border-radius: 8px;
     background-color: #303030;
-      color: #e0e0e0;
+    color: #e0e0e0;
     flex: 1;
   }
-     button {
+    button {
         background-color: #1F8C1F;
         color: white;
         padding: 8px 16px;
@@ -82,12 +82,10 @@
         cursor: pointer;
         transition: background-color 0.3s ease;
     }
-
     button:hover {
         background-color: #4CAF50;
     }
-
-  input[type="text"], select {
+    input[type="text"], select {
         padding: 8px;
         border: 1px solid #616161;
         border-radius: 4px;
@@ -97,20 +95,21 @@
       color: #e0e0e0;
     }
 
+    #pagination-container button, #paid-pagination-container button {
+        background-color: #424242;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 5px
+    }
 
-  #pagination-container button, #paid-pagination-container button {
-      background-color: #424242;
-      color: white;
-      padding: 5px 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-     margin: 5px;
-  }
-     #pagination-container button:hover, #paid-pagination-container button:hover {
-          background-color: #616161;
-       }
+   #pagination-container button:hover, #paid-pagination-container button:hover {
+        background-color: #616161;
+    }
+
   #pagination-container button:disabled, #paid-pagination-container button:disabled {
     background-color: #555;
    cursor: default

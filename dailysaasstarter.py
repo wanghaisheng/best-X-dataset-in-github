@@ -15,6 +15,7 @@ load_dotenv()
 GITHUB_API_BASE_URL = "https://api.github.com/search/repositories"
 GITHUB_API_VERSION = "2022-11-28"
 
+
 class RepoData(TypedDict):
     """Define the structure of a single repository's data"""
 
@@ -59,9 +60,7 @@ def search_github_repos(
             next_page_url = GITHUB_API_BASE_URL
             while next_page_url:
                 logging.info(f"Searching for '{keyword}' at '{next_page_url}'")
-                response = requests.get(
-                    next_page_url, headers=headers, params=params
-                )
+                response = requests.get(next_page_url, headers=headers, params=params)
                 response.raise_for_status()  # Raise HTTPError for bad responses (4xx or 5xx)
 
                 data = response.json()
@@ -138,44 +137,56 @@ def save_data(filepath: Path, data: Dict[str, Any]) -> None:
     with open(filepath, "w") as f:
         json.dump(data, f, indent=2, default=lambda o: o.__dict__)
 
-def extract_keywords(description: str) -> List[str]:
-      """Extract keywords from description string."""
-      if not description:
-         return []
-      print('===DES',description)
-      return list(set(re.findall(r"\b[a-zA-Z0-9\-]+\b", description.lower()))) if description else []
 
-def assign_category(keywords: List[str])-> str:
-     """Categorizes item based on extracted keywords."""
-     if not keywords:
-       return "general"
-     if any(tech in keywords for tech in ["ecommerce", "commerce", "shopify", "vendure", "storefront"]):
-          return "ecommerce"
-     if any(tech in keywords for tech in ["game", "gaming", "unity", "unreal"]):
-          return "game"
-     if any(tech in keywords for tech in ["ai", "machinelearning", "artificialintelligence", "gpt", "chat"]):
+def extract_keywords(description: str) -> List[str]:
+    """Extract keywords from description string."""
+    if not description:
+        return []
+    print("===DES", description)
+    return (
+        list(set(re.findall(r"\b[a-zA-Z0-9\-]+\b", description.lower())))
+        if description
+        else []
+    )
+
+
+def assign_category(keywords: List[str]) -> str:
+    """Categorizes item based on extracted keywords."""
+    if not keywords:
+        return "general"
+    if any(
+        tech in keywords
+        for tech in ["ecommerce", "commerce", "shopify", "vendure", "storefront"]
+    ):
+        return "ecommerce"
+    if any(tech in keywords for tech in ["game", "gaming", "unity", "unreal"]):
+        return "game"
+    if any(
+        tech in keywords
+        for tech in ["ai", "machinelearning", "artificialintelligence", "gpt", "chat"]
+    ):
         return "ai"
-     if any(tech in keywords for tech in ["saas", "boilerplate", "starter"]):
-          return "saas"
-     return "general"
+    if any(tech in keywords for tech in ["saas", "boilerplate", "starter"]):
+        return "saas"
+    return "general"
+
 
 def extract_techstack(keywords: List[str], all_keywords: List[str]) -> List[str]:
     """Extracts techstack from the keywords, using all available keywords."""
     tech_stack = []
     if any(tech in keywords for tech in ["nextjs", "next.js", "next"]):
-            tech_stack.append("nextjs")
+        tech_stack.append("nextjs")
     if any(tech in keywords for tech in ["react", "reactjs", "react.js"]):
-          tech_stack.append("react")
+        tech_stack.append("react")
     if any(tech in keywords for tech in ["python", "django", "flask"]):
         tech_stack.append("python")
     if any(tech in keywords for tech in ["remix"]):
-         tech_stack.append("remix")
+        tech_stack.append("remix")
     if any(tech in keywords for tech in ["node", "nodejs", "node.js"]):
-         tech_stack.append("node")
+        tech_stack.append("node")
     if any(tech in keywords for tech in ["laravel", "php"]):
         tech_stack.append("laravel")
     return tech_stack
-
 
 
 def merge_and_save_results(
@@ -201,33 +212,35 @@ def merge_and_save_results(
     existing_data = load_existing_data(output_filepath)
 
     # 3.  Merge the data, make them unique and add keywords as properties
-    merged_data = {"all":[]}
+    merged_data = {"all": []}
     for keyword, new_repos in new_results.items():
-         if not new_repos:
+        if not new_repos:
             logging.warning(f"No results for {keyword}. skipping...")
             continue  # Skip if there are no results
-         for repo in new_repos:
-              repo["keywords"] = extract_keywords(repo["description"]);
-              repo["category"] = assign_category(repo["keywords"]);
-              repo["techstack"] = extract_techstack(repo["keywords"], keywords_to_search);
-              merged_data["all"].append(repo)
+        for repo in new_repos:
+            repo["keywords"] = extract_keywords(repo["description"])
+            repo["category"] = assign_category(repo["keywords"])
+            repo["techstack"] = extract_techstack(repo["keywords"], keywords_to_search)
+            merged_data["all"].append(repo)
 
     for domain, existing_info in existing_data.items():
-         if domain not in merged_data:
-             merged_data[domain] = []
-         if isinstance(existing_info,dict):
-             for item in existing_info.get("description", []):
-               keywords = extract_keywords(item);
-                merged_data["all"].append({
+        if domain not in merged_data:
+            merged_data[domain] = []
+        if isinstance(existing_info, dict):
+            for item in existing_info.get("description", []):
+                keywords = extract_keywords(item)
+                merged_data["all"].append(
+                    {
                         "name": domain,
-                    "description" : item,
-                       "keywords": keywords,
-                       "category": assign_category(keywords),
+                        "description": item,
+                        "keywords": keywords,
+                        "category": assign_category(keywords),
                         "techstack": extract_techstack(keywords, keywords_to_search),
-                         "domain_strength": existing_info.get("domain_strength"),
-                          "est_mo_clicks": existing_info.get("est_mo_clicks",0),
-                         "google_description":  existing_info.get("google_description")
-                    });
+                        "domain_strength": existing_info.get("domain_strength"),
+                        "est_mo_clicks": existing_info.get("est_mo_clicks", 0),
+                        "google_description": existing_info.get("google_description"),
+                    }
+                )
     # 4. save to file
     save_data(output_filepath, merged_data)
     logging.info(f"Results saved to: {output_filepath}")
@@ -236,7 +249,7 @@ def merge_and_save_results(
 def validate_config(min_stars: int, min_forks: int):
     if not isinstance(min_stars, int) or min_stars < 0:
         raise ValueError("min_stars must be a non-negative integer")
-    if not isinstance(min_forks , int) or min_forks < 0:
+    if not isinstance(min_forks, int) or min_forks < 0:
         raise ValueError("min_forks must be a non-negative integer")
 
 
@@ -246,7 +259,9 @@ if __name__ == "__main__":
     )
 
     # Setup argument parser
-    parser = argparse.ArgumentParser(description="Search and merge GitHub repository data")
+    parser = argparse.ArgumentParser(
+        description="Search and merge GitHub repository data"
+    )
     args = parser.parse_args()
 
     # Load Configuration

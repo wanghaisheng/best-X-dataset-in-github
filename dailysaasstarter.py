@@ -90,8 +90,10 @@ def search_github_repos(
                         if 'rel="next"' in link
                     ]
                     next_page_url = next_links[0] if next_links else None
+                    next_page_url=next_page_url.replace('<','')
                 else:
                     next_page_url = None
+                
 
             repo_data[keyword] = all_repo_data_for_keyword
         except requests.exceptions.RequestException as e:

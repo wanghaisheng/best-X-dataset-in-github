@@ -6,6 +6,7 @@ from pathlib import Path
 import logging
 import time
 import argparse
+import re
 from typing import List, Dict, Any, TypedDict
 
 load_dotenv()
@@ -141,7 +142,8 @@ def extract_keywords(description: str) -> List[str]:
       """Extract keywords from description string."""
       if not description:
          return []
-      return description.lower().replace(/[,.]/g, '').split(/\s+/).filter(Boolean)
+      print('===DES',description)
+      return list(set(re.findall(r"\b[a-zA-Z0-9\-]+\b", description.lower()))) if description else []
 
 def assign_category(keywords: List[str])-> str:
      """Categorizes item based on extracted keywords."""

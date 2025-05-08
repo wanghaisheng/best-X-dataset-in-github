@@ -1,6 +1,9 @@
 name: GitHub Repo Search
 
 on:
+  schedule:
+    - cron: '0 0 1 * *'  # Runs daily at midnight UTC
+
   workflow_dispatch:
     inputs:
       keywords:

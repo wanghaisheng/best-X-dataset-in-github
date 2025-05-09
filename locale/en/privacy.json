@@ -1,16 +1,16 @@
 {
   "seo": {
-    "description": "An AI-powered platform for vision management and personal growth, featuring multilingual support, community engagement, and robust data privacy.",
-    "keywords": "vision board, manifestation, goal management, personal growth, AI, multilingual, community, data privacy",
-    "og:title": "Vision Board - AI Manifestation & Vision Tool",
-    "og:description": "Realize your goals with the AI Vision Board, enhance personal growth, connect with an active community, and benefit from multilingual features and strong privacy protection.",
-    "og:image": "https://visionboard.heymanifestation.com/og-image.png",
-    "og:image:alt": "Vision Board App Banner",
+    "description": "Privacy policy for the GitHub Hot Repo Discovery Tool. Learn how we handle your data while you discover trending GitHub projects.",
+    "keywords": "github, repository, discovery, privacy, data protection, developer tools, open source",
+    "og:title": "Privacy Policy - GitHub Hot Repo Discovery Tool",
+    "og:description": "Understand our data practices for the GitHub Hot Repo Discovery Tool, designed to help you efficiently find popular open-source projects.",
+    "og:image": "https://xdataset.borninsea.com/img/og-image-repo-finder.png",
+    "og:image:alt": "GitHub Hot Repo Discovery Tool Banner",
     "og:image:width": "1200",
     "og:image:height": "630",
-    "og:site_name": "HeyManifestation Vision Board",
+    "og:site_name": "GitHub Repo Finder by xdataset",
     "google": "notranslate",
-    "author": "HeyManifestation Team",
+    "author": "HeyTCM",
     "robots": "index, follow"
   }
 }

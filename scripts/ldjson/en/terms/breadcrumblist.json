@@ -2,7 +2,17 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://visionboard.heymanifestation.com/"},
-    {"@type": "ListItem", "position": 2, "name": "Terms of Service", "item": "https://visionboard.heymanifestation.com/terms.html"}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://xdataset.borninsea.com/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Terms of Service - GitHub Hot Repo Discovery Tool",
+      "item": "https://xdataset.borninsea.com/terms.html"
+    }
   ]
 }

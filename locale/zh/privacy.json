@@ -1,16 +1,16 @@
 {
   "seo": {
-    "description": "AI驱动的愿景管理与自我成长平台，支持多语言、社区互动与数据隐私保障。",
-    "keywords": "愿景板, 显化, 目标管理, 自我成长, AI, 多语言, 社区, 数据隐私",
-    "og:title": "Vision Board - AI愿景板与显化工具",
-    "og:description": "用AI愿景板实现目标，提升自我成长，加入活跃社区，体验多语言和数据隐私保障。",
-    "og:image": "https://visionboard.heymanifestation.com/og-image.png",
-    "og:image:alt": "Vision Board App Banner",
+    "description": "GitHub 热门 Repo 发现工具的隐私政策。了解当您发现热门 GitHub 项目时，我们如何处理您的数据。",
+    "keywords": "github, 仓库, 发现, 隐私, 数据保护, 开发者工具, 开源",
+    "og:title": "隐私政策 - GitHub 热门 Repo 发现工具",
+    "og:description": "了解我们的 GitHub 热门 Repo 发现工具的数据处理方式，该工具旨在帮助您高效找到流行的开源项目。",
+    "og:image": "https://xdataset.borninsea.com/img/og-image-repo-finder.png",
+    "og:image:alt": "GitHub 热门 Repo 发现工具横幅",
     "og:image:width": "1200",
     "og:image:height": "630",
-    "og:site_name": "HeyManifestation Vision Board",
+    "og:site_name": "GitHub Repo Finder by xdataset",
     "google": "notranslate",
-    "author": "HeyManifestation Team",
+    "author": "HeyTCM",
     "robots": "index, follow"
   }
 }

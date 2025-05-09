@@ -4,18 +4,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "我的个人数据会被如何处理？",
+      "name": "\"GitHub热门Repo发现工具\"会收集我的哪些个人信息？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "您的数据仅用于提升产品体验，不会泄露给第三方。"
+        "text": "我们仅收集您用于登录的GitHub账户基本信息（如用户名、头像），以便为您提供个性化服务。我们不会访问或存储您的代码仓库或私有信息。"
       }
     },
     {
       "@type": "Question",
-      "name": "我可以删除我的账户和数据吗？",
+      "name": "我的GitHub账户信息安全吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "您可随时在个人中心申请删除账户及全部数据。"
+        "text": "我们采用行业标准的安全措施保护您的账户信息。登录过程通过GitHub OAuth进行，我们不直接处理或存储您的GitHub密码。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我可以撤销对\"GitHub热门Repo发现工具\"的授权吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "是的，您可以随时在您的GitHub账户设置中撤销对本应用的授权。撤销授权后，我们将无法访问您的GitHub基本信息。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "\"GitHub热门Repo发现工具\"会与第三方共享我的数据吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "我们不会将您的个人信息出售或与第三方共享用于营销目的。数据仅用于改进本工具的功能和服务。"
       }
     }
   ]

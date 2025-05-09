@@ -5,35 +5,35 @@
 MoodWheel was created to provide a dedicated tool for emotional exploration and well-being. It leverages the intuitive concept of an emotion wheel to help users navigate and articulate their feelings, fostering self-awareness and emotional intelligence. The vision is to make emotional understanding accessible and insightful.
 
 ## Main URLs (from sitemap.xml)
-- https://moodwheel.heytcm.com/app/home
+- https://xdataset.borninsea.com/app/home
   - The main page featuring the interactive MoodWheel for emotion exploration.
-- https://moodwheel.heytcm.com/app/journal
+- https://xdataset.borninsea.com/app/journal
   - For recording emotional experiences, including intensity, descriptions, and multimedia.
-- https://moodwheel.heytcm.com/app/analysis
+- https://xdataset.borninsea.com/app/analysis
   - Provides analysis of emotion patterns and history through various visualizations.
-- https://moodwheel.heytcm.com/app/journey
+- https://xdataset.borninsea.com/app/journey
   - A gamified Mood Exploration Map to discover and understand a wide range of emotions.
-- https://moodwheel.heytcm.com/app/toolkit
+- https://xdataset.borninsea.com/app/toolkit
   - Offers a toolkit with resources like meditation and exercises for emotion regulation.
-- https://moodwheel.heytcm.com/privacy
+- https://xdataset.borninsea.com/privacy
   - Details the application's privacy policy.
-- https://moodwheel.heytcm.com/terms
+- https://xdataset.borninsea.com/terms
   - Outlines the terms of service for using MoodWheel.
 
 ## Content Categories
-### [MoodWheel Emotion Exploration](https://moodwheel.heytcm.com/app/home)
+### [MoodWheel Emotion Exploration](https://xdataset.borninsea.com/app/home)
 Interactive wheel navigation to explore emotions layer by layer, from basic feelings to nuanced states.
 
-### [Emotion Journaling & Recording](https://moodwheel.heytcm.com/app/journal)
+### [Emotion Journaling & Recording](https://xdataset.borninsea.com/app/journal)
 Log emotions with details like intensity scores, textual descriptions, and optional photo/voice attachments.
 
-### [Emotion Pattern Analysis](https://moodwheel.heytcm.com/app/analysis)
+### [Emotion Pattern Analysis](https://xdataset.borninsea.com/app/analysis)
 Visualize emotional history and trends using timelines, calendars, or heatmaps to identify patterns and triggers.
 
-### [Mood Exploration Map](https://moodwheel.heytcm.com/app/journey)
+### [Mood Exploration Map](https://xdataset.borninsea.com/app/journey)
 Engage in a gamified experience to explore and unlock a comprehensive map of emotions.
 
-### [Emotion Regulation Toolkit](https://moodwheel.heytcm.com/app/toolkit)
+### [Emotion Regulation Toolkit](https://xdataset.borninsea.com/app/toolkit)
 Access a curated set of tools and exercises, such as guided meditations or music, tailored to help manage and balance emotions.
 
 ## User Value

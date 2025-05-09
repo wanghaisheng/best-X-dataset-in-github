@@ -4,34 +4,42 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is MoodWheel?",
+      "name": "What is the GitHub Hot Repo Discovery Tool?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "MoodWheel is an emotion exploration and recording app based on the imagery of an emotion wheel, helping users better understand, express, and manage their emotions. It helps you understand, express, and manage emotions, making every feeling a resource for personal growth."
+        "text": "The GitHub Hot Repo Discovery Tool is an efficient tool designed to help developers, researchers, and product managers find popular and relevant GitHub repositories. It allows users to search, collect, and analyze projects based on keywords, sorting rules (like stars, forks, updates), and filtering conditions."
       }
     },
     {
       "@type": "Question",
-      "name": "How to Use MoodWheel?",
+      "name": "How do I use the GitHub Hot Repo Discovery Tool?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "1. Select Emotion: Click on the emotion wheel to explore your current emotional state layer by layer. 2. Record Experience: Rate emotional intensity, record text descriptions, photos, or voice. 3. Gain Insights: View emotional change trends, discover emotional triggers. 4. Balance Emotions: Use recommended emotion regulation tools to improve emotional management ability."
+        "text": "1. Enter Keywords: Input one or more keywords to search for repositories by name, description, README, or topics. 2. Set Filters & Sort: Choose sorting options (e.g., by stars, forks, last update) and specify the number of results you want. 3. Analyze Results: Review the extracted information for each repository, including its description, stars, forks, language, and license. 4. Export Data (Optional): Save the search results as a CSV file for further analysis."
       }
     },
     {
       "@type": "Question",
-      "name": "What are the main features of MoodWheel?",
+      "name": "What are the main features of the GitHub Hot Repo Discovery Tool?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "MoodWheel offers several key features: Emotional Wheel Navigation to explore feelings, Emotion Journal Recording to document experiences, Emotion Pattern Analysis to understand trends, an Emotion Regulation Toolkit with helpful resources, and a Mood Exploration Map to gamify the journey of emotional discovery."
+        "text": "Key features include: keyword-based search across multiple repository attributes, flexible sorting options, control over the number of results, comprehensive data extraction (name, URL, description, stars, forks, language, update/creation time, topics, license), and CSV export functionality."
       }
     },
     {
       "@type": "Question",
-      "name": "Who is MoodWheel for?",
+      "name": "Who is this tool for?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "MoodWheel is for anyone who wants to better understand their emotions. This includes individuals who find it difficult to identify or express feelings, those who wish to track their moods for self-awareness, people looking to understand their emotional triggers, and those seeking tools for emotional regulation."
+        "text": "This tool is for software developers looking for libraries/frameworks, researchers tracking tech trends, product managers conducting tech evaluations, technical writers seeking projects to document, and anyone interested in discovering interesting or impactful open-source projects on GitHub."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a GitHub API Token to use this tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While the tool can perform basic searches without a token, configuring a GitHub Personal Access Token (PAT) is recommended to increase the API rate limits, allowing for more extensive searches and a smoother experience, especially for frequent users or large queries."
       }
     }
   ]

@@ -3,23 +3,25 @@
   "@type": "Review",
   "itemReviewed": {
     "@type": "SoftwareApplication",
-    "name": "MoodWheel",
-    "url": "https://moodwheel.heytcm.com/zh/index.html"
+    "name": "GitHub 热门 Repo 发现工具",
+    "applicationCategory": "DeveloperTool",
+    "operatingSystem": "Web",
+    "url": "https://xdataset.borninsea.com/zh/index.html"
   },
   "reviewRating": {
     "@type": "Rating",
-    "ratingValue": "5",
+    "ratingValue": "4.8",
     "bestRating": "5",
     "worstRating": "1"
   },
   "author": {
     "@type": "Person",
-    "name": "李明，心理咨询师"
+    "name": "王明，软件工程师"
   },
-  "reviewBody": "MoodWheel 帮助我识别出以前从未注意的情绪细微差别。现在我能够更好地理解自己的反应，家人也说我的情绪管理能力有了明显提升。",
+  "reviewBody": "这款工具极大地提高了我发现相关 GitHub 项目的效率。搜索和筛选功能非常强大，节省了我大量时间。",
   "publisher": {
     "@type": "Organization",
-    "name": "MoodWheel 团队"
+    "name": "BornInSea"
   },
-  "datePublished": "2024-07-26"
+  "datePublished": "2024-08-15"
 }

@@ -1,8 +1,23 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Privacy Policy Page",
-  "author": {"@type": "Organization", "name": "HeyManifestation"},
-  "datePublished": "2024-01-01",
-  "mainEntityOfPage": "https://visionboard.heymanifestation.com/privacy.html"
+  "headline": "Privacy Policy - GitHub Hot Repo Discovery Tool",
+  "author": {
+    "@type": "Organization",
+    "name": "BornInSea",
+    "url": "https://xdataset.borninsea.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "BornInSea",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://xdataset.borninsea.com/img/logo.svg"
+    }
+  },
+  "datePublished": "2025-05-08",
+  "dateModified": "2025-05-09",
+  "mainEntityOfPage": "https://xdataset.borninsea.com/privacy.html",
+  "description": "This page outlines the privacy policy for the GitHub Hot Repo Discovery Tool by BornInSea, detailing how user data is collected, used, and protected.",
+  "articleBody": "The GitHub Hot Repo Discovery Tool by BornInSea is committed to protecting your privacy. We do not collect personal information beyond what is necessary for the tool's operation, such as GitHub API tokens if provided by the user for enhanced functionality. Any data provided is used solely for the purpose of fetching and displaying GitHub repository information as requested by the user. We do not sell or share your data with third parties. Usage of the tool implies consent to this policy."
 }

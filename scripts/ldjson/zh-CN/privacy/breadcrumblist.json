@@ -2,7 +2,16 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://visionboard.heymanifestation.com/zh/"},
-    {"@type": "ListItem", "position": 2, "name": "隐私政策", "item": "https://visionboard.heymanifestation.com/zh/privacy.html"}
-  ]
-}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://xdataset.borninsea.com/zh/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "隐私政策",
+      "item": "https://xdataset.borninsea.com/zh/privacy.html"
+    }
+  ]\n}

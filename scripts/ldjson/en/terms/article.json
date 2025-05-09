@@ -1,8 +1,19 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Terms of Service Page",
-  "author": {"@type": "Organization", "name": "HeyManifestation"},
-  "datePublished": "2024-01-01",
-  "mainEntityOfPage": "https://visionboard.heymanifestation.com/terms.html"
+  "headline": "Terms of Service - GitHub Hot Repo Discovery Tool",
+  "author": {"@type": "Organization", "name": "BornInSea"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "BornInSea",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://xdataset.borninsea.com/img/logo.svg"
+    }
+  },
+  "datePublished": "2025-05-08",
+  "dateModified": "2025-05-09",
+  "mainEntityOfPage": "https://xdataset.borninsea.com/terms.html",
+  "description": "This page outlines the terms of service for the GitHub Hot Repo Discovery Tool by BornInSea.",
+  "articleBody": "By using the GitHub Hot Repo Discovery Tool by BornInSea, you agree to these terms of service. The tool is provided as-is, and BornInSea is not liable for any inaccuracies or issues arising from its use. You are responsible for complying with GitHub's terms of service when using this tool. We reserve the right to modify these terms at any time."
 }

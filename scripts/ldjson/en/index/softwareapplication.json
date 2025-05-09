@@ -1,29 +1,30 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "MoodWheel",
-  "operatingSystem": "iOS, Android, Web",
-  "applicationCategory": "LifestyleApplication",
-  "description": "MoodWheel is an emotion exploration and recording app that helps users understand, express, and manage their emotions. It uses an interactive emotion wheel and provides tools for journaling, pattern analysis, and emotional regulation, turning every feeling into a resource for personal growth.",
+  "name": "GitHub Hot Repo Discovery Tool",
+  "operatingSystem": "Cross-platform (CLI), Web (Future)",
+  "applicationCategory": "DeveloperTool",
+  "description": "An efficient tool for discovering popular and relevant GitHub repositories. It helps users search, collect, and analyze projects based on keywords, sorting rules, and filtering conditions.",
   "inLanguage": "en",
   "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD"
   },
-  "url": "https://moodwheel.heytcm.com/index.html",
-  "downloadUrl": "https://moodwheel.heytcm.com/index.html",
+  "url": "https://xdataset.borninsea.com/index.html",
+  "downloadUrl": "https://xdataset.borninsea.com/download",
   "publisher": {
     "@type": "Organization",
-    "name": "MoodWheel Team",
-    "url": "https://moodwheel.heytcm.com"
+    "name": "HeyTCM",
+    "url": "https://xdataset.borninsea.com"
   },
   "featureList": [
-    "Emotional Wheel Navigation",
-    "Emotion Journal Recording",
-    "Emotion Pattern Analysis",
-    "Emotion Regulation Toolkit",
-    "Mood Exploration Map"
+    "Keyword Search",
+    "Flexible Sorting (Stars, Forks, Update Time)",
+    "Result Count Control",
+    "Comprehensive Data Extraction",
+    "CSV Export",
+    "GitHub API Token Configuration"
   ],
-  "keywords": "emotion, mood, journal, tracker, mental health, self-care, emotion wheel"
+  "keywords": "github, repository, discovery, trending, popular, developer tools, open source, code search"
 }

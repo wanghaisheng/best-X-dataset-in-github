@@ -1,23 +1,23 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "MoodWheel：理解、表达和管理你的情绪",
+  "headline": "GitHub 热门 Repo 发现工具：轻松找到热门项目",
   "author": {
     "@type": "Organization",
-    "name": "MoodWheel 团队",
-    "url": "https://moodwheel.heytcm.com"
+    "name": "HeyTCM",
+    "url": "https://xdataset.borninsea.com"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "MoodWheel 团队",
+    "name": "HeyTCM",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://moodwheel.heytcm.com/img/logo.png"
+      "url": "https://xdataset.borninsea.com/img/logo.svg"
     }
   },
-  "datePublished": "2024-07-26",
-  "dateModified": "2024-07-26",
-  "mainEntityOfPage": "https://moodwheel.heytcm.com/zh/index.html",
-  "description": "MoodWheel 是一个基于情绪轮盘意象的情绪探索与记录应用，帮助用户更好地理解、表达和管理情绪。",
-  "articleBody": "MoodWheel 帮助你理解、表达和管理情绪，让每一种感受都成为自我成长的养分。通过互动式轮盘设计，层层深入探索你的情绪，从基础感受到细微情绪，精确定位你的内心状态。为你的情绪配上文字、照片和语音，记录当下的感受，留存珍贵的情绪轨迹。通过时间轴、日历视图查看情绪变化趋势，发现情绪触发因素和规律。基于你的情绪状态，智能推荐冥想、音乐、表达练习等调节方式，帮助你平衡情绪。将情绪探索游戏化，解锁全部情绪，完成一次心灵冒险之旅。"
+  "datePublished": "2025-05-09",
+  "dateModified": "2025-05-09",
+  "mainEntityOfPage": "https://xdataset.borninsea.com/zh/index.html",
+  "description": "我们的工具帮助您根据关键词、排序规则和筛选条件，高效找到热门和相关的 GitHub 项目。使用我们先进的搜索和筛选工具，高效发现 GitHub 上的热门和趋势仓库。",
+  "articleBody": "GitHub 热门 Repo 发现工具旨在通过简化查找有价值开源项目的流程，为开发者、研究人员和产品经理节省时间。用户可以跨仓库名称、描述、README 和 Topics 按关键词搜索。排序选项包括按 Star 数、Fork 数或最近更新时间。该工具提取项目描述、Star 数、Fork 数、主要语言和许可证等关键信息，并允许将结果导出为 CSV 文件。它旨在解决 GitHub 上信息过载、难以比较仓库或跟踪新趋势等常见痛点。"
 }

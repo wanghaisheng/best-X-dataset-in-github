@@ -2,11 +2,6 @@
   "defaultLang": "en",
   "langs": [],
   "urls": [
-    "/app/analysis",
-    "/app/home",
-    "/app/journal",
-    "/app/journey",
-    "/app/toolkit",
     "/privacy",
     "/terms",
     "/"

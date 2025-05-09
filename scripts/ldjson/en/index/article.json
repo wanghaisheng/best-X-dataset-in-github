@@ -1,23 +1,23 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "MoodWheel: Understand, Express, and Manage Your Emotions",
+  "headline": "GitHub Hot Repo Discovery Tool: Find Trending Projects Effortlessly",
   "author": {
     "@type": "Organization",
-    "name": "MoodWheel Team",
-    "url": "https://moodwheel.heytcm.com"
+    "name": "HeyTCM",
+    "url": "https://xdataset.borninsea.com"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "MoodWheel Team",
+    "name": "HeyTCM",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://moodwheel.heytcm.com/img/logo.png"
+      "url": "https://xdataset.borninsea.com/img/logo.svg"
     }
   },
-  "datePublished": "2024-07-26",
-  "dateModified": "2024-07-26",
-  "mainEntityOfPage": "https://moodwheel.heytcm.com/index.html",
-  "description": "MoodWheel is an emotion exploration and recording app based on the imagery of an emotion wheel, helping users better understand, express, and manage their emotions.",
-  "articleBody": "MoodWheel helps you understand, express, and manage emotions, making every feeling a resource for personal growth. Explore your emotions layer by layer through an interactive wheel design, from basic feelings to subtle emotions, precisely locating your inner state. Pair your emotions with text, photos, and voice recordings to document your current feelings and preserve valuable emotional trajectories. View emotional change trends through timeline and calendar views to discover emotional triggers and patterns. Intelligently recommends meditation, music, expressive exercises, and other regulation methods based on your emotional state to help balance emotions. Gamify emotional exploration, unlock all emotions, and complete a journey of inner adventure."
+  "datePublished": "2025-05-09",
+  "dateModified": "2025-05-09",
+  "mainEntityOfPage": "https://xdataset.borninsea.com/index.html",
+  "description": "Our tool helps you find trending and relevant GitHub projects based on keywords, sorting, and filters. Efficiently discover popular and trending GitHub repositories with our advanced search and filtering tool.",
+  "articleBody": "The GitHub Hot Repo Discovery Tool is designed to save developers, researchers, and product managers time by streamlining the process of finding valuable open-source projects. Users can search by keywords across repository names, descriptions, READMEs, and topics. Sorting options include by stars, forks, or recent updates. The tool extracts key information like project description, stars, forks, primary language, and license, and allows for CSV export of results. It aims to solve common pain points such as information overload and difficulty in comparing repositories or tracking new trends on GitHub."
 }

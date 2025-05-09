@@ -1,12 +1,12 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "MoodWheel - Spin Your Feelings, Discover Your Rainbow Within",
-  "url": "https://moodwheel.heytcm.com/index.html",
-  "description": "inspiMoodWheel helps you understand, express, and manage emotions, making every feeling a resource for personal growth",
+  "name": "GitHub Hot Repo Discovery Tool - Find Trending Projects",
+  "url": "https://xdataset.borninsea.com/index.html",
+  "description": "Our tool helps you find trending and relevant GitHub projects based on keywords, sorting, and filters.",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://moodwheel.heytcm.com/index.html"
+    "@id": "https://xdataset.borninsea.com/index.html"
   },
   "breadcrumb": {
     "@type": "BreadcrumbList",
@@ -14,7 +14,7 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://moodwheel.heytcm.com/index.html"
+      "item": "https://xdataset.borninsea.com/index.html"
     }]
   }
 }

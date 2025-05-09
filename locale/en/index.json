@@ -1,127 +1,106 @@
 {
   "hero": {
-    "title": "Spin Your Feelings, Discover Your Rainbow Within",
-    "subtitle": "MoodWheel helps you understand, express, and manage emotions, making every feeling a resource for personal growth",
-    "cta": "Start Emotional Journey",
-    "demo": "See Demo"
+    "title": "Discover Hot GitHub Repositories Effortlessly",
+    "subtitle": "Our tool helps you find trending and relevant GitHub projects based on keywords, sorting, and filters.",
+    "cta": "Start Discovering Repos",
+    "demo": "See How It Works"
   },
   "features": {
-    "title": "Explore Your Emotional Universe",
-    "wheel": {
-      "title": "Emotional Wheel Navigation",
-      "description": "Explore your emotions layer by layer through an interactive wheel design, from basic feelings to subtle emotions, precisely locating your inner state"
+    "title": "Key Features for Efficient Discovery",
+    "keywordSearch": {
+      "title": "Keyword Search",
+      "description": "Search repositories by name, description, README, and topics using one or more keywords."
     },
-    "journal": {
-      "title": "Emotion Journal Recording",
-      "description": "Pair your emotions with text, photos, and voice recordings to document your current feelings and preserve valuable emotional trajectories"
+    "sortingOptions": {
+      "title": "Flexible Sorting",
+      "description": "Sort results by Stars, Forks, last update time, or GitHub's best match algorithm."
     },
-    "analysis": {
-      "title": "Emotion Pattern Analysis",
-      "description": "View emotional change trends through timeline and calendar views to discover emotional triggers and patterns"
+    "resultControl": {
+      "title": "Result Count Control",
+      "description": "Specify the number of top repositories you want to retrieve (e.g., top 10, 50, 100)."
     },
-    "toolkit": {
-      "title": "Emotion Regulation Toolkit",
-      "description": "Intelligently recommends meditation, music, expressive exercises, and other regulation methods based on your emotional state to help balance emotions"
+    "dataExtraction": {
+      "title": "Comprehensive Data Extraction",
+      "description": "Get key information for each repo: full name, URL, description, Stars, Forks, language, update/creation time, topics, and license."
     },
-    "map": {
-      "title": "Mood Exploration Map",
-      "description": "Gamify emotional exploration, unlock all emotions, and complete a journey of inner adventure"
+    "csvExport": {
+      "title": "CSV Export",
+      "description": "Export search results to a CSV file for further analysis and offline use."
     }
   },
   "howItWorks": {
-    "title": "How to Use MoodWheel",
+    "title": "How to Use the GitHub Repo Finder",
     "step1": {
-      "title": "Select Emotion",
-      "description": "Click on the emotion wheel to explore your current emotional state layer by layer"
+      "title": "Enter Keywords",
+      "description": "Input your search terms to find relevant repositories."
     },
     "step2": {
-      "title": "Record Experience",
-      "description": "Rate emotional intensity, record text descriptions, photos, or voice"
+      "title": "Set Filters & Sort",
+      "description": "Choose sorting options and specify the number of results you need."
     },
     "step3": {
-      "title": "Gain Insights",
-      "description": "View emotional change trends, discover emotional triggers"
+      "title": "Analyze Results",
+      "description": "Review the extracted information for each repository."
     },
     "step4": {
-      "title": "Balance Emotions",
-      "description": "Use recommended emotion regulation tools to improve emotional management ability"
+      "title": "Export Data (Optional)",
+      "description": "Save your findings as a CSV file for detailed analysis."
     }
   },
   "appPreview": {
-    "title": "App Showcase",
-    "description": "Explore MoodWheel's core features and interface",
-    "onboarding": "Experience Complete Onboarding Flow"
+    "title": "Tool Preview",
+    "description": "See how the GitHub Popular Repo Discovery Tool works and simplifies your search for top repositories.",
+    "onboarding": "Try a Demo Search"
   },
   "testimonials": {
-    "title": "User Voices",
+    "title": "What Developers Say",
     "user1": {
-      "quote": "MoodWheel helped me identify emotional nuances I never noticed before. Now I can better understand my reactions, and my family says my emotional management has improved significantly.",
-      "name": "Li Ming, Counselor"
+      "quote": "This tool saved me hours of manual searching on GitHub. I found the perfect library for my project in minutes!",
+      "name": "Alex P., Software Engineer"
     },
     "user2": {
-      "quote": "Using the emotion wheel daily to record feelings has become an important self-care ritual for me. I especially love the emotional exploration map design, which makes the whole process fun rather than a burden.",
-      "name": "Zhang Ting, College Student"
+      "quote": "The CSV export feature is fantastic for my research. I can easily analyze trends in open-source projects.",
+      "name": "Sarah K., Tech Researcher"
     },
     "user3": {
-      "quote": "As a corporate executive, I often feel immense pressure but can't articulate specific feelings. MoodWheel allows me to accurately express my inner state, and the methods provided in the emotion regulation toolkit are very practical.",
-      "name": "Wang Qiang, CEO"
+      "quote": "As a product manager, staying updated on new tech is crucial. This discovery tool is now part of my weekly workflow.",
+      "name": "Mike B., Product Manager"
     }
   },
-  "download": {
-    "title": "Begin Your Emotional Exploration Journey",
-    "description": "Download MoodWheel, spin the emotion wheel, discover your inner rainbow",
-    "plans": {
-      "popular": "Most Popular",
-      "premium": {
-        "title": "Premium",
-        "period": "/ month",
-        "feature1": "All basic features",
-        "feature2": "Unlimited emotion records",
-        "feature3": "Advanced emotion analysis charts",
-        "feature4": "Complete emotion regulation toolkit",
-        "feature5": "Full emotional exploration map experience",
-        "cta": "Upgrade Now"
-      },
-      "free": {
-        "title": "Free",
-        "feature1": "Basic emotion wheel",
-        "feature2": "30 emotion records per month",
-        "feature3": "Basic emotion trend chart",
-        "feature4": "5 emotion regulation tools",
-        "cta": "Free Download"
-      },
-      "family": {
-        "title": "Family",
-        "period": "/ month",
-        "feature1": "Up to 5 family members",
-        "feature2": "All premium features",
-        "feature3": "Family emotion connection features",
-        "feature4": "Family shared activity recommendations",
-        "cta": "Family Share"
-      }
+  "useCases": {
+    "title": "Popular Use Cases",
+    "case1": {
+      "title": "Tech Stack Selection",
+      "description": "Quickly find and compare frameworks or libraries for your next project."
     },
-    "guarantee": "14-day unconditional refund guarantee, no hidden fees"
+    "case2": {
+      "title": "Market Research",
+      "description": "Identify trending technologies and popular tools in specific domains."
+    },
+    "case3": {
+      "title": "Learning & Contribution",
+      "description": "Discover well-maintained projects to learn from or contribute to."
+    }
   },
   "footer": {
-    "product": "Product",
+    "product": "Tool",
     "features": "Features",
     "demo": "Demo",
     "pricing": "Pricing",
-    "company": "Company",
+    "company": "About",
     "about": "About Us",
     "blog": "Blog",
-    "careers": "Careers",
+    "contact": "Contact Us",
     "support": "Support",
     "help": "Help Center",
-    "contact": "Contact Us",
     "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
     "connect": "Follow Us",
-    "copyright": "© 2023 MoodWheel. All rights reserved."
+    "copyright": "© 2024 GitHub Repo Finder by xdataset. All rights reserved."
   },
   "seo": {
-    "title": "MoodWheel: Understand, Express & Manage Emotions | Emotional Wellness App",
-    "description": "Discover MoodWheel, the app that helps you explore your feelings with an interactive emotion wheel, journal, and analysis tools. Start your journey to emotional growth.",
-    "keywords": "emotion wheel, mood tracker, emotional intelligence, mental wellness, self-care, feeling journal, emotion management"
+    "title": "GitHub Popular Repo Discovery Tool | Find Trending Projects",
+    "description": "Efficiently discover popular and trending GitHub repositories with our advanced search and filtering tool. Ideal for developers, researchers, and product managers.",
+    "keywords": "github, repository, popular, trending, discovery, developer tools, open source, project finder, code search, tech trends"
   }
 }
-

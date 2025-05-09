@@ -1,4 +1,4 @@
-name: GitHub Repo Search
+name: X in GitHub Repo Search
 
 on:
   schedule:
@@ -49,7 +49,7 @@ jobs:
           MIN_FORKS: ${{ github.event.inputs.min_forks }}
           OUTPUT_FILE: ${{ github.event.inputs.output_file }}
         run: |
-          python dailysaasstarter.py
+          python dailyx.py
 
       - name: Upload search results as artifact
         if: always()

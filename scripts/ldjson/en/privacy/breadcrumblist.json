@@ -2,7 +2,17 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://visionboard.heymanifestation.com/"},
-    {"@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://visionboard.heymanifestation.com/privacy.html"}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://xdataset.borninsea.com/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Privacy Policy",
+      "item": "https://xdataset.borninsea.com/privacy.html"
+    }
   ]
 }

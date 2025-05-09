@@ -1,23 +1,23 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "MoodWheel",
-  "url": "https://moodwheel.heytcm.com",
+  "name": "GitHub 热门 Repo 发现工具",
+  "url": "https://xdataset.borninsea.com",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://moodwheel.heytcm.com/search?q={search_term_string}",
+    "target": "https://xdataset.borninsea.com/search?q={search_term_string}",
     "query-input": "required name=search_term_string"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "HeyTCM",
+    "name": "BornInSea",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://moodwheel.heytcm.com/img/logo.svg",
+      "url": "https://xdataset.borninsea.com/img/logo.svg",
       "width": 600,
       "height": 60
     }
   },
   "inLanguage": "{{page.lang}}",
-  "description": "MoodWheel - 一个基于情绪轮盘意象的情绪探索与记录应用，帮助用户更好地理解、表达和管理情绪。"
+  "description": "一款高效的 GitHub 热门和相关仓库发现工具，帮助用户根据关键词、排序规则和过滤条件进行搜索、收集与分析。"
 }

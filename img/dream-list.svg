@@ -1,0 +1,10 @@
+<svg viewBox="0 0 320 80" width="320" height="80" xmlns="http://www.w3.org/2000/svg">
+  <rect x="16" y="22" rx="12" width="56" height="36" fill="#ede9fe"/>
+  <text x="44" y="46" text-anchor="middle" font-size="13" fill="#7c3aed">考研</text>
+  <rect x="86" y="22" rx="12" width="56" height="36" fill="#fbbf24"/>
+  <text x="114" y="46" text-anchor="middle" font-size="13" fill="#b45309">环游</text>
+  <rect x="156" y="22" rx="12" width="56" height="36" fill="#bae6fd"/>
+  <text x="184" y="46" text-anchor="middle" font-size="13" fill="#0ea5e9">健身</text>
+  <rect x="226" y="22" rx="12" width="56" height="36" fill="#f0fdf4"/>
+  <text x="254" y="46" text-anchor="middle" font-size="13" fill="#22d3ee">百万</text>
+</svg>

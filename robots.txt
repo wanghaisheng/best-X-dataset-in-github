@@ -175,9 +175,14 @@ Disallow: /
 
 User-agent: *
 Allow: /
-Allow: /en
 Allow: /zh
-Allow: /fr
-Allow: /es
-Allow: /de
-Sitemap: https://appleappdataset.borninsea.com/sitemap.xml
+Disallow: /js
+Disallow: /scripts
+Disallow: /lang
+Disallow: /locale
+Disallow: /css
+Disallow: /docs
+Disallow: /reference
+Disallow: /template
+Disallow: /input
+Sitemap: https://moodwheel.heytcm.com/sitemap.xml

@@ -16,8 +16,8 @@ The prompt will now instruct the AI to:
 
 ### **Enhanced Prompt Template: Generating PPT Structure & Basic Web Presentation Code**
 
-**Prompt Template Version:** 2.0
-**Last Updated:** 2024-08-13
+**Prompt Template Version:** 2.1
+**Last Updated:** 2025-04-27
 
 **Role:** You are an expert UX/UI Designer and Full-Stack Developer tasked with translating a Product Requirements Document (PRD) into both a conceptual presentation plan and functional web-based presentation code (HTML/CSS/JS).
 
@@ -69,6 +69,6 @@ The prompt will now instruct the AI to:
 [ *** PASTE THE ENTIRE CONTENT OF YOUR PRD.MD FILE HERE *** ]
 ```
 
-**Instruction:** Now, please generate **both** the conceptual PPT structure (Part A) and the basic web presentation code (Part B - HTML, CSS, JS) based on the PRD provided above. Adhere strictly to all requirements outlined in this prompt (Version 2.0, Last Updated 2024-08-13). Ensure Part B uses appropriate placeholders for prototype images and that the code structure reflects the plan in Part A. Prioritize clarity and basic functionality for the code.
+**Instruction:** Now, please generate **both** the conceptual PPT structure (Part A) and the basic web presentation code (Part B - HTML, CSS, JS) based on the PRD provided above. Adhere strictly to all requirements outlined in this prompt (Version 2.1, Last Updated 2025-04-27). Ensure Part B uses appropriate placeholders for prototype images and that the code structure reflects the plan in Part A. Prioritize clarity and basic functionality for the code.
 
 ---

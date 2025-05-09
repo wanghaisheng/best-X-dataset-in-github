@@ -1,0 +1,127 @@
+{
+  "hero": {
+    "title": "Spin Your Feelings, Discover Your Rainbow Within",
+    "subtitle": "MoodWheel helps you understand, express, and manage emotions, making every feeling a resource for personal growth",
+    "cta": "Start Emotional Journey",
+    "demo": "See Demo"
+  },
+  "features": {
+    "title": "Explore Your Emotional Universe",
+    "wheel": {
+      "title": "Emotional Wheel Navigation",
+      "description": "Explore your emotions layer by layer through an interactive wheel design, from basic feelings to subtle emotions, precisely locating your inner state"
+    },
+    "journal": {
+      "title": "Emotion Journal Recording",
+      "description": "Pair your emotions with text, photos, and voice recordings to document your current feelings and preserve valuable emotional trajectories"
+    },
+    "analysis": {
+      "title": "Emotion Pattern Analysis",
+      "description": "View emotional change trends through timeline and calendar views to discover emotional triggers and patterns"
+    },
+    "toolkit": {
+      "title": "Emotion Regulation Toolkit",
+      "description": "Intelligently recommends meditation, music, expressive exercises, and other regulation methods based on your emotional state to help balance emotions"
+    },
+    "map": {
+      "title": "Mood Exploration Map",
+      "description": "Gamify emotional exploration, unlock all emotions, and complete a journey of inner adventure"
+    }
+  },
+  "howItWorks": {
+    "title": "How to Use MoodWheel",
+    "step1": {
+      "title": "Select Emotion",
+      "description": "Click on the emotion wheel to explore your current emotional state layer by layer"
+    },
+    "step2": {
+      "title": "Record Experience",
+      "description": "Rate emotional intensity, record text descriptions, photos, or voice"
+    },
+    "step3": {
+      "title": "Gain Insights",
+      "description": "View emotional change trends, discover emotional triggers"
+    },
+    "step4": {
+      "title": "Balance Emotions",
+      "description": "Use recommended emotion regulation tools to improve emotional management ability"
+    }
+  },
+  "appPreview": {
+    "title": "App Showcase",
+    "description": "Explore MoodWheel's core features and interface",
+    "onboarding": "Experience Complete Onboarding Flow"
+  },
+  "testimonials": {
+    "title": "User Voices",
+    "user1": {
+      "quote": "MoodWheel helped me identify emotional nuances I never noticed before. Now I can better understand my reactions, and my family says my emotional management has improved significantly.",
+      "name": "Li Ming, Counselor"
+    },
+    "user2": {
+      "quote": "Using the emotion wheel daily to record feelings has become an important self-care ritual for me. I especially love the emotional exploration map design, which makes the whole process fun rather than a burden.",
+      "name": "Zhang Ting, College Student"
+    },
+    "user3": {
+      "quote": "As a corporate executive, I often feel immense pressure but can't articulate specific feelings. MoodWheel allows me to accurately express my inner state, and the methods provided in the emotion regulation toolkit are very practical.",
+      "name": "Wang Qiang, CEO"
+    }
+  },
+  "download": {
+    "title": "Begin Your Emotional Exploration Journey",
+    "description": "Download MoodWheel, spin the emotion wheel, discover your inner rainbow",
+    "plans": {
+      "popular": "Most Popular",
+      "premium": {
+        "title": "Premium",
+        "period": "/ month",
+        "feature1": "All basic features",
+        "feature2": "Unlimited emotion records",
+        "feature3": "Advanced emotion analysis charts",
+        "feature4": "Complete emotion regulation toolkit",
+        "feature5": "Full emotional exploration map experience",
+        "cta": "Upgrade Now"
+      },
+      "free": {
+        "title": "Free",
+        "feature1": "Basic emotion wheel",
+        "feature2": "30 emotion records per month",
+        "feature3": "Basic emotion trend chart",
+        "feature4": "5 emotion regulation tools",
+        "cta": "Free Download"
+      },
+      "family": {
+        "title": "Family",
+        "period": "/ month",
+        "feature1": "Up to 5 family members",
+        "feature2": "All premium features",
+        "feature3": "Family emotion connection features",
+        "feature4": "Family shared activity recommendations",
+        "cta": "Family Share"
+      }
+    },
+    "guarantee": "14-day unconditional refund guarantee, no hidden fees"
+  },
+  "footer": {
+    "product": "Product",
+    "features": "Features",
+    "demo": "Demo",
+    "pricing": "Pricing",
+    "company": "Company",
+    "about": "About Us",
+    "blog": "Blog",
+    "careers": "Careers",
+    "support": "Support",
+    "help": "Help Center",
+    "contact": "Contact Us",
+    "privacy": "Privacy Policy",
+    "connect": "Follow Us",
+    "copyright": "© 2023 MoodWheel. All rights reserved."
+  },
+  "seo": {
+    "title": "MoodWheel: Understand, Express & Manage Emotions | Emotional Wellness App",
+    "description": "Discover MoodWheel, the app that helps you explore your feelings with an interactive emotion wheel, journal, and analysis tools. Start your journey to emotional growth.",
+    "keywords": "emotion wheel, mood tracker, emotional intelligence, mental wellness, self-care, feeling journal, emotion management"
+  }
+}
+

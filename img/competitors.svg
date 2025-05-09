@@ -1,0 +1,12 @@
+<svg viewBox="0 0 340 120" width="340" height="120" xmlns="http://www.w3.org/2000/svg">
+  <rect x="12" y="28" rx="14" width="60" height="64" fill="#e0e7ff" stroke="#6366F1" stroke-width="2"/>
+  <text x="42" y="60" text-anchor="middle" font-size="13" fill="#6366F1">Canva</text>
+  <rect x="82" y="28" rx="14" width="60" height="64" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+  <text x="112" y="60" text-anchor="middle" font-size="13" fill="#b45309">Pinterest</text>
+  <rect x="152" y="28" rx="14" width="60" height="64" fill="#bae6fd" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="182" y="60" text-anchor="middle" font-size="13" fill="#0ea5e9">Hay House</text>
+  <rect x="222" y="28" rx="14" width="60" height="64" fill="#f0fdf4" stroke="#22d3ee" stroke-width="2"/>
+  <text x="252" y="60" text-anchor="middle" font-size="13" fill="#22d3ee">Shuffles</text>
+  <rect x="292" y="28" rx="14" width="36" height="64" fill="#fff7ed" stroke="#fb923c" stroke-width="2"/>
+  <text x="310" y="60" text-anchor="middle" font-size="13" fill="#fb923c">...</text>
+</svg>

@@ -6,63 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Mood Island 移动模拟器服务条款，了解使用条款、隐私政策和用户责任。">
-  <meta name="keywords" content="服务条款, Terms of Service, 移动模拟器, 用户协议, 隐私政策, Mood Island">
-  <meta name="author" content="Mood Island Team">
+  <meta name="description" content="Terms of Service - Understand the user agreement and service terms for Vision Board.">
+  <meta name="keywords" content="terms, conditions, vision board, heymanifestation, terms of service">
+  <meta name="author" content="HeyManifestation">
   <meta http-equiv="Content-Language" content="en">
-  <link rel="canonical" href="https://appleappdataset.borninsea.com/terms" />
-  <meta property="og:title" content="Terms of Service - Mood Island">
-  <meta property="og:description" content="Mood Island 移动模拟器服务条款，了解使用条款、隐私政策和用户责任。">
-  <meta property="og:image" content="https://appleappdataset.borninsea.com/images/terms-preview.jpg">
-  <meta property="og:url" content="https://appleappdataset.borninsea.com/terms">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Terms of Service - Mood Island">
-  <meta name="twitter:description" content="Mood Island 移动模拟器服务条款，了解使用条款、隐私政策和用户责任。">
-  <meta name="twitter:image" content="https://appleappdataset.borninsea.com/images/terms-preview.jpg">
-  <meta name="twitter:creator" content="@moodisland">
-  <link rel="icon" href="https://appleappdataset.borninsea.com/favicon.ico" type="image/x-icon">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebPage","name":"Terms of Service - Mood Island","url":"https://appleappdataset.borninsea.com/terms","description":"Mood Island 移动模拟器服务条款，了解使用条款、隐私政策和用户责任。","inLanguage":"en","publisher":{"@type":"Organization","name":"Mood Island Team","url":"https://appleappdataset.borninsea.com","logo":{"@type":"ImageObject","url":"https://appleappdataset.borninsea.com/favicon.ico"}}}
+
+  <!-- Canonical Link 多语言支持，参考 ldjson 加载 -->
+  <script>
+    fetch('/scripts/config.json').then(r => r.json()).then(cfg => {
+      let lang = document.documentElement.lang || 'en';
+      let path = window.location.pathname;
+      let canonicalUrl = cfg.baseUrl + path;
+      document.querySelector('link[rel=canonical]')?.setAttribute('href', canonicalUrl);
+    });
   </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://appleappdataset.borninsea.com/"},{"@type":"ListItem","position":2,"name":"Terms","item":"https://appleappdataset.borninsea.com/terms"}],"language":"en"}
-  </script>
+  <link rel="canonical" href="https://visionboard.heymanifestation.com/terms.html" />
 
   <!-- Open Graph for Social Media -->
-  <meta property="og:title" content="Terms of Service - Mood Island">
-  <meta property="og:description" content="Read the terms and conditions for using the mobile simulator.">
-  <meta property="og:image" content="https://appleappdataset.borninsea.com/images/terms-preview.jpg">
-  <meta property="og:url" content="https://appleappdataset.borninsea.com/terms">
+  <meta property="og:title" content="Terms of Service - Vision Board">
+  <meta property="og:description" content="Read the terms and conditions for using Vision Board by HeyManifestation.">
+  <meta property="og:image" content="/assets/terms-image.jpg">
+  <meta property="og:url" content="https://visionboard.heymanifestation.com/terms.html">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Terms of Service - Mood Island">
-  <meta name="twitter:description" content="Read the terms and conditions for using the mobile simulator.">
-  <meta name="twitter:image" content="https://appleappdataset.borninsea.com/images/terms-preview.jpg">
-  <meta name="twitter:creator" content="@moodisland">
+  <meta name="twitter:title" content="Terms of Service - Vision Board">
+  <meta name="twitter:description" content="Read the terms and conditions for using Vision Board by HeyManifestation.">
+  <meta name="twitter:image" content="/assets/terms-image.jpg">
 
   <!-- Favicon -->
-  <link rel="icon" href="https://appleappdataset.borninsea.com/favicon.ico" type="image/x-icon">
-  
-  <!-- Update contact email -->
-  <p>If you have any questions regarding these terms, feel free to contact us at support@appleappdataset.borninsea.com.</p>
-  <meta property="og:title" content="Terms of Service">
-  <meta property="og:description" content="Read the terms and conditions for using the mobile simulator.">
-  <meta property="og:image" content="https://www.yourwebsite.com/terms-image.jpg">
-  <meta property="og:url" content="https://www.yourwebsite.com/terms">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Terms of Service">
-  <meta name="twitter:description" content="Read the terms and conditions for using the mobile simulator.">
-  <meta name="twitter:image" content="https://www.yourwebsite.com/terms-image.jpg">
-  <meta name="twitter:creator" content="@yourtwitterhandle">
-
-  <!-- Favicon -->
-  <link rel="icon" href="https://www.yourwebsite.com/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="https://www.heymanifestation.com/favicon.ico" type="image/x-icon">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
@@ -85,7 +59,7 @@
     })(document,window,'script','https://www.clarity.ms/tag/XXXXXX');
   </script>
 
-  <title>Terms of Service</title>
+  <title>Terms of Service - Vision Board | HeyManifestation</title>
 
   <style>
     /* Global Styles */
@@ -159,13 +133,17 @@
 </head>
 
 <body>
+  <header>
+    <h1>Vision Board by HeyManifestation</h1>
+    <h2>Terms of Service</h2>
+  </header>
   <div class="terms-container">
     <h1>Terms of Service</h1>
 
     <p><strong>Effective Date:</strong> January 1, 2024</p>
 
     <h2>1. Introduction</h2>
-    <p>Welcome to our Mobile Simulator. By using our service, you agree to abide by the following terms and conditions...</p>
+    <p>Welcome to our Vision Board. By using our service, you agree to abide by the following terms and conditions...</p>
 
     <h2>2. Use of Service</h2>
     <p>Users must comply with all applicable laws when using our service. Unauthorized use or abuse of our service may result in penalties...</p>
@@ -182,8 +160,15 @@
     <h2>6. Changes to the Terms</h2>
     <p>We may update these terms from time to time. Any changes will be posted on this page, and the updated terms will be effective immediately...</p>
 
-    <p>If you have any questions regarding these terms, feel free to contact us at support@appleappdataset.borninsea.com.</p>
+    <p>If you have any questions regarding these terms, feel free to contact us at support@heymanifestation.com.</p>
+    <img src="/assets/terms-icon.png" alt="Terms of service icon" class="w-12 h-12 mr-2">
   </div>
+  <footer>
+    <p>&copy; 2024 HeyManifestation. All Rights Reserved.</p>
+  </footer>
+  <script src="/js/ldjson-loader.js"></script>
+  <script src="/js/canonical-loader.js"></script>
+  <script src="/js/bootstrap-scripts.js"></script>
 </body>
 
 </html>

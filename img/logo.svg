@@ -1,0 +1,28 @@
+<svg viewBox="0 0 180 180" width="180" height="180" xmlns="http://www.w3.org/2000/svg">
+  <!-- 柔和渐变背景圆 -->
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </radialGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f9a8d4"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="star" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+  </defs>
+  <circle cx="90" cy="90" r="80" fill="url(#bg)"/>
+  <!-- 女性侧脸（极简线条） -->
+  <path d="M 70 120 Q 90 80 80 60 Q 78 48 90 44 Q 110 38 110 60 Q 112 80 100 110 Q 95 120 120 120" stroke="#fff" stroke-width="4" fill="none"/>
+  <!-- 头发 -->
+  <ellipse cx="100" cy="58" rx="28" ry="18" fill="url(#hair)" opacity="0.55"/>
+  <!-- 星星（愿望） -->
+  <polygon points="90,38 93,47 103,47 95,53 98,62 90,56 82,62 85,53 77,47 87,47" fill="url(#star)"/>
+  <!-- 爱心点缀 -->
+  <path d="M75 130 Q77 127 80 130 Q83 127 85 130 Q85 134 80 137 Q75 134 75 130" fill="#f9a8d4"/>
+  <!-- 品牌字母 -->
+  <text x="90" y="165" text-anchor="middle" font-size="24" fill="#fff" font-family="Verdana,Arial,sans-serif" font-weight="bold">Vision</text>
+</svg>

@@ -67,7 +67,7 @@ function checkKeyInAllLanguages(key, baseName) {
     languageDirs.forEach(lang => {
         // First check specific JSON file
         const specificJsonPath = path.join(localeDir, lang, `${baseName}.json`);
-        const commonJsonPath = path.join(localeDir, lang, 'common.json');
+        const commonJsonPath = path.join(localeDir, lang, '.json');
         
         // Check both specific and common JSON files
         if (!checkKeyInJson(key, specificJsonPath) && !checkKeyInJson(key, commonJsonPath)) {

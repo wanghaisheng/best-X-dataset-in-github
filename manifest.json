@@ -1,11 +1,11 @@
 {
-  "name": "Mobile Simulator",
-  "short_name": "Simulator",
-  "description": "A mobile simulator designed to demonstrate mobile interface design.",
-  "start_url": "/",
+  "name": "Vision Board 显化应用",
+  "short_name": "VisionBoard",
+  "description": "Vision Board：多语言愿望板显化应用，支持个性化定制、社区互动与多端体验。",
+  "start_url": "/app/home.html",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "background_color": "#f5f6fa",
+  "theme_color": "#6366F1",
   "icons": [
     {
       "src": "icons/icon-192x192.png",
@@ -17,5 +17,9 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "lang": "zh-CN",
+  "scope": "/app/",
+  "orientation": "portrait",
+  "prefer_related_applications": false
 }

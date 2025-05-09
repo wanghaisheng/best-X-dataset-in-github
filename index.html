@@ -1,1 +1,365 @@
-<body></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodWheel - 转动你的感受，发现内心的彩虹</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/js/bootstrap-scripts.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="MoodWheel Logo">
+                <h1>MoodWheel</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">功能</a></li>
+                    <li><a href="#how-it-works">如何使用</a></li>
+                    <li><a href="#testimonials">用户评价</a></li>
+                    <li><a href="#download">下载</a></li>
+                    <li class="language-selector">
+                        <select id="language-select">
+                            <option value="zh">中文</option>
+                            <option value="en">English</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-i18n="hero.title">转动你的感受，发现内心的彩虹</h1>
+                <p data-i18n="hero.subtitle">MoodWheel 帮助你理解、表达和管理情绪，让每一种感受都成为自我成长的养分</p>
+                <div class="hero-cta">
+                    <a href="#download" class="btn btn-primary" data-i18n="hero.cta">开始情绪之旅</a>
+                    <a href="#demo" class="btn btn-secondary" data-i18n="hero.demo">查看演示</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="img/hero-wheel.png" alt="MoodWheel Emotion Wheel">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 data-i18n="features.title">探索你的情绪宇宙</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="img/feature-wheel.png" alt="MoodWheel Feature">
+                    </div>
+                    <h3 data-i18n="features.wheel.title">情绪轮盘导航</h3>
+                    <p data-i18n="features.wheel.description">通过互动式轮盘设计，层层深入探索你的情绪，从基础感受到细微情绪，精确定位你的内心状态</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="img/feature-journal.png" alt="Journal Feature">
+                    </div>
+                    <h3 data-i18n="features.journal.title">情绪日记记录</h3>
+                    <p data-i18n="features.journal.description">为你的情绪配上文字、照片和语音，记录当下的感受，留存珍贵的情绪轨迹</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="img/feature-analysis.png" alt="Analysis Feature">
+                    </div>
+                    <h3 data-i18n="features.analysis.title">情绪图谱分析</h3>
+                    <p data-i18n="features.analysis.description">通过时间轴、日历视图查看情绪变化趋势，发现情绪触发因素和规律</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="img/feature-toolkit.png" alt="Toolkit Feature">
+                    </div>
+                    <h3 data-i18n="features.toolkit.title">情绪调节工具箱</h3>
+                    <p data-i18n="features.toolkit.description">基于你的情绪状态，智能推荐冥想、音乐、表达练习等调节方式，帮助你平衡情绪</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="img/feature-map.png" alt="Map Feature">
+                    </div>
+                    <h3 data-i18n="features.map.title">心情探索地图</h3>
+                    <p data-i18n="features.map.description">将情绪探索游戏化，解锁全部情绪，完成一次心灵冒险之旅</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 data-i18n="howItWorks.title">如何使用 MoodWheel</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 data-i18n="howItWorks.step1.title">选择情绪</h3>
+                        <p data-i18n="howItWorks.step1.description">在情绪轮盘上点击，逐层探索你当前的情绪状态</p>
+                        <img src="img/step1.png" alt="Step 1: Choose Emotion">
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 data-i18n="howItWorks.step2.title">记录体验</h3>
+                        <p data-i18n="howItWorks.step2.description">评分情绪强度，记录文字描述、照片或语音</p>
+                        <img src="img/step2.png" alt="Step 2: Record Experience">
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 data-i18n="howItWorks.step3.title">获取洞察</h3>
+                        <p data-i18n="howItWorks.step3.description">查看情绪变化趋势，发现情绪触发因素</p>
+                        <img src="img/step3.png" alt="Step 3: Gain Insights">
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 data-i18n="howItWorks.step4.title">平衡情绪</h3>
+                        <p data-i18n="howItWorks.step4.description">使用推荐的情绪调节工具，提升情绪管理能力</p>
+                        <img src="img/step4.png" alt="Step 4: Balance Emotions">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="app-preview">
+        <div class="container">
+            <h2 data-i18n="appPreview.title">应用展示</h2>
+            <p data-i18n="appPreview.description">探索 MoodWheel 的核心功能和界面</p>
+            
+            <div class="preview-tabs">
+                <button class="tab-btn active" data-tab="base">基础风格</button>
+                <button class="tab-btn" data-tab="minimal">简约风格</button>
+                <button class="tab-btn" data-tab="colorful">多彩风格</button>
+            </div>
+            
+            <div class="preview-content">
+                <div class="tab-content active" id="base-content">
+                    <div class="phone-mockups">
+                        <div class="phone-mockup">
+                            <iframe src="apps/base/home.html" frameborder="0"></iframe>
+                            <p>主页情绪轮盘</p>
+                        </div>
+                        <div class="phone-mockup">
+                            <iframe src="apps/base/journal.html" frameborder="0"></iframe>
+                            <p>情绪日记</p>
+                        </div>
+                        <div class="phone-mockup">
+                            <iframe src="apps/base/analysis.html" frameborder="0"></iframe>
+                            <p>情绪分析</p>
+                        </div>
+                        <div class="phone-mockup">
+                            <iframe src="apps/base/toolkit.html" frameborder="0"></iframe>
+                            <p>情绪调节工具箱</p>
+                        </div>
+                        <div class="phone-mockup">
+                            <iframe src="apps/base/journey.html" frameborder="0"></iframe>
+                            <p>情绪探索地图</p>
+                        </div>
+                    </div>
+                    <div class="preview-cta">
+                        <a href="apps/base/onboarding-preview/index.html" class="btn btn-secondary" target="_blank" data-i18n="appPreview.onboarding">体验完整导览流程</a>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="minimal-content">
+                    <div class="phone-mockups">
+                        <div class="phone-mockup">
+                            <iframe src="apps/minimal/home.html" frameborder="0"></iframe>
+                            <p>主页情绪轮盘</p>
+                        </div>
+                        <div class="phone-mockup">
+                            <iframe src="apps/minimal/journal.html" frameborder="0"></iframe>
+                            <p>情绪日记</p>
+                        </div>
+                        <div class="phone-mockup">
+                            <iframe src="apps/minimal/analysis.html" frameborder="0"></iframe>
+                            <p>情绪分析</p>
+                        </div>
+                    </div>
+                    <div class="preview-cta">
+                        <a href="apps/minimal/onboarding-preview/index.html" class="btn btn-secondary" target="_blank" data-i18n="appPreview.onboarding">体验完整导览流程</a>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="colorful-content">
+                    <div class="phone-mockups">
+                        <div class="phone-mockup">
+                            <iframe src="apps/colorful/home.html" frameborder="0"></iframe>
+                            <p>主页情绪轮盘</p>
+                        </div>
+                        <div class="phone-mockup">
+                            <iframe src="apps/colorful/journal.html" frameborder="0"></iframe>
+                            <p>情绪日记</p>
+                        </div>
+                        <div class="phone-mockup">
+                            <iframe src="apps/colorful/analysis.html" frameborder="0"></iframe>
+                            <p>情绪分析</p>
+                        </div>
+                    </div>
+                    <div class="preview-cta">
+                        <a href="apps/colorful/onboarding-preview/index.html" class="btn btn-secondary" target="_blank" data-i18n="appPreview.onboarding">体验完整导览流程</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 data-i18n="testimonials.title">用户心声</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="img/avatar1.png" alt="User Avatar">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text" data-i18n="testimonials.user1.quote">"MoodWheel 帮助我识别出以前从未注意的情绪细微差别。现在我能够更好地理解自己的反应，家人也说我的情绪管理能力有了明显提升。"</p>
+                        <p class="testimonial-author" data-i18n="testimonials.user1.name">李明，心理咨询师</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="img/avatar2.png" alt="User Avatar">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text" data-i18n="testimonials.user2.quote">"每天使用情绪轮盘记录感受，成为我自我关怀的重要仪式。特别喜欢情绪探索地图的设计，让整个过程变得有趣而不是负担。"</p>
+                        <p class="testimonial-author" data-i18n="testimonials.user2.name">张婷，大学生</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="img/avatar3.png" alt="User Avatar">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text" data-i18n="testimonials.user3.quote">"作为一名企业高管，我常感到压力巨大却说不出具体感受。MoodWheel 让我能够准确表达内心状态，情绪调节工具箱提供的方法也非常实用。"</p>
+                        <p class="testimonial-author" data-i18n="testimonials.user3.name">王强，公司CEO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download">
+        <div class="container">
+            <h2 data-i18n="download.title">开始你的情绪探索之旅</h2>
+            <p data-i18n="download.description">下载 MoodWheel，转动情绪轮盘，发现内心的彩虹</p>
+            <div class="download-options">
+                <a href="#" class="download-btn">
+                    <img src="img/app-store.png" alt="Download on App Store">
+                </a>
+                <a href="#" class="download-btn">
+                    <img src="img/google-play.png" alt="Get it on Google Play">
+                </a>
+            </div>
+            <div class="subscription-info">
+                <div class="subscription-plan popular">
+                    <div class="popular-badge" data-i18n="download.plans.popular">最受欢迎</div>
+                    <h3 data-i18n="download.plans.premium.title">高级版</h3>
+                    <div class="price">
+                        <span class="amount">¥12</span>
+                        <span class="period" data-i18n="download.plans.premium.period">/ 月</span>
+                    </div>
+                    <ul class="features-list">
+                        <li data-i18n="download.plans.premium.feature1">所有基础功能</li>
+                        <li data-i18n="download.plans.premium.feature2">无限情绪记录</li>
+                        <li data-i18n="download.plans.premium.feature3">高级情绪分析图表</li>
+                        <li data-i18n="download.plans.premium.feature4">完整情绪调节工具箱</li>
+                        <li data-i18n="download.plans.premium.feature5">情绪探索地图完整体验</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" data-i18n="download.plans.premium.cta">立即升级</a>
+                </div>
+                <div class="subscription-plan">
+                    <h3 data-i18n="download.plans.free.title">免费版</h3>
+                    <div class="price">
+                        <span class="amount">¥0</span>
+                    </div>
+                    <ul class="features-list">
+                        <li data-i18n="download.plans.free.feature1">基础情绪轮盘</li>
+                        <li data-i18n="download.plans.free.feature2">每月30条情绪记录</li>
+                        <li data-i18n="download.plans.free.feature3">基础情绪趋势图</li>
+                        <li data-i18n="download.plans.free.feature4">5种情绪调节工具</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" data-i18n="download.plans.free.cta">免费下载</a>
+                </div>
+                <div class="subscription-plan">
+                    <h3 data-i18n="download.plans.family.title">家庭版</h3>
+                    <div class="price">
+                        <span class="amount">¥28</span>
+                        <span class="period" data-i18n="download.plans.family.period">/ 月</span>
+                    </div>
+                    <ul class="features-list">
+                        <li data-i18n="download.plans.family.feature1">最多5个家庭成员</li>
+                        <li data-i18n="download.plans.family.feature2">所有高级版功能</li>
+                        <li data-i18n="download.plans.family.feature3">家庭情绪连接功能</li>
+                        <li data-i18n="download.plans.family.feature4">家庭共享活动推荐</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" data-i18n="download.plans.family.cta">家庭共享</a>
+                </div>
+            </div>
+            <div class="download-guarantee">
+                <img src="img/guarantee.png" alt="Satisfaction Guarantee">
+                <p data-i18n="download.guarantee">14天无条件退款保证，没有隐藏费用</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="MoodWheel Logo">
+                <h3>MoodWheel</h3>
+            </div>
+            <div class="footer-nav">
+                <div class="footer-nav-column">
+                    <h4 data-i18n="footer.product">产品</h4>
+                    <ul>
+                        <li><a href="#features" data-i18n="footer.features">功能</a></li>
+                        <li><a href="#demo" data-i18n="footer.demo">演示</a></li>
+                        <li><a href="#download" data-i18n="footer.pricing">价格</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-column">
+                    <h4 data-i18n="footer.company">公司</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer.about">关于我们</a></li>
+                        <li><a href="#" data-i18n="footer.blog">博客</a></li>
+                        <li><a href="#" data-i18n="footer.careers">招聘</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-column">
+                    <h4 data-i18n="footer.support">支持</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer.help">帮助中心</a></li>
+                        <li><a href="#" data-i18n="footer.contact">联系我们</a></li>
+                        <li><a href="#" data-i18n="footer.privacy">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-column">
+                    <h4 data-i18n="footer.connect">关注我们</h4>
+                    <div class="social-links">
+                        <a href="#"><img src="img/icon-twitter.png" alt="Twitter"></a>
+                        <a href="#"><img src="img/icon-instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="img/icon-facebook.png" alt="Facebook"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">© 2023 MoodWheel. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,8 +1,9 @@
 {
-  "baseUrl": "https://appleappdataset.borninsea.com",
+  "baseUrl": "https://moodwheel.heytcm.com",
   "defaultLang": "en",
-  "email":"support@appleappdataset.borninsea.com",
+  "email":"support@heytcm.com",
   "apptype":"app",
+  "localepath":"locale",
   "robots": {
     "allowedBots": [
       "Googlebot",
@@ -21,11 +22,18 @@
     ],
     "allowedPaths": [
       "/",
-      "/en",
-      "/zh",
-      "/fr",
-      "/es",
-      "/de"
+      "/zh"
+    ],
+    "blockedPaths": [
+      "/js",
+      "/scripts",
+      "/lang",
+      "/locale",
+      "/css",
+      "/docs",
+      "/reference",
+      "/template",
+      "/input"
     ]
   }
 }

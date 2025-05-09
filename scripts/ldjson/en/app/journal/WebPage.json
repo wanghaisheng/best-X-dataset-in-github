@@ -1,0 +1,15 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "MoodWheel Journal",
+  "url": "https://moodwheel.heytcm.com/app/journal",
+  "description": "记录您的情绪日记，追踪您的心路历程。",
+  "isPartOf": {
+    "@id": "https://moodwheel.heytcm.com/#website"
+  },
+  "inLanguage": "en",
+  "mainEntity": {
+    "@type": "SoftwareApplication",
+    "@id": "https://moodwheel.heytcm.com/#softwareapplication"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "SoftwareApplication",
+    "name": "MoodWheel",
+    "url": "https://moodwheel.heytcm.com/index.html"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Li Ming, Counselor"
+  },
+  "reviewBody": "MoodWheel helped me identify emotional nuances I never noticed before. Now I can better understand my reactions, and my family says my emotional management has improved significantly.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MoodWheel Team"
+  },
+  "datePublished": "2024-07-26"
+}

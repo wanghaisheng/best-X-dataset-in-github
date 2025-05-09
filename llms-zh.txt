@@ -1,0 +1,48 @@
+# MoodWheel - 网站完整介绍
+> MoodWheel 是一款基于情绪轮盘意象的情绪探索与记录应用，旨在帮助用户更好地理解、表达和管理情绪。它使用户能够将每一种感受都转化为个人成长的资源。
+
+## 网站背景
+MoodWheel 的创建旨在为情绪探索和心理健康提供一个专门的工具。它利用情绪轮盘的直观概念，帮助用户导航和清晰表达自己的感受，从而培养自我意识和情商。其愿景是让情绪理解变得易于 erişilebilir (accessible) 和富有洞察力。
+
+## 主要网址说明（根据 sitemap.xml）
+- https://moodwheel.heytcm.com/app/home
+  - 主要页面，以交互式 MoodWheel 为特色，用于情绪探索。
+- https://moodwheel.heytcm.com/app/journal
+  - 用于记录情绪体验，包括强度、描述和多媒体内容。
+- https://moodwheel.heytcm.com/app/analysis
+  - 通过各种可视化方式提供情绪模式和历史分析。
+- https://moodwheel.heytcm.com/app/journey
+  - 一个游戏化的情绪探索地图，用于发现和理解广泛的情绪。
+- https://moodwheel.heytcm.com/app/toolkit
+  - 提供一个包含冥想和练习等资源的工具箱，用于情绪调节。
+- https://moodwheel.heytcm.com/privacy
+  - 详细说明应用程序的隐私政策。
+- https://moodwheel.heytcm.com/terms
+  - 概述使用 MoodWheel 的服务条款。
+
+## 内容分类详情
+### [MoodWheel 情绪探索](https://moodwheel.heytcm.com/app/home)
+交互式轮盘导航，逐层探索情绪，从基本感觉到细微状态。
+
+### [情绪日记与记录](https://moodwheel.heytcm.com/app/journal)
+记录情绪详情，如强度评分、文字描述以及可选的照片/语音附件。
+
+### [情绪模式分析](https://moodwheel.heytcm.com/app/analysis)
+使用时间轴、日历或热力图可视化情绪历史和趋势，以识别模式和触发因素。
+
+### [心情探索地图](https://moodwheel.heytcm.com/app/journey)
+参与游戏化体验，探索并解锁全面的情绪地图。
+
+### [情绪调节工具箱](https://moodwheel.heytcm.com/app/toolkit)
+访问一套精选工具和练习，如引导冥想或音乐，旨在帮助管理和平衡情绪。
+
+## 用户价值
+- 通过帮助用户准确识别和表达情绪，增强自我意识。
+- 通过结构化的探索和记录，促进情绪理解和管理。
+- 为主动的心理健康提供关于个人情绪模式和触发因素的洞察。
+- 提供实用工具和资源，以实现有效的情绪调节。
+- 通过将情绪体验转化为学习机会，支持个人成长之旅。
+
+## 技术 SEO 优化
+- 动态注入 SEO 元标签、备用语言链接和 LD+JSON 结构化数据，以实现最佳搜索引擎可见性和多语言支持。
+- AI Scraper 友好的配置和全面的站点地图确保有效的抓取和索引。

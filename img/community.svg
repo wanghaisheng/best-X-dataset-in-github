@@ -1,0 +1,10 @@
+<svg viewBox="0 0 320 80" width="320" height="80" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="40" r="24" fill="#e0e7ff"/>
+  <circle cx="140" cy="40" r="24" fill="#fbbf24"/>
+  <circle cx="220" cy="40" r="24" fill="#bae6fd"/>
+  <circle cx="280" cy="40" r="16" fill="#f0fdf4"/>
+  <text x="60" y="46" text-anchor="middle" font-size="15" fill="#6366F1">赞</text>
+  <text x="140" y="46" text-anchor="middle" font-size="15" fill="#b45309">评</text>
+  <text x="220" y="46" text-anchor="middle" font-size="15" fill="#0ea5e9">榜</text>
+  <text x="280" y="46" text-anchor="middle" font-size="12" fill="#22d3ee">群</text>
+</svg>

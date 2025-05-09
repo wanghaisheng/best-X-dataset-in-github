@@ -1,0 +1,29 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "MoodWheel",
+  "operatingSystem": "iOS, Android, Web",
+  "applicationCategory": "LifestyleApplication",
+  "description": "MoodWheel is an emotion exploration and recording app that helps users understand, express, and manage their emotions. It uses an interactive emotion wheel and provides tools for journaling, pattern analysis, and emotional regulation, turning every feeling into a resource for personal growth.",
+  "inLanguage": "en",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "url": "https://moodwheel.heytcm.com/index.html",
+  "downloadUrl": "https://moodwheel.heytcm.com/index.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MoodWheel Team",
+    "url": "https://moodwheel.heytcm.com"
+  },
+  "featureList": [
+    "Emotional Wheel Navigation",
+    "Emotion Journal Recording",
+    "Emotion Pattern Analysis",
+    "Emotion Regulation Toolkit",
+    "Mood Exploration Map"
+  ],
+  "keywords": "emotion, mood, journal, tracker, mental health, self-care, emotion wheel"
+}

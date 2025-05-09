@@ -1,0 +1,20 @@
+<svg viewBox="0 0 340 80" width="340" height="80" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="36" cy="40" r="24" fill="#e0e7ff"/>
+  <text x="36" y="46" text-anchor="middle" font-size="15" fill="#6366F1">创建</text>
+  <circle cx="116" cy="40" r="24" fill="#fbbf24"/>
+  <text x="116" y="46" text-anchor="middle" font-size="15" fill="#b45309">激励</text>
+  <circle cx="196" cy="40" r="24" fill="#bae6fd"/>
+  <text x="196" y="46" text-anchor="middle" font-size="15" fill="#0ea5e9">追踪</text>
+  <circle cx="276" cy="40" r="24" fill="#f0fdf4"/>
+  <text x="276" y="46" text-anchor="middle" font-size="15" fill="#22d3ee">互动</text>
+  <g stroke="#a78bfa" stroke-width="3" fill="none">
+    <path d="M60,40 Q76,40 92,40" marker-end="url(#arrowhead)"/>
+    <path d="M140,40 Q156,40 172,40" marker-end="url(#arrowhead)"/>
+    <path d="M220,40 Q236,40 252,40" marker-end="url(#arrowhead)"/>
+  </g>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/>
+    </marker>
+  </defs>
+</svg>

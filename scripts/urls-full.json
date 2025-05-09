@@ -1,0 +1,17 @@
+{
+  "defaultLang": "en",
+  "langs": [
+    ""
+  ],
+  "urls": [
+    "https://moodwheel.heytcm.com/app/analysis",
+    "https://moodwheel.heytcm.com/app/home",
+    "https://moodwheel.heytcm.com/app/journal",
+    "https://moodwheel.heytcm.com/app/journey",
+    "https://moodwheel.heytcm.com/app/toolkit",
+    "https://moodwheel.heytcm.com/privacy",
+    "https://moodwheel.heytcm.com/terms",
+    "https://moodwheel.heytcm.com/",
+    "https://moodwheel.heytcm.com/index.html"
+  ]
+}

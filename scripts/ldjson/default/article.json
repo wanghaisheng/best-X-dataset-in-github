@@ -1,0 +1,15 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Build Interactive Simulations with WebSim Starter",
+  "image": [
+    "https://websimstarter.borninsea.com/assets/blog/article1-cover.png"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Jane Doe"
+  },
+  "datePublished": "2024-04-10",
+  "dateModified": "2024-04-12",
+  "articleBody": "WebSim Starter enables anyone to build, run, and share interactive simulations easily. In this article, we explore the main features and how to get started..."
+}

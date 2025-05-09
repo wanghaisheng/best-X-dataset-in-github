@@ -1,0 +1,19 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "WebSim Starter Inc.",
+  "url": "https://websimstarter.borninsea.com",
+  "logo": "https://websimstarter.borninsea.com/assets/logo.png",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "email": "support@websimstarter.borninsea.com",
+      "contactType": "customer support",
+      "telephone": "+1-234-567-8900"
+    }
+  ],
+  "sameAs": [
+    "https://twitter.com/websimstarter",
+    "https://facebook.com/websimstarter"
+  ]
+}

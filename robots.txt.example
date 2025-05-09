@@ -1,0 +1,36 @@
+User-agent: Googlebot
+User-agent: Applebot
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: Yeti
+User-agent: Twitterbot
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
+User-agent: 360Spider
+User-agent: Yisouspider
+User-agent: Sogouspider
+Disallow: /
+
+
+User-Agent: GPTBot
+Allow: /llms.txt
+Disallow: /
+
+
+User-Agent: anthropic-ai
+Allow: /llms.txt
+Disallow: /
+
+
+
+User-agent: *
+Allow: /en/getting-started
+Allow: /en/using-tiktok
+Allow: /en/account-and-privacy
+Allow: /en/safety-hc
+Allow: /en/log-in-troubleshoot
+Allow: /en/live-gifts-wallet
+Allow: /en/business-and-creator
+Sitemap: https://support.tiktok.com/tos/node/sitemaps/sitemap.xml

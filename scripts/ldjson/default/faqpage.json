@@ -1,0 +1,22 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is WebSim Starter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "WebSim Starter is a platform for creating and sharing web-based simulations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is WebSim Starter free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, WebSim Starter offers a free tier for all users."
+      }
+    }
+  ]
+}

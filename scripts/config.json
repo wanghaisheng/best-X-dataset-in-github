@@ -1,0 +1,31 @@
+{
+  "baseUrl": "https://appleappdataset.borninsea.com",
+  "defaultLang": "en",
+  "email":"support@appleappdataset.borninsea.com",
+  "apptype":"app",
+  "robots": {
+    "allowedBots": [
+      "Googlebot",
+      "Applebot",
+      "Bingbot",
+      "DuckDuckBot",
+      "Yeti",
+      "Twitterbot",
+      "Yandex"
+    ],
+    "blockedBots": [
+      "Baiduspider",
+      "360Spider",
+      "Yisouspider",
+      "Sogouspider"
+    ],
+    "allowedPaths": [
+      "/",
+      "/en",
+      "/zh",
+      "/fr",
+      "/es",
+      "/de"
+    ]
+  }
+}

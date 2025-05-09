@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Reports Dashboard</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clusterize.js@0.18.1/clusterize.min.js"></script>
+  <style>
+    .clusterize-scroll{overflow-y:auto;max-height:500px;}
+    .clusterize-no-data{padding:2rem;text-align:center;color:#888;}
+  </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col">
+  <header class="w-full bg-gradient-to-r from-primary to-secondary text-white py-6 mb-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div class="flex items-center">
+        <span class="text-3xl mr-2">📊</span>
+        <span class="text-xl font-bold">AppSitemap Analyzer</span>
+      </div>
+      <nav class="flex gap-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="#" class="underline font-semibold">Reports</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container mx-auto px-4 flex-1">
+    <h1 class="text-2xl font-bold mb-4">Historical App Reports</h1>
+    <div class="mb-6">
+      <div class="flex flex-wrap gap-2 border-b border-gray-300 dark:border-gray-700 mb-4">
+        <button class="tab-btn px-4 py-2 focus:outline-none border-b-2 border-transparent text-gray-600 dark:text-gray-300" data-tab="all">All Details</button>
+        <button class="tab-btn px-4 py-2 focus:outline-none border-b-2 border-transparent text-gray-600 dark:text-gray-300" data-tab="daily">Daily Report</button>
+        <button class="tab-btn px-4 py-2 focus:outline-none border-b-2 border-transparent text-gray-600 dark:text-gray-300" data-tab="weekly">Weekly Report</button>
+        <button class="tab-btn px-4 py-2 focus:outline-none border-b-2 border-transparent text-gray-600 dark:text-gray-300" data-tab="monthly">Monthly Report</button>
+      </div>
+      <div id="tab-all" class="tab-content">
+        <section class="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 shadow">
+            <div class="text-gray-500 text-sm">Total Apps</div>
+            <div id="total-apps" class="text-2xl font-bold">-</div>
+          </div>
+          <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 shadow">
+            <div class="text-gray-500 text-sm">Daily New</div>
+            <div id="daily-new" class="text-2xl font-bold">-</div>
+          </div>
+          <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 shadow">
+            <div class="text-gray-500 text-sm">Weekly New</div>
+            <div id="weekly-new" class="text-2xl font-bold">-</div>
+          </div>
+          <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 shadow">
+            <div class="text-gray-500 text-sm">Monthly New</div>
+            <div id="monthly-new" class="text-2xl font-bold">-</div>
+          </div>
+          <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 shadow">
+            <div class="text-gray-500 text-sm">Search</div>
+            <input id="search-input" type="text" placeholder="Search app name or ID..." class="w-full px-2 py-1 rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+          </div>
+          <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 shadow flex items-center justify-center">
+            <button id="reload-btn" class="bg-primary text-white px-4 py-2 rounded hover:bg-secondary">Reload Data</button>
+          </div>
+        </section>
+        <section class="mb-4">
+          <div class="clusterize">
+            <table class="min-w-full text-sm border rounded overflow-hidden">
+              <thead class="bg-gray-200 dark:bg-gray-700">
+                <tr>
+                  <th class="px-2 py-1">App ID</th>
+                  <th class="px-2 py-1">App Name</th>
+                  <th class="px-2 py-1">Category</th>
+                  <th class="px-2 py-1">Added Date</th>
+                  <th class="px-2 py-1">Last Modified</th>
+                </tr>
+              </thead>
+            </table>
+            <div id="scrollArea" class="clusterize-scroll border-b border-gray-200 dark:border-gray-700" style="height:400px;">
+              <table class="min-w-full text-sm">
+                <tbody id="contentArea" class="clusterize-content">
+                  <tr><td colspan="5" class="clusterize-no-data">Loading...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="tab-daily" class="tab-content hidden">
+        <section class="mb-4">
+          <h2 class="text-lg font-semibold mb-2">Daily Report List & Analysis</h2>
+          <div id="daily-dashboard" class="mb-2"></div>
+          <div class="clusterize">
+            <table class="min-w-full text-sm border rounded overflow-hidden">
+              <thead class="bg-gray-200 dark:bg-gray-700">
+                <tr>
+                  <th class="px-2 py-1">App ID</th>
+                  <th class="px-2 py-1">App Name</th>
+                  <th class="px-2 py-1">Category</th>
+                  <th class="px-2 py-1">Added Date</th>
+                  <th class="px-2 py-1">Last Modified</th>
+                </tr>
+              </thead>
+            </table>
+            <div id="scrollArea-daily" class="clusterize-scroll border-b border-gray-200 dark:border-gray-700" style="height:400px;">
+              <table class="min-w-full text-sm">
+                <tbody id="contentArea-daily" class="clusterize-content">
+                  <tr><td colspan="5" class="clusterize-no-data">Loading...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="tab-weekly" class="tab-content hidden">
+        <section class="mb-4">
+          <h2 class="text-lg font-semibold mb-2">Weekly Report List & Analysis</h2>
+          <div id="weekly-dashboard" class="mb-2"></div>
+          <div class="clusterize">
+            <table class="min-w-full text-sm border rounded overflow-hidden">
+              <thead class="bg-gray-200 dark:bg-gray-700">
+                <tr>
+                  <th class="px-2 py-1">App ID</th>
+                  <th class="px-2 py-1">App Name</th>
+                  <th class="px-2 py-1">Category</th>
+                  <th class="px-2 py-1">Added Date</th>
+                  <th class="px-2 py-1">Last Modified</th>
+                </tr>
+              </thead>
+            </table>
+            <div id="scrollArea-weekly" class="clusterize-scroll border-b border-gray-200 dark:border-gray-700" style="height:400px;">
+              <table class="min-w-full text-sm">
+                <tbody id="contentArea-weekly" class="clusterize-content">
+                  <tr><td colspan="5" class="clusterize-no-data">Loading...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="tab-monthly" class="tab-content hidden">
+        <section class="mb-4">
+          <h2 class="text-lg font-semibold mb-2">Monthly Report List & Analysis</h2>
+          <div id="monthly-dashboard" class="mb-2"></div>
+          <div class="clusterize">
+            <table class="min-w-full text-sm border rounded overflow-hidden">
+              <thead class="bg-gray-200 dark:bg-gray-700">
+                <tr>
+                  <th class="px-2 py-1">App ID</th>
+                  <th class="px-2 py-1">App Name</th>
+                  <th class="px-2 py-1">Category</th>
+                  <th class="px-2 py-1">Added Date</th>
+                  <th class="px-2 py-1">Last Modified</th>
+                </tr>
+              </thead>
+            </table>
+            <div id="scrollArea-monthly" class="clusterize-scroll border-b border-gray-200 dark:border-gray-700" style="height:400px;">
+              <table class="min-w-full text-sm">
+                <tbody id="contentArea-monthly" class="clusterize-content">
+                  <tr><td colspan="5" class="clusterize-no-data">Loading...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="text-center py-4 text-gray-500 text-xs">&copy; 2024 AppSitemap Analyzer</footer>
+  <script>
+    // Tab logic
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('border-primary', 'text-primary', 'font-bold', 'border-b-2'));
+        btn.classList.add('border-primary', 'text-primary', 'font-bold', 'border-b-2');
+        tabContents.forEach(tc => tc.classList.add('hidden'));
+        document.getElementById('tab-' + btn.dataset.tab).classList.remove('hidden');
+      });
+    });
+    // Default to All tab
+    document.querySelector('.tab-btn[data-tab="all"]').classList.add('border-primary', 'text-primary', 'font-bold', 'border-b-2');
+    document.getElementById('tab-all').classList.remove('hidden');
+
+    // Data loading for each tab
+    let allData = [], dailyData = [], weeklyData = [], monthlyData = [];
+    let clusterizeAll = null, clusterizeDaily = null, clusterizeWeekly = null, clusterizeMonthly = null;
+    function randomDate(start, end) {
+      return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+    }
+    function generateFakeData(count) {
+      const cats = ['Games','Productivity','Education','Music','Photo','Health','Finance'];
+      const arr = [];
+      for(let i=0;i<count;i++){
+        const date = randomDate(new Date(2023,0,1), new Date());
+        arr.push({
+          id: 'app'+(1000000+i),
+          name: 'App '+(1000000+i),
+          category: cats[Math.floor(Math.random()*cats.length)],
+          added_date: date.toISOString().slice(0,10),
+          lastmodified: randomDate(date,new Date()).toISOString().slice(0,10)
+        });
+      }
+      return arr;
+    }
+    function renderRows(data) {
+      return data.map(d=>`<tr><td class='px-2 py-1 border-b'>${d.id}</td><td class='px-2 py-1 border-b'>${d.name}</td><td class='px-2 py-1 border-b'>${d.category}</td><td class='px-2 py-1 border-b'>${d.added_date}</td><td class='px-2 py-1 border-b'>${d.lastmodified}</td></tr>`);
+    }
+    function updateDashboard(data, prefix='') {
+      document.getElementById(prefix+'total-apps')?.textContent = data.length;
+      const today = new Date().toISOString().slice(0,10);
+      const weekAgo = new Date(Date.now()-7*86400000).toISOString().slice(0,10);
+      const monthAgo = new Date(Date.now()-30*86400000).toISOString().slice(0,10);
+      document.getElementById(prefix+'daily-new')?.textContent = data.filter(d=>d.added_date===today).length;
+      document.getElementById(prefix+'weekly-new')?.textContent = data.filter(d=>d.added_date>=weekAgo).length;
+      document.getElementById(prefix+'monthly-new')?.textContent = data.filter(d=>d.added_date>=monthAgo).length;
+    }
+    function reloadTable(tab) {
+      let data, clusterize, scrollId, contentId;
+      if(tab==='all') { data = allData; clusterize = clusterizeAll; scrollId = 'scrollArea'; contentId = 'contentArea'; }
+      else if(tab==='daily') { data = dailyData; clusterize = clusterizeDaily; scrollId = 'scrollArea-daily'; contentId = 'contentArea-daily'; }
+      else if(tab==='weekly') { data = weeklyData; clusterize = clusterizeWeekly; scrollId = 'scrollArea-weekly'; contentId = 'contentArea-weekly'; }
+      else if(tab==='monthly') { data = monthlyData; clusterize = clusterizeMonthly; scrollId = 'scrollArea-monthly'; contentId = 'contentArea-monthly'; }
+      if(clusterize) clusterize.destroy(true);
+      const newClusterize = new Clusterize({
+        rows: renderRows(data),
+        scrollId,
+        contentId,
+        no_data_text: 'No data found.'
+      });
+      if(tab==='all') clusterizeAll = newClusterize;
+      else if(tab==='daily') clusterizeDaily = newClusterize;
+      else if(tab==='weekly') clusterizeWeekly = newClusterize;
+      else if(tab==='monthly') clusterizeMonthly = newClusterize;
+    }
+    function loadData(tab) {
+      if(tab==='all') { allData = generateFakeData(10000); reloadTable('all'); updateDashboard(allData); }
+      else if(tab==='daily') { dailyData = generateFakeData(1000); reloadTable('daily'); document.getElementById('daily-dashboard').textContent = `Total: ${dailyData.length}`; }
+      else if(tab==='weekly') { weeklyData = generateFakeData(5000); reloadTable('weekly'); document.getElementById('weekly-dashboard').textContent = `Total: ${weeklyData.length}`; }
+      else if(tab==='monthly') { monthlyData = generateFakeData(10000); reloadTable('monthly'); document.getElementById('monthly-dashboard').textContent = `Total: ${monthlyData.length}`; }
+    }
+    // Initial load
+    loadData('all');
+    // Tab switching loads data if not loaded
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tab = btn.dataset.tab;
+        if(tab==='all' && allData.length===0) loadData('all');
+        else if(tab==='daily' && dailyData.length===0) loadData('daily');
+        else if(tab==='weekly' && weeklyData.length===0) loadData('weekly');
+        else if(tab==='monthly' && monthlyData.length===0) loadData('monthly');
+      });
+    });
+  </script>
+</body>
+</html>

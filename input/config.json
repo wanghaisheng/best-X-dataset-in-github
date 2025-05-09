@@ -1,0 +1,31 @@
+{
+  "baseUrl": "https://websimstarter.borninsea.com",
+  "defaultLang": "en",
+  "email":"support@websimstarter.borninsea.com",
+  "apptype":"software",
+  "robots": {
+    "allowedBots": [
+      "Googlebot",
+      "Applebot",
+      "Bingbot",
+      "DuckDuckBot",
+      "Yeti",
+      "Twitterbot",
+      "Yandex"
+    ],
+    "blockedBots": [
+      "Baiduspider",
+      "360Spider",
+      "Yisouspider",
+      "Sogouspider"
+    ],
+    "allowedPaths": [
+      "/",
+      "/en",
+      "/zh",
+      "/fr",
+      "/es",
+      "/de"
+    ]
+  }
+}

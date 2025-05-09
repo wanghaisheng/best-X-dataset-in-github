@@ -1,0 +1,11 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "WebSim Starter",
+  "url": "https://websimstarter.borninsea.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://websimstarter.borninsea.com/search/{search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}

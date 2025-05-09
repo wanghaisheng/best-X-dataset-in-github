@@ -1,0 +1,42 @@
+# WebSim Vibe Coding Starter - AI采集专用页面 llms.txt
+
+## 网站简介
+WebSim Vibe Coding Starter 是一个面向开发者、创业团队和内容创作者的现代化 SaaS 网站生成器，主打极致自动化、SEO 友好、多语言支持和一键部署。通过集成 AI 工具和自动化脚本，用户可以在数分钟内搭建并上线高质量、具备 SEO 最佳实践的多语言网站。
+
+## 项目背景与目标
+本项目旨在解决传统建站繁琐、SEO 难以自动化、多语言和内容管理复杂等痛点。通过集成 Grok.com、Google AI Studio、WebSim.com 等第三方 API，实现需求分析、PRD 生成、代码/内容自动化生成、自动部署与 SEO 全流程自动化。
+
+## 允许采集的页面（根据 sitemap.xml 自动生成）
+- https://websimstarter.borninsea.com
+- https://websimstarter.borninsea.com/about
+- https://websimstarter.borninsea.com/career
+- https://websimstarter.borninsea.com/intro
+- https://websimstarter.borninsea.com/privacy
+- https://websimstarter.borninsea.com/terms
+
+## 页面结构与内容分类
+- 首页（index.html）：产品介绍、功能亮点、Playground 互动区、案例展示、未来愿景。
+- about.html、career.html：团队与招聘信息。
+- Playground：多步骤标签页，嵌入 Grok、Google AI Studio、WebSim。
+- locale/：多语言资源。
+- docs/prompts/：各类 prompt 模板。
+
+## 推荐提示词（Prompt）
+- 网站自动化生成
+- SaaS Coding Starter
+- 多语言网站生成器
+- SEO 自动化建站
+- 一键部署静态站点
+- AI 需求分析
+- PRD 自动生成
+- Playground 互动体验
+
+## 用户价值
+用户可通过本平台快速上线高质量网站，节省开发和运维成本，获得自动化 SEO、内容管理和多语言支持，极大提升建站效率和网站曝光度。
+
+## 最新更新（自动采集）
+- https://websimstarter.borninsea.com/intro （产品与未来展望）
+- https://websimstarter.borninsea.com/about （团队信息）
+- https://websimstarter.borninsea.com/career （招聘信息）
+- https://websimstarter.borninsea.com/privacy （隐私政策）
+- https://websimstarter.borninsea.com/terms （服务条款）
